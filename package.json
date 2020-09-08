@@ -1,8 +1,7 @@
 {
   "name": "homepage",
   "version": "1.0.0",
-  "description": "A presonalised homepage generated as a static site using 11ty",
-  "main": "index.js",
+  "description": "A personalised homepage generated as a static site using 11ty",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
@@ -13,10 +12,14 @@
     "11ty",
     "eleventy"
   ],
-  "author": "Dom Wakeling",
+  "author": "Dom Wakeling <domwakelinge@gmail.com>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domwakeling/web_homepage.git"
   }
 }
