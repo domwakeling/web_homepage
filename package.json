@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
     "dev": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "clean": "rimraf _site"
   },
   "keywords": [
     "11ty",
@@ -16,7 +17,9 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "js-beautify": "^1.13.0",
+    "rimraf": "^3.0.2"
   },
   "repository": {
     "type": "git",
