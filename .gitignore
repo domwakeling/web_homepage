@@ -1,0 +1,8 @@
+// ignore node_modules for obvious reasons
+node_modules
+
+// ignore compiled site output
+_site
+
+// stuff I don't want to add
+_not_for_git

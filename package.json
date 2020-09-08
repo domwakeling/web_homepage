@@ -1,0 +1,22 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "A presonalised homepage generated as a static site using 11ty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev",
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy"
+  ],
+  "author": "Dom Wakeling",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
