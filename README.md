@@ -11,3 +11,5 @@ Technologies used:
   [6015](https://wornandwound.com/review/affordable-vintage-seiko-6105/)-inspired watchface
 * `dart-sass` to convert `SASS` to `CSS`, and then `clean-css` to minify
 * `js-beautify` to generate clean, properly-indented HTML
+
+As at 22:20 on 9 September 2020, Google Lighthouse is ranking at 100% ...
