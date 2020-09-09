@@ -6,6 +6,8 @@ build myself a personal "Welcome" page (planning on setting it as my browser hom
 Eleventy setup built from basics and deployed on Netlify.
 
 Technologies used:
-* Nunjucks templates
+* Nunjucks templates (including for generating CSS)
 * SVG/HTML/JavaScript for the
   [6015](https://wornandwound.com/review/affordable-vintage-seiko-6105/)-inspired watchface
+* `dart-sass` to convert `SASS` to `CSS`, and then `clean-css` to minify
+* `js-beautify` to generate clean, properly-indented HTML

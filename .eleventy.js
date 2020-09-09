@@ -1,4 +1,6 @@
 const beautify_html = require("js-beautify").html;
+const sass = require('dart-sass');
+const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
 
@@ -9,6 +11,14 @@ module.exports = function (eleventyConfig) {
         }
 
         return content;
+    });
+
+    eleventyConfig.addNunjucksFilter("convertSASS", function (value) {
+        return sass.renderSync({data: value}).css.toString()
+    });
+
+    eleventyConfig.addFilter("cssmin", function (code) {
+        return new CleanCSS({}).minify(code).styles;
     });
 
     // because we're making a function we need to return the "normal" exports object

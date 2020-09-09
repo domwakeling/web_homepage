@@ -1,0 +1,8 @@
+---
+permalink: style.css
+---
+{% set scss %}
+    {% include "sass/_color.scss" %}
+    {% include "sass/style.scss" %}
+{% endset %}
+{{ scss | convertSASS | cssmin | safe }}
