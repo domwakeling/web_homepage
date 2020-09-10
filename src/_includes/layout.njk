@@ -15,7 +15,13 @@ title: Dom's Homepage
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h1>{{ title }}</h1>
+        </div>
+      </div>
+      {{ content | safe }}
+    </div>
   </body>
 </html>

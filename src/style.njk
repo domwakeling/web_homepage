@@ -1,8 +1,10 @@
 ---
 permalink: style.css
 ---
+{% include "style/normalize.css" %}
+{% include "style/skeleton.css" %}
 {% set scss %}
-    {% include "sass/_color.scss" %}
-    {% include "sass/style.scss" %}
+    {% include "style/_color.scss" %}
+    {% include "style/style.scss" %}
 {% endset %}
 {{ scss | convertSASS | cssmin | safe }}

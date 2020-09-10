@@ -3,7 +3,15 @@ layout: layout.njk
 title: Dom's Homepage - Index
 ---
 {% include "watch/watch.html" %}
-<p>This is a test</p>
+<p>This text isn't in a row</p>
+<div class="row">
+    <p>This text is in a row, but not a column</p>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>This text is in a 12-width column</p>
+    </div>
+</div>
 <script>
     {% include "watch/watch.js" %}
 </script>
