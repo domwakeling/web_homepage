@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addNunjucksFilter("datefromtweet", function(item) {
         let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
-        return `${t[1]} ${parseInt(t[3])} ${t[2]} - ${t[4]}`
+        return `${t[1]} ${parseInt(t[3])} ${t[2]} - ${t[4]}`.toUpperCase()
     })
 
     eleventyConfig.addFilter("cssmin", function (code) {

@@ -13,7 +13,7 @@ let params = {
     count: 20,
     tweet_mode: "extended",
     exclude_replies: true,
-    include_rts: false
+    include_rts: true
 }
 
 module.exports = async function () {
