@@ -7,41 +7,19 @@ module.exports = function() {
         axios({
             url,
             responseType: 'stream',
-        }).then(
-            response =>
-                new Promise((resolve, reject) => {
-                    response.data
-                        .pipe(fs.createWriteStream(image_path))
-                        .on('finish', () => resolve())
-                        .on('error', e => reject(e));
-                }),
+        })
+        .then(response => new Promise((resolve, reject) => {
+                response.data
+                    .pipe(fs.createWriteStream(image_path))
+                    .on('finish', () => resolve())
+                    .on('error', e => reject(e));
+            }),
         )
         .catch(err => {console.log(err)});
 
-    /* ============================================================
-      Download Images in Order
-    ============================================================ */
-
     (async () => {
-        await download_image('https://unavatar.now.sh/twitter/realtimewwii', './_site/ww2.png')
-        // let example_image_1 = await download_image('https://example.com/test-1.png', 'example-1.png');
-
-        // console.log(example_image_1.status); // true
-        // console.log(example_image_1.error); // ''
-
-        // let example_image_2 = await download_image('https://example.com/does-not-exist.png', 'example-2.png');
-
-        // console.log(example_image_2.status); // false
-        // console.log(example_image_2.error); // 'Error: Request failed with status code 404'
-
-        // let example_image_3 = await download_image('https://example.com/test-3.png', 'example-3.png');
-
-        // console.log(example_image_3.status); // true
-        // console.log(example_image_3.error); // ''
+        await download_image('https://unavatar.now.sh/twitter/realtimewwii', './src/images/ww2.png')
     })();
-
-
-
 
     return [
         { "created_at": "Wed Sep 09 21:27:53 +0000 2020", "id": 1303807361740660700, "id_str": "1303807361740660736", "full_text": "American territory in Hawai'i &amp; Alaska have both been bombed already by Japanese planes, but this is the first aeriel assault on an American state. https://t.co/JurzFsnBqA", "truncated": false, "display_text_range": [0, 151], "entities": { "hashtags": [], "symbols": [], "user_mentions": [], "urls": [], "media": [{ "id": 1303802196836966400, "id_str": "1303802196836966402", "indices": [152, 175], "media_url": "http://pbs.twimg.com/media/EhgJMK_XYAIk12Y.png", "media_url_https": "https://pbs.twimg.com/media/EhgJMK_XYAIk12Y.png", "url": "https://t.co/JurzFsnBqA", "display_url": "pic.twitter.com/JurzFsnBqA", "expanded_url": "https://twitter.com/RealTimeWWII/status/1303807361740660736/photo/1", "type": "photo", "sizes": { "medium": { "w": 600, "h": 792, "resize": "fit" }, "large": { "w": 600, "h": 792, "resize": "fit" }, "small": { "w": 515, "h": 680, "resize": "fit" }, "thumb": { "w": 150, "h": 150, "resize": "crop" } } }] }, "extended_entities": { "media": [{ "id": 1303802196836966400, "id_str": "1303802196836966402", "indices": [152, 175], "media_url": "http://pbs.twimg.com/media/EhgJMK_XYAIk12Y.png", "media_url_https": "https://pbs.twimg.com/media/EhgJMK_XYAIk12Y.png", "url": "https://t.co/JurzFsnBqA", "display_url": "pic.twitter.com/JurzFsnBqA", "expanded_url": "https://twitter.com/RealTimeWWII/status/1303807361740660736/photo/1", "type": "photo", "sizes": { "medium": { "w": 600, "h": 792, "resize": "fit" }, "large": { "w": 600, "h": 792, "resize": "fit" }, "small": { "w": 515, "h": 680, "resize": "fit" }, "thumb": { "w": 150, "h": 150, "resize": "crop" } } }] }, "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>", "in_reply_to_status_id": 1303801893085470700, "in_reply_to_status_id_str": "1303801893085470723", "in_reply_to_user_id": 364488011, "in_reply_to_user_id_str": "364488011", "in_reply_to_screen_name": "RealTimeWWII", "user": { "id": 364488011, "id_str": "364488011", "name": "Live tweets from 1942", "screen_name": "RealTimeWWII", "location": "Britain", "description": "I livetweet the Second World War as it happened on this date in 1942 & for 4 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com", "url": "https://t.co/PyKZc9qWms", "entities": { "url": { "urls": [{ "url": "https://t.co/PyKZc9qWms", "expanded_url": "https://www.patreon.com/RealTimeWWII", "display_url": "patreon.com/RealTimeWWII", "indices": [0, 23] }] }, "description": { "urls": [] } }, "protected": false, "followers_count": 531446, "friends_count": 679, "listed_count": 5556, "created_at": "Mon Aug 29 21:13:38 +0000 2011", "favourites_count": 893, "utc_offset": null, "time_zone": null, "geo_enabled": true, "verified": false, "statuses_count": 17907, "lang": null, "contributors_enabled": false, "is_translator": false, "is_translation_enabled": false, "profile_background_color": "C0DEED", "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", "profile_background_tile": false, "profile_image_url": "http://pbs.twimg.com/profile_images/1247267168594599937/hzn1TXdu_normal.jpg", "profile_image_url_https": "https://pbs.twimg.com/profile_images/1247267168594599937/hzn1TXdu_normal.jpg", "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1584346453", "profile_link_color": "1DA1F2", "profile_sidebar_border_color": "C0DEED", "profile_sidebar_fill_color": "DDEEF6", "profile_text_color": "333333", "profile_use_background_image": true, "has_extended_profile": true, "default_profile": true, "default_profile_image": false, "following": true, "follow_request_sent": false, "notifications": false, "translator_type": "none" }, "geo": null, "coordinates": null, "place": null, "contributors": null, "is_quote_status": false, "retweet_count": 14, "favorite_count": 151, "favorited": false, "retweeted": false, "possibly_sensitive": false, "lang": "en" },

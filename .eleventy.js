@@ -9,18 +9,28 @@ module.exports = function (eleventyConfig) {
         if (outputPath.endsWith(".html")) {
             return beautify_html(content);
         }
-
         return content;
     });
 
+    // need to add .png to template formats so that files are copied
+    eleventyConfig.setTemplateFormats([
+        "md",
+        'njk',
+        'png'
+    ]);
+
+    // filter to convert SASS to CSS
     eleventyConfig.addNunjucksFilter("convertSASS", function (value) {
         return sass.renderSync({data: value}).css.toString()
     });
 
+    // filter to stringify JSON
     eleventyConfig.addNunjucksFilter("stringify", function (value) {
         return JSON.stringify(value);
     });
 
+    // filter to take a tweet and either strip the final url (if it's not a "real" link) or
+    // turn it into an <a> tag if it *is* a real link
     eleventyConfig.addNunjucksFilter("tweetbodytext", function (item) {
         // receives a tweet item
         let t = item.full_text;
@@ -36,11 +46,13 @@ module.exports = function (eleventyConfig) {
         return t;
     });
 
+    // filter to generate a properly-formatted date string from a teet created_at string
     eleventyConfig.addNunjucksFilter("datefromtweet", function(item) {
         let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
         return `${t[1]} ${parseInt(t[3])} ${t[2]} - ${t[4]}`.toUpperCase()
-    })
+    });
 
+    // filter to minimise css
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code).styles;
     });
@@ -51,5 +63,5 @@ module.exports = function (eleventyConfig) {
             input: "src",
             output: "_site"
         }
-    }
+    };
 };

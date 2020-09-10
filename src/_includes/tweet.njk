@@ -2,7 +2,7 @@
 {%- if item.entities.media[0].media_url -%}
     <img src="{{ item.entities.media[0].media_url }}" class="tweet_img" />
 {%- endif -%}
-<h3 class=“tweet_h3”>{{ item | datefromtweet }}</h3>
+<h3 class="tweet_h3">{{ item | datefromtweet }}</h3>
 <p>{{ item | tweetbodytext | safe}}</p>
 <div style="clear: both"></div>
 {# <p>{{ item | stringify }} #}
