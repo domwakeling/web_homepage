@@ -2,22 +2,20 @@
 layout: layout.njk
 title: Dom's Homepage - Index
 ---
-{% include "watch/watch.html" %}
-<p>This text isn't in a row</p>
 <div class="row">
-    <p>This text is in a row, but not a column</p>
-</div>
-<div class="row">
-    <div class="twelve columns">
-        <p>This text is in a 12-width column</p>
+    <div class="six columns">
+        {% include "watch/watch.html" %}
+        <br />
+        <img class="tweet_user" src="ww2.png" />
+        <h2>Real Time WWII</h2>
+        <hr class="tweet_hr" />
+        {% set twitter = tweets %}
+        {# {% set twitter = dummy_tweets %} #}
+        {%- for item in twitter -%}
+            {% include "tweet.njk" %}
+        {%- endfor -%}
     </div>
-</div>
-{# {% set twitter = tweets %} #}
-{% set twitter = dummy_tweets %}
-{%- for item in twitter -%}
-    <div>{{ item | stringify }}</div>
-    <hr />
-{%- endfor -%}
+</div><!-- row -->
 <script>
     {% include "watch/watch.js" %}
 </script>

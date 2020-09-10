@@ -2,3 +2,27 @@ body {
     color: $textColor;
     background-color: $backgroundColor;
 }
+
+// tweets
+
+img.tweet_img {
+    float: right;
+    max-width: 120px;
+    max-height: 200px;
+    margin-left: 1.0rem;
+    border-radius: 0.5rem;
+}
+
+img.tweet_user {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1.0rem;
+    margin-top: 0.5rem;
+}
+
+hr.tweet_hr {
+    margin-top: 0;
+    margin-bottom: 2.0rem;
+}
