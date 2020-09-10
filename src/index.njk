@@ -12,6 +12,12 @@ title: Dom's Homepage - Index
         <p>This text is in a 12-width column</p>
     </div>
 </div>
+{# {% set twitter = tweets %} #}
+{% set twitter = dummy_tweets %}
+{%- for item in twitter -%}
+    <div>{{ item | stringify }}</div>
+    <hr />
+{%- endfor -%}
 <script>
     {% include "watch/watch.js" %}
 </script>

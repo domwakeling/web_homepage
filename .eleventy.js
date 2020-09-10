@@ -17,6 +17,10 @@ module.exports = function (eleventyConfig) {
         return sass.renderSync({data: value}).css.toString()
     });
 
+    eleventyConfig.addNunjucksFilter("stringify", function (value) {
+        return JSON.stringify(value);
+    });
+
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code).styles;
     });
