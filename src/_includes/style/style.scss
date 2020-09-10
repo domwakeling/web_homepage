@@ -3,14 +3,23 @@ body {
     background-color: $backgroundColor;
 }
 
+#watchouter {
+    -webkit-filter: drop-shadow(5px 5px 5px #777);
+    filter:         drop-shadow(5px 5px 5px #777); 
+}
+
+
 // tweets
 
 img.tweet_img {
     float: right;
-    max-width: 120px;
-    max-height: 200px;
+    // max-width: 120px;
+    // max-height: 160px;
+    max-width: 40%;
     margin-left: 1.0rem;
     border-radius: 0.5rem;
+    -webkit-filter: drop-shadow(5px 5px 5px #777);
+    filter:         drop-shadow(5px 5px 5px #777); 
 }
 
 img.tweet_user {
@@ -27,10 +36,12 @@ hr.tweet_hr {
     margin-bottom: 2.0rem;
 }
 
-h3.tweet_h3  {
+h3.tweet_date  {
     font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: 1.4;
     letter-spacing: -0.05rem;
     margin-bottom: 0px;
     color: #777;
+    font-weight: 600;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
