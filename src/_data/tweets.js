@@ -35,7 +35,7 @@ module.exports = async function () {
         .catch(err => { console.log(err) });
 
     (async () => {
-        await download_image('https://unavatar.now.sh/twitter/realtimewwii', './src/images/ww2.png')
+        await download_image('https://unavatar.now.sh/twitter/realtimewwii', 'src/images/ww2.png')
     })();
 
     return client.get('statuses/user_timeline', params)
