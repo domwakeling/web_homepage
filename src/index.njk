@@ -2,20 +2,21 @@
 layout: layout.njk
 title: Dom's Homepage
 ---
+
 <div class="row">
+
     <div class="six columns">
         {% include "watch/watch.html" %}
         <br />
-        <img class="tweet_user" src="/images/ww2.png" />
-        <h2>Real Time WWII</h2>
-        <hr class="tweet_hr" />
-        {% set twitter = tweets %}
-        {# {% set twitter = dummy_tweets %} #}
-        {%- for item in twitter -%}
-            {% include "tweet.njk" %}
-        {%- endfor -%}
-    </div>
+        {% include "tweet.njk" %}
+    </div><!-- column -->
+
+    <div class="six columns">
+        {% include "covid.njk" %}
+    </div><!-- column -->
+
 </div><!-- row -->
+
 <script>
     {% include "watch/watch.js" %}
 </script>

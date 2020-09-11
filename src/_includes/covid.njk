@@ -1,0 +1,20 @@
+{% set coviddata = covid %}
+<h2>Covid-19</h2>
+<p>Summary of data from yesterday.</p>
+<table>
+    <tr>
+        <th>Region</th>
+        <th>{{ "Cases\nYesterday" | safe}}</th>
+        <th>{{ "Deaths\nYesterday" | safe }}</th>
+    </tr>
+{%- for item in coviddata -%}
+    <tr>
+        <td>{{ item.region.name }}</td>
+        <td>{{ item.confirmed_diff }}</td>
+        <td>{{ item.deaths_diff}}</td>
+    </tr>
+{%- endfor -%}
+</table>
+<p class="footnote">
+    approximate data from open-source APIs
+</p>

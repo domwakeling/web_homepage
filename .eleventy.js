@@ -12,13 +12,6 @@ module.exports = function (eleventyConfig) {
         return content;
     });
 
-    // need to add .png to template formats so that files are copied
-    eleventyConfig.setTemplateFormats([
-        "md",
-        'njk',
-        'png'
-    ]);
-
     // filter to convert SASS to CSS
     eleventyConfig.addNunjucksFilter("convertSASS", function (value) {
         return sass.renderSync({data: value}).css.toString()

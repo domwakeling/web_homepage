@@ -1,4 +1,5 @@
 const Twitter = require('twitter');
+const axios = require('axios');
 require('dotenv').config()
 
 const client = new Twitter({
@@ -18,8 +19,27 @@ let params = {
 
 module.exports = async function () {
 
-    return client.get('statuses/user_timeline', params)
+    const tweets = await client
+        .get('statuses/user_timeline', params)
         .catch((err) => {
             console.error(err);
+            return {};
         });
+
+    const screen_name = tweets[0].user.screen_name;
+    const imgurl = await axios
+        .get(`https://unavatar.now.sh/twitter/${screen_name}?json`)
+        .catch((err) => {
+            console.error(err);
+            return {
+                tweets,
+                screen_name
+            };
+        })
+
+    return {
+        tweets,
+        imgurl: imgurl.data.url,
+        screen_name
+    };
 }
