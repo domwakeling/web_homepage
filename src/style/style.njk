@@ -5,6 +5,7 @@ permalink: style.css
 {% include "style/skeleton.css" %}
 {% set scss %}
     {% include "style/_color.scss" %}
+    {% include "style/_responsive.scss" %}
     {% include "style/style.scss" %}
 {% endset %}
 {{ scss | convertSASS | cssmin | safe }}

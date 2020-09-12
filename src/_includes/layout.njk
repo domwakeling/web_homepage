@@ -17,13 +17,11 @@ title: Dom's Homepage
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
+    <div class="outer_container">
+      <div class="complete-row">
           <h1 class="page_title">{{ title }}</h1>
-        </div>
       </div>
-      {{ content | safe }}
     </div>
+    {{ content | safe }}
   </body>
 </html>

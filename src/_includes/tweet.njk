@@ -1,6 +1,6 @@
 {% set twitter = tweets %}
 
-<div class="panel">
+<div class="panel" id="tweet">
     <img class="tweet_user" src="{{ twitter.imgurl }}" />
     <h2>{{ twitter.screen_name }}</h2>
     {%- for item in twitter.tweets -%}

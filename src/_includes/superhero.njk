@@ -1,0 +1,10 @@
+{% set hero = superhero %}
+
+<div class="panel" id="superhero">
+    <h2>{{ hero.name}}</h2>
+    <img src="{{ hero.image.url}}" class="tweet_img"/>
+    <p>({{ hero.biography["full-name"] }})</p>
+    <p>{{ hero.biography.publisher }}</p>
+    {# <p>{{ hero |stringify }}</p> #}
+    <div style="clear: both;"></div>
+</div>

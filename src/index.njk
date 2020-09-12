@@ -3,19 +3,14 @@ layout: layout.njk
 title: Welcome Back!
 ---
 
-<div class="row">
-
-    <div class="six columns">
-        {% include "watch/watch.html" %}
-        <br />
-        {% include "covid.njk" %}
-    </div><!-- column -->
-
-    <div class="six columns">
-        {% include "tweet.njk" %}
-    </div><!-- column -->
-
-</div><!-- row -->
+<div class="outer_container">
+    {% include "watch/watch.html" %}
+    {% include "covid.njk" %}
+    {% include "tweet.njk" %}
+    {% include "superhero.njk" %}
+    <div class="panel">Panel to follow</div>
+    <div class="panel">Panel to follow</div>
+</div><!-- outer_container -->
 
 <script>
     {% include "watch/watch.js" %}
