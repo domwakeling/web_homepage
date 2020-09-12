@@ -1,23 +1,52 @@
 body {
-    color: $textColor;
-    background-color: $backgroundColor;
+    color: $color_mainText;
+    background-color: $color_mainBackground;
 }
+
+/* SPECIFIC ELEMENTS / STYLES */
+h1.page_title {
+    text-align: center;
+}
+
+p.footnote {
+    color: $color_greyText;
+    font-style: italic;
+}
+
+/* STYLING FOR PANELS */
+
+div.panel {
+    padding: 1.0rem 1.25rem;
+    background-color: $color_panelBackground;
+    border-radius: 1.0rem;
+    border: 1px solid $color_orange;
+}
+
+/* OVERRIDE STYLING FOR (SKELETON) TABLES */
+th, td {
+    border-bottom-color: $color_orange;
+}
+
+/* OVERRIDE HR COLOR */
+hr {
+    border-top-color: $color_orange;
+}
+
+/* STYLING FOR WATCH ELEMENT */
 
 #watchouter {
     -webkit-filter: drop-shadow(5px 5px 5px #777);
     filter:         drop-shadow(5px 5px 5px #777); 
 }
 
-
-// tweets
+/* STYLING FOR TWEETS */
 
 img.tweet_img {
     float: right;
-    // max-width: 120px;
-    // max-height: 160px;
     max-width: 40%;
     margin-left: 1.0rem;
     border-radius: 0.5rem;
+    margin-bottom: 1.0rem;
     -webkit-filter: drop-shadow(5px 5px 5px #777);
     filter:         drop-shadow(5px 5px 5px #777); 
 }
@@ -32,7 +61,7 @@ img.tweet_user {
 }
 
 hr.tweet_hr {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 2.0rem;
 }
 
@@ -42,6 +71,5 @@ h3.tweet_date  {
     letter-spacing: -0.05rem;
     margin-bottom: 0px;
     color: #777;
-    font-weight: 600;
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700; 
 }

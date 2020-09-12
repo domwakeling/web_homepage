@@ -12,14 +12,15 @@ title: Dom's Homepage
       content="A personalised homepage built with 11ty and hosted on Neylify."
     >
     <title>{{ title }}</title>
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    {# <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> #}
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="twelve columns">
-          <h1>{{ title }}</h1>
+          <h1 class="page_title">{{ title }}</h1>
         </div>
       </div>
       {{ content | safe }}

@@ -1,14 +1,31 @@
 const axios = require('axios');
+require('dotenv').config()
 
 module.exports = async function () {
-    // generate string for yesterday's date
+
+    // in development, send back a static object
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return {
+        dateString: '11 September',
+        data: [
+            { country: 'France', cases: 9647, deaths: 82 },
+            { country: 'US', cases: 47192, deaths: 1213 },
+            { country: 'United Kingdom', cases: 3544, deaths: 6 }
+        ]
+    };
+
+    // generate query-string for yesterday's date
     let yday = new Date()
     yday.setDate(yday.getDate() - 1)
-    const dateString = `${yday.getFullYear()}-${("0" + (yday.getMonth() + 1)).slice(-2)}-${("0" + yday.getDate()).slice(-2)}`
+    const dateNum = `${yday.getFullYear()}-${("0" + (yday.getMonth() + 1)).slice(-2)}-${("0" + yday.getDate()).slice(-2)}`
+
+    // generate text string for yesterday's date
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+    const dateString = `${yday.getDate()} ${months[yday.getMonth()]}`
 
     // get the raw data (will be in coviddata.data.data)
     let coviddata = await axios
-        .get(`https://covid-api.com/api/reports?date=${dateString}`)
+        .get(`https://covid-api.com/api/reports?date=${dateNum}`)
         .catch((err) => {
             console.error(err);
             return [];
@@ -28,13 +45,14 @@ module.exports = async function () {
         filteredList[region.region.name].deaths += region.deaths_diff;
     }
 
-    let returnData = Object.keys(filteredList).sort().map(country => ({
-        region: {
-            name: country
-        },
-        confirmed_diff: filteredList[country].cases,
-        deaths_diff: filteredList[country].deaths,
-    }));
+    let returnData = {
+        dateString,
+        data: Object.keys(filteredList).sort().map(country => ({
+            country,
+            cases: filteredList[country].cases,
+            deaths: filteredList[country].deaths,
+        }))
+    };
     
     return returnData;
 };
