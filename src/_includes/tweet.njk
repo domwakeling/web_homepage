@@ -3,8 +3,8 @@
 <div class="panel">
     <img class="tweet_user" src="{{ twitter.imgurl }}" />
     <h2>{{ twitter.screen_name }}</h2>
-    <hr class="tweet_hr" />
     {%- for item in twitter.tweets -%}
+        <hr class="tweet_hr" />
         <h3 class="tweet_date">{{ item | datefromtweet }}</h3>
         {%- if item.entities.media[0].media_url_https -%}
             <img src="{{ item.entities.media[0].media_url_https }}" class="tweet_img" />
@@ -14,6 +14,5 @@
         <p>{{ item | tweetbodytext | safe}}</p>
         <div style="clear: both"></div>
         {# <p>{{ item | stringify }} #}
-        <hr class="tweet_hr" />
     {%- endfor -%}
 </div>
