@@ -8,8 +8,19 @@ title: Welcome Back!
     {% include "covid.njk" %}
     {% include "tweet.njk" %}
     {% include "superhero.njk" %}
-    <div class="panel">Panel to follow</div>
-    <div class="panel">Panel to follow</div>
+    {% include "beer.njk" %}
+    <div class="panel">
+        <h2>About</h2>
+        <p>
+            Little project using a static site generator (<a href="https://www.11ty.dev/">11ty</a>)
+            to build a custom 'homepage' dashboard, including as many odd little widgets as I can
+            think of.
+        </p>
+        <p>
+            Code on a <a href="https://github.com/domwakeling/web_homepage">Github repo</a>,
+            page is housed on Netlify and refreshed at 6am each morning via a Netlify Hook.
+        </p>
+    </div>
 </div><!-- outer_container -->
 
 <script>

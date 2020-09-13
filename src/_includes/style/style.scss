@@ -98,6 +98,9 @@ h3.tweet_date  {
 #tweet {
     grid-row-end: span 5
 }
+#beer {
+    grid-row-start: span 2;
+}
 @include for-three-column-only {
     .outer_container {
         max-width: 1460px;
