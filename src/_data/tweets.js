@@ -13,7 +13,7 @@ let params = {
     user_id: 364488011,
     count: 20,
     tweet_mode: "extended",
-    exclude_replies: true,
+    exclude_replies: false,
     include_rts: true
 }
 
