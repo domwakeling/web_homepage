@@ -8,6 +8,12 @@ a {
     font-weight: 400;
 }
 
+button {
+    background-color: orange;
+    border-color: $color_mainText;
+    color: darken($color_mainText, 10%);
+}
+
 /* SPECIFIC ELEMENTS / STYLES */
 h1.page_title {
     text-align: center;
@@ -53,8 +59,9 @@ img.tweet_img {
     margin-left: 1.0rem;
     border-radius: 0.5rem;
     margin-bottom: 1.0rem;
-    -webkit-filter: drop-shadow(5px 5px 5px #777);
-    filter:         drop-shadow(5px 5px 5px #777); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // -webkit-filter: drop-shadow(5px 5px 5px #777);
+    // filter:         drop-shadow(5px 5px 5px #777); 
 }
 
 img.tweet_user {
@@ -78,6 +85,17 @@ h3.tweet_date  {
     margin-bottom: 0px;
     color: $color_greyText;
     font-weight: 700; 
+}
+
+/* STYLING FOR BEERS */
+img.beer_img {
+    float: right;
+    max-width: 40%;
+    margin-left: 1.0rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.0rem;
+    -webkit-filter: drop-shadow(5px 5px 5px #777);
+    filter:         drop-shadow(5px 5px 5px #777); 
 }
 
 /* RESPONSIVE LAYOUR  */

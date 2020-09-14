@@ -4,11 +4,11 @@ title: Welcome Back!
 ---
 
 <div class="outer_container">
-    {% include "watch/watch.html" %}
-    {% include "covid.njk" %}
-    {% include "tweet.njk" %}
-    {% include "superhero.njk" %}
-    {% include "beer.njk" %}
+    {% include "components/watch.html" %}
+    {% include "components/covid.njk" %}
+    {% include "components/tweet.njk" %}
+    {% include "components/superhero.njk" %}
+    {% include "components/beer.njk" %}
     <div class="panel">
         <h2>About</h2>
         <p>
@@ -21,8 +21,17 @@ title: Welcome Back!
             page is housed on Netlify and refreshed at 6am each morning via a Netlify Hook.
         </p>
     </div>
+    <div class="panel">
+        <h2>Regenerate</h2>
+        <p>
+            Use the button below to trigger a fresh "build" of the website on Netlify (takes circa
+            30 seconds, and you'll need to refresh the page).
+        </p>
+        <button id="trigger_build">Trigger build</button>
+    </div>
 </div><!-- outer_container -->
 
 <script>
-    {% include "watch/watch.js" %}
+    {% include "js/watch.js" %}
+    {% include "js/button.js" %}
 </script>
