@@ -1,5 +1,6 @@
 $color_orange: #f29626;
 $color_mainText: darken($color_orange, 45%);
+$color_linkText: darken(saturate($color_orange, 50%), 32%);
 $color_mainBackground: white;
 $color_panelBackground: lighten($color_orange, 43%);
 $color_greyText: darken(desaturate($color_orange, 70%), 15%);

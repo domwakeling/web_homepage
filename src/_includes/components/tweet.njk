@@ -1,18 +1,18 @@
 {% set twitter = tweets %}
 
 <div class="panel" id="tweet">
-    <img class="tweet_user" src="{{ twitter.imgurl }}" />
+    <img alt="user avatar" class="tweet_user" src="{{ twitter.imgurl }}" />
     <h2>{{ twitter.screen_name }}</h2>
     {%- for item in twitter.tweets -%}
         <hr class="tweet_hr" />
         <h3 class="tweet_date">{{ item | datefromtweet }}</h3>
         {%- if item.entities.media[0].media_url_https -%}
-            <img src="{{ item.entities.media[0].media_url_https }}" class="tweet_img" />
+            <img alt="tweet image" src="{{ item.entities.media[0].media_url_https }}" class="tweet_img" />
         {%- elseif item.entities.media[0].media_url -%}
-            <img src="{{ item.entities.media[0].media_url }}" class="tweet_img" />
+            <img alt="tweet image" src="{{ item.entities.media[0].media_url }}" class="tweet_img" />
         {%- endif -%}
         <p>{{ item | tweetbodytext | safe}}</p>
         <div style="clear: both"></div>
-        {# <p>{{ item | stringify }} #}
+        <p>{{ item | stringify }}
     {%- endfor -%}
 </div>
