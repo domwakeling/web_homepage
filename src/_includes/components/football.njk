@@ -1,0 +1,27 @@
+<div class="panel" id="football">
+    <h2>Premier League</h2>
+    <table style="margin: 0 auto 1.0rem;">
+        <tr>
+            <th></th>
+            <th>Club</th>
+            <th>P</th>
+            <th>W-D-L</th>
+            <th>Form</th>
+            <th>GD</th>
+        </tr>
+        {%- for item in football -%}
+        <tr>
+            <td>{{ item.position }}</td>
+            <td><img
+                alt="{{ item.team.name}}"
+                src="{{ item.team.crestUrl }}"
+                style="height: 4.0rem; width: 4.0rem; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
+                /></td>
+            <td>{{ item.playedGames}}</td>
+            <td>{{ item.won}}-{{ item.draw}}-{{ item.lost}}</td>
+            <td>{{ item.form}}</td>
+            <td>{{ item.goalDifference}}</td>
+        </tr>
+        {%- endfor -%}
+    </table>
+</div>

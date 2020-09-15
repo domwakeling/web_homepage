@@ -2,7 +2,7 @@
 <div class="panel" id="covid">
     <h2>Covid-19</h2>
     <p>Summary of data from yesterday, {{ coviddata.dateString }}.</p>
-    <table>
+    <table style="margin: 0 auto 1.0rem;">
         <tr>
             <th>Region</th>
             <th>Cases</th>
@@ -16,7 +16,7 @@
         </tr>
         {%- endfor -%}
     </table>
-    <p class="footnote">
+    <p class="footnote" style="text-align: center;">
         approximate data from open-source APIs
     </p>
 </div>

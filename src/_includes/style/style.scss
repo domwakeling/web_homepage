@@ -48,7 +48,7 @@ hr {
 
 #watchouter {
     -webkit-filter: drop-shadow(5px 5px 5px #777);
-    filter:         drop-shadow(5px 5px 5px #777); 
+    filter:         drop-shadow(5px 5px 5px #777);
 }
 
 /* STYLING FOR TWEETS */
@@ -96,63 +96,4 @@ img.beer_img {
     margin-bottom: 1.0rem;
     -webkit-filter: drop-shadow(5px 5px 5px #777);
     filter:         drop-shadow(5px 5px 5px #777); 
-}
-
-/* RESPONSIVE LAYOUR  */
-
-.outer_container {
-    padding: 0 20px;
-    max-width: 1960px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
-    column-gap: 2%;
-    row-gap: 2.0rem;
-}
-.complete-row {
-    grid-column-start: span 4;
-    width: 100%
-}
-#tweet {
-    grid-row-end: span 5
-}
-#beer {
-    grid-row-start: span 2;
-}
-@include for-three-column-only {
-    .outer_container {
-        max-width: 1460px;
-        grid-template-columns: 31% 31% 31%;
-        column-gap: 3%;
-    }
-    .complete-row {
-        grid-column-start: span 3;
-    }
-    #tweet {
-        grid-row-end: span 5
-    }
-}
-@include for-two-column-only {
-    .outer_container {
-        max-width: 960px;
-        grid-template-columns: 48% 48%;
-        column-gap: 4%;
-    }
-    .complete-row {
-        grid-column-start: span 2;
-    }
-    #covid {
-        grid-column: 1;
-    }
-    #tweet {
-        grid-column: 2;
-        grid-row-start: 1;
-        grid-row-end: span 5
-    }
-}
-@include for-one-column-only {
-    .outer_container {
-        max-width: 460px;
-        display: block;
-    }
 }
