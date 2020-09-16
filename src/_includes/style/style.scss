@@ -97,3 +97,14 @@ img.beer_img {
     -webkit-filter: drop-shadow(5px 5px 5px #777);
     filter:         drop-shadow(5px 5px 5px #777); 
 }
+
+/* STYLING FOR FOOTBALL */
+
+#football_table {
+    tr {
+        td {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+    }
+}
