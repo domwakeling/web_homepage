@@ -1,0 +1,13 @@
+{% set item = archer %}
+
+<div class="panel" id="archer">
+    <h2>Archer</h2>
+    {%- if item.full_text -%}
+        {{ item.full_text | safe }}
+    {%- endif -%}
+    {%- if item.media_url_https -%}
+        <img alt="tweet image" src="{{ item.media_url_https }}" style="width: 100%; border-radius: 1.0rem;" />
+    {%- elseif item.media_url -%}
+        <img alt="tweet image" src="{{ item.media_url }}" style="width: 100%; border-radius: 1.0rem;" />
+    {%- endif -%}
+</div>
