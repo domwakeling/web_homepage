@@ -22,6 +22,11 @@ module.exports = function (eleventyConfig) {
         return JSON.stringify(value);
     });
 
+    // filter to turn comma-seperated form list into string
+    eleventyConfig.addNunjucksFilter("formstring", function (str) {
+        return str.split(",").join("");
+    })
+
     // filter to take a tweet and either strip the final url (if it's not a "real" link) or
     // turn it into an <a> tag if it *is* a real link
     eleventyConfig.addNunjucksFilter("tweetbodytext", function (item) {

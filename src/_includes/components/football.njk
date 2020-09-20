@@ -19,7 +19,7 @@
                 /></td>
             <td>{{ item.points}}</td>
             <td>{{ item.playedGames}}</td>
-            <td>{{ item.form}}</td>
+            <td>{{ item.form | formstring }}</td>
             <td>{{ item.goalDifference}}</td>
         </tr>
         {%- endfor -%}
