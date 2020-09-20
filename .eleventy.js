@@ -23,8 +23,8 @@ module.exports = function (eleventyConfig) {
     });
 
     // filter to turn comma-seperated form list into string
-    eleventyConfig.addNunjucksFilter("formstring", function (str) {
-        return str.split(",").join("");
+    eleventyConfig.addNunjucksFilter("formstring", function (value) {
+        return value ? value.split(",").join("") : null;
     })
 
     // filter to take a tweet and either strip the final url (if it's not a "real" link) or
