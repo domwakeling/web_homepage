@@ -106,5 +106,17 @@ img.beer_img {
             padding-top: 0.25rem;
             padding-bottom: 0.25rem;
         }
+        td, th {
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+
+            &:first-of-type {
+                padding-left: 0.2;
+            }
+
+            &:last-of-type {
+                padding-right: 0.2;
+            }
+        }
     }
 }

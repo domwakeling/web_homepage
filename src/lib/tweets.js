@@ -25,19 +25,12 @@ module.exports = async function (
         });
 
     const screen_name = tweets[0].user.screen_name;
-    const imgurl = await axios
-        .get(`https://unavatar.now.sh/twitter/${screen_name}?json`)
-        .catch((err) => {
-            console.error(err);
-            return {
-                tweets,
-                screen_name
-            };
-        })
+    
+    const imgurl = tweets[0].user.profile_image_url_https;
 
     return {
         tweets,
-        imgurl: imgurl.data.url,
+        imgurl,
         screen_name
     };
 }
