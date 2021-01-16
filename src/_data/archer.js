@@ -11,8 +11,8 @@ const data = [
     },
     {
         "full_text": `
-            <p>- Don't you think it's a little premature to be celebrating?</p>
-            <p>- Who's celebrating?</p>
+            <li>Don't you think it's a little premature to be celebrating?</li>
+            <li>Who's celebrating?</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CwhV65sVIAAVRkr.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CwhV65sVIAAVRkr.jpg",
@@ -35,30 +35,30 @@ const data = [
     },
     {
         "full_text": `
-            <p>- You're my smoochie boochie</p>
-            <p>- No, you're my smoochie boochie</p>
+            <li>You're my smoochie boochie</li>
+            <li>No, you're my smoochie boochie</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CquyqMEUIAAcjbC.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CquyqMEUIAAcjbC.jpg",
     },
     {
         "full_text": `
-            <p>- I can't remember when I was this happy</p>
-            <p>- You just had a baby</p>
+            <li>I can't remember when I was this happy</li>
+            <li>You just had a baby</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CqpspWrVUAEi5te.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CqpspWrVUAEi5te.jpg",        
     },
     {
         "full_text": `
-            <p>- Archer, I know you think you're invincible</p>
-            <p>- Plus, now I have a laser backpack.</p>
+            <li>Archer, I know you think you're invincible</li>
+            <li>Plus, now I have a laser backpack.</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CqksuCfUsAAaanO.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CqksuCfUsAAaanO.jpg",            
     },
     {
-        "full_text": "<p>Pam, if you want to scuff them that badly just throw them down the......ugh.<p>",
+        "full_text": "<li>Pam, if you want to scuff them that badly just throw them down the......ugh.</li>",
         "media_url": "http://pbs.twimg.com/media/Cp8P_zrVUAAAfu2.jpg",
         "media_url_https": "https://pbs.twimg.com/media/Cp8P_zrVUAAAfu2.jpg",        
     },
@@ -68,9 +68,9 @@ const data = [
     },
     {
         "full_text": `
-            <p>- Who's beard guy?</p>
-            <p>- That's Kenny Loggins!</p>
-            <p>- From Kenny Loggins Roaster's?<p>
+            <li>Who's beard guy?</li>
+            <li>That's Kenny Loggins!</li>
+            <li>From Kenny Loggins Roaster's?</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CpxYZaKVIAAFkvX.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CpxYZaKVIAAFkvX.jpg",
@@ -81,27 +81,27 @@ const data = [
     },
     {
         "full_text": `
-            <p>- Could you not find a punch bowl?</p>
-            <p>- It was too heavy</p>
+            <li>Could you not find a punch bowl?</li>
+            <li>It was too heavy</li>
             `,
         "media_url": "http://pbs.twimg.com/media/Cph1_3wUsAAoz7d.jpg",
         "media_url_https": "https://pbs.twimg.com/media/Cph1_3wUsAAoz7d.jpg",
     },
     {
         "full_text": `
-            <p>- I am pregnant</p>
-            <p>- How long are you going to keep using that as an excuse?</p>
-            <p>- Probably until childbirth</p>
+            <li>I am pregnant</li>
+            <li>How long are you going to keep using that as an excuse?</li>
+            <li>Probably until childbirth</li>
             `,
         "media_url": "http://pbs.twimg.com/media/Cpdmfz1UIAElJcC.jpg",
         "media_url_https": "https://pbs.twimg.com/media/Cpdmfz1UIAElJcC.jpg",       
     },
     {
         "full_text": `
-            <p>- How much did that cost!?</p>
-            <p>- It's advertising</p>
-            <p>-For what!?</p>
-            <p>- Pontiac, I guess</p>
+            <li>How much did that cost!?</li>
+            <li>It's advertising</li>
+            <li>-For what!?</li>
+            <li>Pontiac, I guess</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CpYQCWXUsAA1w-t.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CpYQCWXUsAA1w-t.jpg",

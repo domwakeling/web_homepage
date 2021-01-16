@@ -120,3 +120,22 @@ img.beer_img {
         }
     }
 }
+
+/* STYLING FOR ARCHER */
+
+#archer {
+    ul {
+        list-style-type: none;
+        li {
+            padding-left: 1.1rem;
+            margin-left: 0;
+            font-family: 'Bebas Neue';
+            font-size: 2.0rem;
+            margin-bottom: 1.0rem;
+            &:before {
+                content: "-- ";
+                margin-left: -1.1rem;
+            }
+        }
+    }
+}
