@@ -34,6 +34,9 @@
 #beer {
     grid-row-start: span 2;
 }
+#weather {
+    grid-row-end: span 2;
+}
 
 @include for-three-column-only {
     .outer_container {

@@ -62,7 +62,7 @@ module.exports = function (eleventyConfig) {
 
     // filter to return an openweathermap icon link from icon code
     eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {
-        return `http://openweathermap.org/img/wn/${shortcode}@2x.png`
+        return `https://openweathermap.org/img/wn/${shortcode}@2x.png`
     })
 
     // filter to generate a properly-formatted date string from a teet created_at string
