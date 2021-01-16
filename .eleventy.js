@@ -44,6 +44,27 @@ module.exports = function (eleventyConfig) {
         return t;
     });
 
+    // filter to take a Unix timestamp and return the weekday
+    eleventyConfig.addNunjucksFilter("weekdayfromutc", function(utc) {
+        const date = new Date(utc * 1000)
+        return `${["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"][date.getDay()]}day`
+    })
+
+    // filter to take a decimal and return nearest whole number
+    eleventyConfig.addNunjucksFilter("rounddecimal", function(n) {
+        const minmax = [Math.floor(n), Math.ceil(n)];
+        if (Math.abs(minmax[0] * 1.0 - n) < Math.abs(minmax[1] * 1.0 - n)) {
+            return minmax[0]
+        } else {
+            return minmax[1]
+        }
+    })
+
+    // filter to return an openweathermap icon link from icon code
+    eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {
+        return `http://openweathermap.org/img/wn/${shortcode}@2x.png`
+    })
+
     // filter to generate a properly-formatted date string from a teet created_at string
     eleventyConfig.addNunjucksFilter("datefromtweet", function(item) {
         let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
