@@ -100,7 +100,7 @@ const data = [
         "full_text": `
             <li>How much did that cost!?</li>
             <li>It's advertising</li>
-            <li>-For what!?</li>
+            <li>For what!?</li>
             <li>Pontiac, I guess</li>
             `,
         "media_url": "http://pbs.twimg.com/media/CpYQCWXUsAA1w-t.jpg",
