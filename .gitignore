@@ -7,3 +7,4 @@ _site
 // stuff I don't want to add
 _not_for_git
 .env
+.cache

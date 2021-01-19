@@ -7,7 +7,7 @@
     "start": "npm run dev",
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "clean": "rimraf _site"
+    "clean": "rimraf _site && rimraf .cache"
   },
   "keywords": [
     "11ty",
@@ -15,14 +15,16 @@
   ],
   "author": "Dom Wakeling <domwakelinge@gmail.com>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.7.4"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "axios": "^0.20.0",
+    "@11ty/eleventy": "^0.11.1",
+    "axios": "^0.21.1",
     "clean-css": "^4.2.3",
     "dart-sass": "^1.25.0",
     "dotenv": "^8.2.0",
-    "js-beautify": "^1.13.0",
+    "js-beautify": "^1.13.4",
     "rimraf": "^3.0.2",
     "twitter": "^1.7.1"
   },

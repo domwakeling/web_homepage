@@ -1,11 +1,14 @@
 ---
 permalink: style.css
 ---
-{% include "style/normalize.css" %}
-{% include "style/skeleton.css" %}
-{% set scss %}
-    {% include "style/_color.scss" %}
-    {% include "style/_responsive.scss" %}
-    {% include "style/style.scss" %}
+{% set css %}
+    {% include "style/normalize.css" %}
+    {% include "style/skeleton.css" %}
+    {% set scss %}
+        {% include "style/_color.scss" %}
+        {% include "style/_responsive.scss" %}
+        {% include "style/style.scss" %}
+    {% endset %}
+    {{ scss | convertSASS | safe }}
 {% endset %}
-{{ scss | convertSASS | cssmin | safe }}
+{{ css | cssmin | safe }}

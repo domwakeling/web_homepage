@@ -1,6 +1,20 @@
 const beautify_html = require("js-beautify").html;
 const sass = require('dart-sass');
 const CleanCSS = require("clean-css");
+const Image = require("@11ty/eleventy-img");
+
+async function generateTwitterImage(src, alt) {
+    if (alt === undefined) {
+        alt = ''
+    }
+    let metadata = await Image(src, {
+        widths: [300],
+        formats: ["jpeg"],
+        outputDir: "./_site/img/"
+    });
+    let data = metadata.jpeg.pop();
+    return `<img src="${data.url}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+}
 
 module.exports = function (eleventyConfig) {
 
@@ -59,6 +73,10 @@ module.exports = function (eleventyConfig) {
             return minmax[1]
         }
     })
+
+    // take Twitter images, pass them to function which generates a 300-wide version,
+    // get back html 
+    eleventyConfig.addNunjucksAsyncShortcode("twitterImage", generateTwitterImage);
 
     // filter to return an openweathermap icon link from icon code
     eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {
