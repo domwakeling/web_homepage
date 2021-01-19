@@ -2,8 +2,14 @@ const beautify_html = require("js-beautify").html;
 const sass = require('dart-sass');
 const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
+require('dotenv').config();
 
 async function generateTwitterImage(src, alt) {
+    // stop errors in development (comment out to test locally)
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+    }
+    // production
     if (alt === undefined) {
         alt = ''
     }
@@ -93,6 +99,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code).styles;
     });
+
+    // copy from src/_includes/favicons to the root
+    eleventyConfig.addPassthroughCopy({ "src/_includes/favicons": "." })
 
     // because we're making a function we need to return the "normal" exports object
     return {
