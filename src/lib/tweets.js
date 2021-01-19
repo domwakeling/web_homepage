@@ -26,7 +26,8 @@ module.exports = async function (
 
     const screen_name = tweets[0].user.screen_name;
     
-    const imgurl = tweets[0].user.profile_image_url_https;
+    // get the user profile, change to the "_bigger" (slightly higher res) version
+    const imgurl = tweets[0].user.profile_image_url_https.replace("_normal", "_bigger");
 
     return {
         tweets,
