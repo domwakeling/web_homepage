@@ -80,6 +80,15 @@ module.exports = function (eleventyConfig) {
         }
     })
 
+    // add a new shortcode to return today (date generator ran) in a pleasing format
+    eleventyConfig.addShortcode("todayString", () => {
+        const today = new Date()
+        const weekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"][today.getDay()]
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+                        'September', 'October', 'November', 'December']
+        return `${weekday}day ${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`
+    })
+
     // take Twitter images, pass them to function which generates a 300-wide version,
     // get back html 
     eleventyConfig.addNunjucksAsyncShortcode("twitterImage", generateTwitterImage);
