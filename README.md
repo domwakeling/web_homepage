@@ -12,4 +12,13 @@ Technologies used:
 * `dart-sass` to convert SASS to CSS (SASS compiled using Nunjucks), and `clean-css` to minify CSS
 * `js-beautify` to generate clean, properly-indented HTML
 
-As at 22:20 on 9 September 2020, Google Lighthouse is ranking at 100% ...
+To improve Lighthouse scores and reduce the load times, Twitter images are processed as the
+generator runs to:
+* create a hosted copy at reduced size (width 300, approximately `@2x` quality)
+* return an `<img>` tag pointing to the hosted copy and using lazy loading
+
+Google Lighthouse is high, but still being held back a little by:
+* Twitter images not necessarily "right" size (the element width is not set, generating circa `@2x`
+  but this isn't guaranteed)
+* Premier League club logos, which are high-quality SVGs (considering changing these)
+* Unreliable responses for images for both the Superhero and Beer panels
