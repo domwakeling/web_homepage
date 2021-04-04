@@ -20,7 +20,6 @@ module.exports = async function () {
 
     const outputData = [];
     for (craft of Object.keys(mappedData)) {
-        console.log(craft)
         outputData.push({
             craft,
             people: mappedData[craft].join(", "),

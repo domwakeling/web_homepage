@@ -25,7 +25,7 @@ module.exports = async function () {
 
     // get the current data
     const key = process.env.EXCHANGE_RATE_KEY;
-    console.log(key)
+
     let ratedata = await axios
         .get(`http://api.exchangeratesapi.io/v1/latest?symbols=GBP,EUR,USD&access_key=${key}`)
         .then(res => res.data.rates)
