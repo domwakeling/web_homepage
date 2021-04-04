@@ -24,13 +24,17 @@ module.exports = async function () {
     }];
 
     // get the current data
+    const key = process.env.EXCHANGE_RATE_KEY;
+    console.log(key)
     let ratedata = await axios
-        .get(`https://api.exchangeratesapi.io/latest?base=GBP&symbols=EUR,USD`)
+        .get(`http://api.exchangeratesapi.io/v1/latest?symbols=GBP,EUR,USD&access_key=${key}`)
         .then(res => res.data.rates)
         .catch((err) => {
             console.error(err);
             return {};
         });
+    
+    console.log(ratedata)
 
     // generate return data
     let returnData = [{
@@ -42,12 +46,12 @@ module.exports = async function () {
         flag: 'https://www.countryflags.io/eu/flat/64.png',
         alt: 'European flag',
         symbol: '&euro;',
-        rate: ratedata.EUR ? ratedata.EUR.toFixed(2) : "N/A"
+        rate: ratedata.EUR && ratedata.GBP ? (ratedata.EUR / ratedata.GBP).toFixed(2) : "N/A"
     }, {
         flag: 'https://www.countryflags.io/us/flat/64.png',
         alt: 'US flag',
         symbol: '$',
-        rate: ratedata.USD ? ratedata.USD.toFixed(2) : "N/A"
+        rate: ratedata.USD && ratedata.GBP ? (ratedata.USD / ratedata.GBP).toFixed(2) : "N/A"
     }]
 
     return returnData;
