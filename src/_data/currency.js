@@ -33,8 +33,6 @@ module.exports = async function () {
             console.error(err);
             return {};
         });
-    
-    console.log(ratedata)
 
     // generate return data
     let returnData = [{
