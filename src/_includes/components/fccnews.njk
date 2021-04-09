@@ -1,10 +1,10 @@
 <div class="panel" id="fccnews">
     <h2>freeCodeCamp</h2>
     {%- for item in fccnews -%}
+        <hr class="tweet_hr" />
         <a href="{{ item.link }}" target="_offiste">
-            <hr class="tweet_hr" />
+            {% twitterImage item.imageUrl, "freeCodeCamp image" %}
         </a>
-        {% twitterImage item.imageUrl, "freeCodeCamp image" %}
         <p>{{ item.title }}</p>
         <div style="clear: both"></div>
     {%- endfor -%}
