@@ -37,6 +37,9 @@
 #weather {
     grid-row-end: span 2;
 }
+#fccnews {
+    grid-row-end: span 3;
+}
 
 @include for-three-column-only {
     .outer_container {

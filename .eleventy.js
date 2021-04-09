@@ -7,6 +7,7 @@ require('dotenv').config();
 async function generateTwitterImage(src, alt) {
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        console.log(src)
         return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
     }
     // production

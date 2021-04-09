@@ -25,6 +25,7 @@
     "dart-sass": "^1.25.0",
     "dotenv": "^8.2.0",
     "js-beautify": "^1.13.4",
+    "jsdom": "^16.5.2",
     "rimraf": "^3.0.2",
     "twitter": "^1.7.1"
   },
