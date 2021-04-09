@@ -1,5 +1,6 @@
 const axios = require('axios');
 const jsdom = require('jsdom');
+require('dotenv').config();
 
 module.exports = async function () {
 

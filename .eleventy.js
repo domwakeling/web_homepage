@@ -7,7 +7,6 @@ require('dotenv').config();
 async function generateTwitterImage(src, alt) {
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        console.log(src)
         return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
     }
     // production
@@ -21,6 +20,24 @@ async function generateTwitterImage(src, alt) {
     });
     let data = metadata.jpeg.pop();
     return `<img src="${data.url}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+}
+
+async function generateF1Image(src, alt) {
+    // stop errors in development (comment out to test locally)
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return `<img src="${src}" alt="${alt}" style="max-height: 5.0rem; max-width: 95%;" loading="lazy" decoding="async">`;
+    }
+    production
+    if (alt === undefined) {
+        alt = ''
+    }
+    let metadata = await Image(src, {
+        widths: [300],
+        formats: ["png"],
+        outputDir: "./_site/img/"
+    });
+    let data = metadata.png.pop();
+    return `<img src="${data.url}" alt="${alt}" style="max-height: 5.0rem; max-width: 95%;" loading="lazy" decoding="async">`;
 }
 
 module.exports = function (eleventyConfig) {
@@ -93,6 +110,10 @@ module.exports = function (eleventyConfig) {
     // take Twitter images, pass them to function which generates a 300-wide version,
     // get back html 
     eleventyConfig.addNunjucksAsyncShortcode("twitterImage", generateTwitterImage);
+
+    // take F1 images, pass them to function which generates a 300-wide version,
+    // get back html 
+    eleventyConfig.addNunjucksAsyncShortcode("f1Image", generateF1Image);
 
     // filter to return an openweathermap icon link from icon code
     eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {

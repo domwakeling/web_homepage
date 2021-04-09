@@ -1,0 +1,13 @@
+<div class="panel" id="f1">
+    <h2>F1 Standings</h2>
+    <table style="margin: 0 auto 1.0rem;" id="f1_table">
+        {%- for item in f1 -%}
+        <tr style="height: 5.5rem">
+            <td style="height: 5.5rem">
+                {% f1Image item.imageUrl, item.name %}
+            </td>
+            <td style="padding-right: 1.0rem; text-align: right;">{{ item.points}}</td>
+        </tr>
+        {%- endfor -%}
+    </table>
+</div>

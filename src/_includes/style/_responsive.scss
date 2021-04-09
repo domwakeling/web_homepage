@@ -40,6 +40,9 @@
 #fccnews {
     grid-row-end: span 3;
 }
+#f1 {
+    grid-row-end: span 3;
+}
 
 @include for-three-column-only {
     .outer_container {
