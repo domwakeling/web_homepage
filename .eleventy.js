@@ -27,7 +27,7 @@ async function generateF1Image(src, alt) {
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
         return `<img src="${src}" alt="${alt}" style="max-height: 5.0rem; max-width: 95%;" loading="lazy" decoding="async">`;
     }
-    production
+    // production
     if (alt === undefined) {
         alt = ''
     }
