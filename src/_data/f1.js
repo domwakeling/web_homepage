@@ -150,13 +150,15 @@ module.exports = async function () {
     } else {
          f1data = await axios
         .get('https://ergast.com/api/f1/current/constructorStandings.json')
-        .then(res => { console.log(res.data); return res.data})
+        .then(res => res.data)
         .catch((err) => {
             console.error(err);
             return {};
         });
     }
 
+    // If more are needed: use Wikipedia, right-click on the image and open in new tab, this will
+    // allow you to get link with "upload"; generating out PNG's to retain transparency
     const imgUrls = {
         'mercedes': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mercedes-Benz_in_Formula_One_logo.svg/358px-Mercedes-Benz_in_Formula_One_logo.svg.png',
         'red_bull': 'https://upload.wikimedia.org/wikipedia/en/b/b2/Red_Bull_Racing_2021_logo.png',
@@ -167,7 +169,6 @@ module.exports = async function () {
         'alpine': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Alpine_F1_Team_Logo.svg/262px-Alpine_F1_Team_Logo.svg.png',
         'ferrari': 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Scuderia_Ferrari_Logo.svg/177px-Scuderia_Ferrari_Logo.svg.png',
         'alphatauri': 'https://upload.wikimedia.org/wikipedia/en/0/09/Scuderia_Alpha-Tauri.svg',
-        // 'alphatauri': 'https://www.f1-fansite.com/wp-content/uploads/2020/02/logo_scuderiaalphatauri.png',
         'alfa': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_Alfa_Romeo_Racing_Orlen.svg/320px-Logo_Alfa_Romeo_Racing_Orlen.svg.png',
         'haas': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Uralkali_Haas_F1_Team_Logo.svg/405px-Uralkali_Haas_F1_Team_Logo.svg.png',
         'williams': 'https://upload.wikimedia.org/wikipedia/en/e/e8/Williams_Racing_2020_logo.png'
