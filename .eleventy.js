@@ -23,9 +23,13 @@ async function generateTwitterImage(src, alt) {
 }
 
 async function generateF1Image(src, alt) {
+    // capture images that are being copied locally
+    if (/^\/img/.test(src)) {
+        return `<img src="${src}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
+    }
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="${alt}" style="max-height: 5.0rem; max-width: 95%;" loading="lazy" decoding="async">`;
+        return `<img src="${src}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
     }
     // production
     if (alt === undefined) {
@@ -36,8 +40,9 @@ async function generateF1Image(src, alt) {
         formats: ["png"],
         outputDir: "./_site/img/"
     });
+    console.log(src);
     let data = metadata.png.pop();
-    return `<img src="${data.url}" alt="${alt}" style="max-height: 5.0rem; max-width: 95%;" loading="lazy" decoding="async">`;
+    return `<img src="${data.url}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
 }
 
 module.exports = function (eleventyConfig) {
@@ -133,6 +138,9 @@ module.exports = function (eleventyConfig) {
 
     // copy from src/_includes/favicons to the root
     eleventyConfig.addPassthroughCopy({ "src/_includes/favicons": "." })
+
+    // copy from src/img to the root
+    eleventyConfig.addPassthroughCopy({ "src/img": "./img" })
 
     // because we're making a function we need to return the "normal" exports object
     return {
