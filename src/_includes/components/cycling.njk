@@ -1,0 +1,11 @@
+<div class="panel" id="cycling">
+    <h2>Cycling</h2>
+    {%- for item in cycling -%}
+        <hr class="tweet_hr" />
+        <a href="{{ item.link }}" target="_offiste">
+            {% twitterImage item.imageUrl, "freeCodeCamp image" %}
+        </a>
+        <p>{{ item.title }}</p>
+        <div style="clear: both"></div>
+    {%- endfor -%}
+</div>
