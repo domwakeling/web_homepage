@@ -1,0 +1,16 @@
+<div class="panel" id="today">
+    <h2>On this day</h2>
+    {% if today.event %}
+        <p>In {{ today.event.html | safe }}</p>
+    {% endif %}
+    {% if today.birth %}
+        <p>Born {{ today.birth.html | safe }}</p>
+    {% endif %}
+    {% if today.death %}
+        <p>Died {{ today.death.html | safe }}</p>
+    {% endif %}
+    <hr />
+    <p style="text-align: center"><i>
+        data from <a href="https://history.muffinlabs.com/" target="_offiste">muffinlabs' history API</a>
+    </i></p>
+</div>
