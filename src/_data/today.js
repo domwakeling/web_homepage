@@ -32,8 +32,6 @@ module.exports = async function () {
             return {};
         });
 
-    console.log(todaydata);
-
     return todaydata;
 
 };

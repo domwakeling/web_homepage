@@ -2,9 +2,9 @@ const axios = require('axios');
 require('dotenv').config();
 
 module.exports = async function () {
-
+    return {
     // in development, send back a static object
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return {
+    // if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return {
         "id": 132,
         "name": "5am Saint",
         "tagline": "Bittersweet Chaos. Malty. Fruity. Bite.",
