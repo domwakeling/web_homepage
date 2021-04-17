@@ -398,19 +398,20 @@ module.exports = async function () {
         }
     ]
 
-
-
-    return dummydata[Math.floor(Math.random() * dummydata.length)];
     // in development, send back a static object
-    // if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return dummydata[Math.floor(Math.random() * dummydata.length)];
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return dummydata[Math.floor(Math.random() * dummydata.length)];
+    }
         
-
+    // otherwise look up the API and fail gracefully if there's an issue
     let beerdata = await axios
         .get('https://api.punkapi.com/v2/beers/random')
+        .then(res => res.data)
         .catch((err) => {
-            console.error(err);
-            return {}
+            console.error('PunkAPI failed:', err.message);
+            console.log('Defaulting to stored data')
+            return [dummydata[Math.floor(Math.random() * dummydata.length)]]
         });
 
-    return beerdata.data[0];
+    return beerdata[0];
 };
