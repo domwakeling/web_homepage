@@ -4,7 +4,15 @@
     <table style="margin: 0 auto 1.0rem;">
         <tr>
             {%- for item in ratedata -%}
-            <th><img src="{{ item.flag }}" alt="{{ item.alt }}" /></th>
+            <th>
+                <img
+                    src="{{ item.flag.src }}"
+                    srcset="{{ item.flag.srcset }}"
+                    alt="{{ item.alt }}"
+                    width="64"
+                    height="48"
+                />
+            </th>
             {%- endfor -%}
         </tr>
         <tr>
