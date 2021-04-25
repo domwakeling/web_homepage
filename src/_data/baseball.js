@@ -556,7 +556,7 @@ module.exports = async function () {
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
         livedata = dummydata
     } else {
-        let livedata = await axios
+        livedata = await axios
             .get('https://erikberg.com/mlb/standings.json')
             .then(res => res.data)
             .catch((err) => {
