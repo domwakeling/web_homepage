@@ -1,0 +1,28 @@
+<div class="panel" id="baseball">
+    <h2>MLB</h2>
+    <table style="margin: 0 auto 1.0rem;" id="baseball_table">
+        <tr>
+            <th></th>
+            <th colspan="2">Club</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>GB</th>
+        </tr>
+        {%- for item in baseball -%}
+        <tr>
+            <td>{{ item.rank }}</td>
+            <td>
+                <img
+                    alt="{{ item.team_id}}"
+                    src="{{ item.imgUrl }}"
+                    style="height: 3.0rem; position: relative; top: 0.2rem"
+                />
+            </td>
+            <td>{{ item.short }}</td>
+            <td>{{ item.won}}</td>
+            <td>{{ item.lost}}</td>
+            <td>{{ item.gb}}</td>
+        </tr>
+        {%- endfor -%}
+    </table>
+</div>

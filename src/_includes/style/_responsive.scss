@@ -43,6 +43,9 @@
 #f1 {
     grid-row-end: span 3;
 }
+#baseball {
+    grid-row-end: span 4;
+}
 
 @include for-three-column-only {
     .outer_container {
