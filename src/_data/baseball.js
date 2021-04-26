@@ -567,6 +567,11 @@ module.exports = async function () {
 
     const confVal = (conf) => conf == "AL" ? 0 : 100;
     const divVal = (div) => div == "E" ? 0 : (div == "C" ? 10 : 20);
+    const percentVal = (item) => {
+        if (item.won == 0) return ".000"
+        if (item.lost == 0) return "1.00"
+        return `.${Math.ceil(1000 * item.won / (item.won + item.lost))}`
+    }
 
     const retdata = livedata.
         standing.
@@ -579,7 +584,8 @@ module.exports = async function () {
             gb: item.games_back,
             order: confVal(item.conference) + divVal(item.division) + item.rank,
             imgUrl: clubs[item.team_id].url,
-            short: clubs[item.team_id].short
+            short: clubs[item.team_id].short,
+            pct: percentVal(item)
         })).
         sort((a,b) => a.order - b.order);
 

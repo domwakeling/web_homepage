@@ -3,9 +3,9 @@
     <table style="margin: 0 auto 1.0rem;" id="baseball_table">
         <tr>
             <th></th>
-            <th colspan="2">Club</th>
-            <th>Won</th>
-            <th>Lost</th>
+            <th>Club</th>
+            <th>Games</th>
+            <th>PCT</th>
             <th>GB</th>
         </tr>
         {%- for item in baseball -%}
@@ -18,10 +18,16 @@
                     style="height: 3.0rem; position: relative; top: 0.2rem"
                 />
             </td>
-            <td>{{ item.short }}</td>
-            <td>{{ item.won}}</td>
-            <td>{{ item.lost}}</td>
-            <td>{{ item.gb}}</td>
+            {# <td>{{ item.short }}</td> #}
+            <td style="text-align: center">{{ item.won }}-{{ item.lost }}</td>
+            <td>{{ item.pct }}</td>
+            <td style="text-align: right">
+                {% if item.gb > 0%}
+                    +{{ item.gb }}
+                {% else %}
+                    {{ item.gb }}
+                {% endif %}
+            </td>
         </tr>
         {%- endfor -%}
     </table>
