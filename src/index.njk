@@ -21,13 +21,19 @@ layout: layout.njk
     {% include "components/archer.njk" %}
     {% include "components/superhero.njk" %}
     {% include "components/beer.njk" %}
-    {% include "components/football.njk" %}
+    {% if panels.football %}
+        {% include "components/football.njk" %}
+    {% endif %}
     {% include "components/weather.njk" %}
     {% include "components/space.njk" %}
-    {% include "components/baseball.njk" %}
+    {% if panels.baseball %}
+        {% include "components/baseball.njk" %}
+    {% endif %}
     {% include "components/fccnews.njk" %}
     {% include "components/currency.njk" %}
-    {% include "components/f1.njk" %}
+    {% if panels.f1 %}
+        {% include "components/f1.njk" %}
+    {% endif %}
     {% include "components/cycling.njk" %}
     {% include "components/today.njk" %}
     {% include "components/bitcoin.njk" %}
