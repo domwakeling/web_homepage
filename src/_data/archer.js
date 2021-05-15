@@ -8,6 +8,7 @@ const data = [
     {
         "media_url": "http://pbs.twimg.com/media/CxGMKNdUUAASf8y.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CxGMKNdUUAASf8y.jpg",
+        "heightClass": "height1"
     },
     {
         "full_text": `
@@ -16,10 +17,12 @@ const data = [
             `,
         "media_url": "http://pbs.twimg.com/media/CwhV65sVIAAVRkr.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CwhV65sVIAAVRkr.jpg",
+        "heightClass": "height2"
     },
     {
         "media_url": "http://pbs.twimg.com/media/CtPu3UFUsAA3kzj.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CtPu3UFUsAA3kzj.jpg",
+        "heightClass": "height1"
     },
     {
         "media_url": "http://pbs.twimg.com/media/CtKa6QDUsAAPS-K.jpg",
@@ -91,7 +94,7 @@ const data = [
         "full_text": `
             <li>I am pregnant</li>
             <li>How long are you going to keep using that as an excuse?</li>
-            <li>Probably until childbirth</li>
+            <li>Probably at least through childbirth</li>
             `,
         "media_url": "http://pbs.twimg.com/media/Cpdmfz1UIAElJcC.jpg",
         "media_url_https": "https://pbs.twimg.com/media/Cpdmfz1UIAElJcC.jpg",       
@@ -113,5 +116,10 @@ const data = [
 ];
 
 module.exports = () => {
-    return data[Math.floor(Math.random() * data.length)];
+    const ret = data[Math.floor(Math.random() * data.length)];
+    const keys = Object.keys(ret);
+    if (keys.indexOf("heightClass") < 0) {
+        ret.heightClass = keys.indexOf('full_text') >= 0 ? "height3" : "height2";
+    }
+    return ret;
 }

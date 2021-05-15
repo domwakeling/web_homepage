@@ -1,6 +1,6 @@
 {% set item = archer %}
 
-<div class="panel" id="archer">
+<div class="panel {{ item.heightClass }}" id="archer">
     <h2>Archer</h2>
     {%- if item.full_text -%}
         <ul>{{ item.full_text | safe }}</ul>

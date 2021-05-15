@@ -10,7 +10,7 @@ module.exports = () => {
     if (month >= 8 || month <= 5) football = true;
 
     let f1 = false;
-    if (month >= 3) f1 = true
+    if (month >= 3) f1 = true;    
 
     return {
         baseball,

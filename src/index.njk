@@ -2,13 +2,9 @@
 layout: layout.njk
 ---
 
-<div class="outer_container">
-    <div class="panel">
-        <h2>Quote Of the Night</h2>
-        <p style="font-family: 'Bebas Neue'; font-size: 4.0rem">I had a great day &mdash; because you weren't here!</p>
-    </div>
-    <div>
-        {% include "components/watch.html" %}
+<div class="outer_container"> 
+    {% include "components/watch.html" %}
+    <div id="podcast">
         <iframe
             style="border-radius: 1.0rem"
             sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups allow-forms"
@@ -22,6 +18,10 @@ layout: layout.njk
     </div>
     {% include "components/covid.njk" %}
     {% include "components/rtww2.njk" %}
+    <div id="silly-quote" class="panel">
+        <h2>Quote Of the Night</h2>
+        <p style="font-family: 'Bebas Neue'; font-size: 4.0rem">I had a great day &mdash; because you weren't here!</p>
+    </div>
     {% include "components/archer.njk" %}
     {% include "components/superhero.njk" %}
     {% include "components/beer.njk" %}
@@ -33,17 +33,17 @@ layout: layout.njk
     {% if panels.baseball %}
         {% include "components/baseball.njk" %}
     {% endif %}
-    {% include "components/fccnews.njk" %}
-    {% include "components/currency.njk" %}
     {% if panels.f1 %}
         {% include "components/f1.njk" %}
     {% endif %}
+    {% include "components/fccnews.njk" %}
+    {% include "components/currency.njk" %}
     {% include "components/cycling.njk" %}
     {% include "components/today.njk" %}
     {% include "components/bitcoin.njk" %}
     {% include "components/joke.njk" %}
     {% include "components/randomcat.njk" %}
-    <div class="panel">
+    <div class="panel" id="about">
         <h2>About</h2>
         <p>
             Little project using a static site generator (<a href="https://www.11ty.dev/">11ty</a>)
@@ -55,7 +55,7 @@ layout: layout.njk
             page is housed on Netlify and refreshed at 6am each morning via a Netlify Hook.
         </p>
     </div>
-    <div class="panel">
+    <div class="panel" id="regen">
         <h2>Regenerate</h2>
         <p>
             Use the button below to trigger a fresh "build" of the website on Netlify. This will

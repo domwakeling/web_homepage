@@ -25,26 +25,72 @@
     grid-column-start: span 4;
     width: 100%
 }
-#rtww2 {
-    grid-row-end: span 7;
-}
-#football {
-    grid-row-end: span 4;
-}
-#beer {
-    grid-row-start: span 2;
-}
-#weather {
+
+// watch and podcast always top left
+#watchouter {
+    grid-column-start: 1;
+    grid-row-start: 1;
     grid-row-end: span 2;
 }
-#fccnews, #cycling {
+#podcast {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+// archer panel varies in height
+#archer{
+    &.height2 {
+        grid-row-end: span 2;
+    }
+    &.height3 {
+        grid-row-end: span 3;
+    }
+}
+
+// all the smaller units
+#silly-quote {
+    grid-row-end: span 2;
+}
+#covid {
     grid-row-end: span 3;
+}
+#superhero {
+    grid-row-end: span 2;
+}
+#about, #regen, #joke, #randomcat, #currency, #bitcoin, #space {
+    grid-row-end: span 2;
+}
+
+// middling
+#beer {
+    grid-row-start: span 3;
+}
+#today {
+    grid-row-start: span 3;
+}
+
+// big'uns
+
+#rtww2 {
+    grid-row-end: span 15;
+}
+#football {
+    grid-row-end: span 6;
+}
+#weather {
+    grid-row-end: span 3;
+}
+#fccnews {
+    grid-row-end: span 6;
+}
+#cycling {
+    grid-row-end: span 7;
 }
 #f1 {
-    grid-row-end: span 3;
+    grid-row-end: span 7;
 }
 #baseball {
-    grid-row-end: span 4;
+    grid-row-end: span 9;
 }
 
 @include for-three-column-only {
@@ -65,13 +111,6 @@
     }
     .complete-row {
         grid-column-start: span 2;
-    }
-    #covid {
-        grid-column: 1;
-    }
-    #rtww2 {
-        grid-column: 2;
-        grid-row-start: 1;
     }
 }
 @include for-one-column-only {
