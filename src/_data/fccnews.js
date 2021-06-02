@@ -47,7 +47,7 @@ module.exports = async function () {
             // get src and title for first n items
             for (let i = 0; i < 6; i++) {
                 const temp = {
-                    imageUrl: articles[i].querySelector('.post-card-image').getAttribute('src'),
+                    imageUrl: articles[i].querySelector('.post-card-image').getAttribute('data-src'),
                     link: articles[i].querySelector('a.post-card-image-link').getAttribute('href'),
                     title: articles[i].querySelector('h2>a').textContent
                 }
@@ -58,7 +58,8 @@ module.exports = async function () {
                 item.title = item.title.replace(/\n/g, '').replace(/\s{3,}/g, '');
                 // turn imageUrl into full url
                 if (/^\/news/.test(item.imageUrl)) {
-                    item.imageUrl = "http://freecodecamp.org" + item.imageUrl
+                    item.imageUrl = "http://freecodecamp.org" + item.imageUrl;
+                    item.imageUrl = item.imageUrl.replace('600w', '300w');
                 }
                 // turn links into full url
                 if (/^\/news/.test(item.link)) {
