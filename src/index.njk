@@ -25,6 +25,9 @@ layout: layout.njk
     {% include "components/archer.njk" %}
     {% include "components/superhero.njk" %}
     {% include "components/beer.njk" %}
+    {% if tv.length > 0 %}
+        {% include "components/tv.njk" %}
+    {% endif %}
     {% if panels.football %}
         {% include "components/football.njk" %}
     {% endif %}
