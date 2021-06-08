@@ -1,11 +1,19 @@
 const data = [
     {
-        "showName": "Bosch",
+        "showName": "Loki",
+        "release": "09.06.21"
+    },
+    {
+        "showName": "Lupin (Pt 2)",
+        "release": "11.06.21"
+    },
+    {
+        "showName": "Bosch (Season 7)",
         "release": "25.06.21"
     },
     {
-        "showName": "Loki",
-        "release": "09.06.21"
+        "showName": "Ted Lasso (Season 2)",
+        "release": "23.07.21"
     },
     {
         "showName": "The Book Of Boba Fett",
