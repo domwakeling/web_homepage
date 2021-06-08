@@ -25,7 +25,7 @@ const today = new Date();
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 
-const diffDays = (d1, d2) => Math.round((d1 - d2) / oneDay);
+const diffDays = (d1, d2) => Math.ceil((d1 - d2) / oneDay);
 
 const daysUntil = (dStr) => {
     const nums = dStr.split(".").map(n => parseInt(n))
