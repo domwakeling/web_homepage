@@ -1,7 +1,7 @@
 const data = [
     {
-        "showName": "Loki",
-        "release": "09.06.21"
+        "showName": "Foundation",
+        "release": "24.09.21"
     },
     {
         "showName": "Lupin (Pt 2)",
