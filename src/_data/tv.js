@@ -4,8 +4,8 @@ const data = [
         "release": "24.09.21"
     },
     {
-        "showName": "Lupin (Pt 2)",
-        "release": "11.06.21"
+        "showName": "What If ... ?",
+        "release": "06.08.21"
     },
     {
         "showName": "Bosch (Season 7)",
