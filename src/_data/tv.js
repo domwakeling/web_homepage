@@ -5,11 +5,15 @@ const data = [
     },
     {
         "showName": "What If ... ?",
-        "release": "06.08.21"
+        "release": "11.08.21"
     },
     {
         "showName": "Bosch (Season 7)",
         "release": "25.06.21"
+    },
+    {
+        "showName": "The Witcher (Season 2)",
+        "release": "17.12.21"
     },
     {
         "showName": "Ted Lasso (Season 2)",
