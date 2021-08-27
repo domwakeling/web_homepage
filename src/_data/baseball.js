@@ -556,11 +556,15 @@ module.exports = async function () {
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
         livedata = dummydata
     } else {
+        const opts = {
+            headers: {
+                'User-Agent': `MyHomepage/1.0 (${process.env.CONTACT_EMAIL})` }
+        }
         livedata = await axios
-            .get('https://erikberg.com/mlb/standings.json')
+            .get('https://erikberg.com/mlb/standings.json', opts)
             .then(res => res.data)
             .catch((err) => {
-                console.error(err);
+                console.error(err.response.data);
                 return {standing: []};
             });
     }
