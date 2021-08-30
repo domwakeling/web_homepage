@@ -8,3 +8,4 @@ _site
 _not_for_git
 .env
 .cache
+.DS_Store
