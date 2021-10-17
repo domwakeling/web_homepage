@@ -1,11 +1,7 @@
 const data = [
     {
-        "showName": "Foundation",
-        "release": "24.09.21"
-    },
-    {
-        "showName": "What If ... ?",
-        "release": "11.08.21"
+        "showName": "Hawkeye",
+        "release": "24.10.21"
     },
     {
         "showName": "The Witcher (Season 2)",
@@ -13,7 +9,7 @@ const data = [
     },
     {
         "showName": "The Book Of Boba Fett",
-        "release": "25.12.21"
+        "release": "29.12.21"
     }
 ];
 
