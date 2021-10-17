@@ -1,7 +1,7 @@
 const data = [
     {
         "showName": "Hawkeye",
-        "release": "24.10.21"
+        "release": "24.11.21"
     },
     {
         "showName": "The Witcher (Season 2)",
