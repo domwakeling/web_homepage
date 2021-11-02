@@ -5,6 +5,7 @@ const Image = require("@11ty/eleventy-img");
 require('dotenv').config();
 
 async function generateTwitterImage(src, alt) {
+    if (!src || src == '') return '';
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
         return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
