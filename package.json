@@ -16,16 +16,16 @@
   "author": "Dom Wakeling <domwakelinge@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy-img": "^0.7.4"
+    "@11ty/eleventy-img": "^1.0.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "axios": "^0.21.1",
-    "clean-css": "^4.2.3",
+    "axios": "^0.24.0",
+    "clean-css": "^5.2.2",
     "dart-sass": "^1.25.0",
-    "dotenv": "^8.2.0",
-    "js-beautify": "^1.13.4",
-    "jsdom": "^16.5.2",
+    "dotenv": "^10.0.0",
+    "js-beautify": "^1.14.0",
+    "jsdom": "^18.0.1",
     "rimraf": "^3.0.2",
     "twitter": "^1.7.1"
   },
