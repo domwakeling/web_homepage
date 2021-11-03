@@ -1,5 +1,5 @@
 const beautify_html = require("js-beautify").html;
-const sass = require('dart-sass');
+const sass = require('sass');
 const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 require('dotenv').config();

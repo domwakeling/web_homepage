@@ -9,7 +9,7 @@ Technologies used:
 * Nunjucks templates
 * SVG/HTML/JavaScript for the
   [6015](https://wornandwound.com/review/affordable-vintage-seiko-6105/)-inspired watchface
-* `dart-sass` to convert SASS to CSS (SASS compiled using Nunjucks), and `clean-css` to minify CSS
+* `sass` to convert SASS to CSS (SASS compiled using Nunjucks), and `clean-css` to minify CSS
 * `js-beautify` to generate clean, properly-indented HTML
 
 To improve Lighthouse scores and reduce the load times, Twitter images are processed as the
