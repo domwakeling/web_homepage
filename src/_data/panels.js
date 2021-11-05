@@ -4,7 +4,7 @@ module.exports = () => {
     const month = today.getMonth() + 1;
 
     let baseball = false;
-    if (month >= 4 || month <= 10) baseball = true;
+    if (month >= 4 && month <= 10) baseball = true;
 
     let football = false;
     if (month >= 8 || month <= 5) football = true;

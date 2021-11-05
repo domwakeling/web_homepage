@@ -4,18 +4,7 @@ layout: layout.njk
 
 <div class="outer_container"> 
     {% include "components/watch.html" %}
-    <div id="podcast">
-        <iframe
-            style="border-radius: 1.0rem"
-            sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups allow-forms"
-            scrolling=no
-            width="100%"
-            height="185"
-            frameborder="0"
-            src="https://embed.radiopublic.com/e?if=this-day-in-history-class-6VDrpM"
-        >
-        </iframe>
-    </div>
+    {% include "components/podcast.html" %}
     {% include "components/covid.njk" %}
     {% include "components/rtww2.njk" %}
     <div id="silly-quote" class="panel">
@@ -47,26 +36,8 @@ layout: layout.njk
     {% include "components/bitcoin.njk" %}
     {% include "components/joke.njk" %}
     {% include "components/randomcat.njk" %}
-    <div class="panel" id="about">
-        <h2>About</h2>
-        <p>
-            Little project using a static site generator (<a href="https://www.11ty.dev/">11ty</a>)
-            to build a custom 'homepage' dashboard, including as many odd little widgets as I can
-            think of.
-        </p>
-        <p>
-            Code on a <a href="https://github.com/domwakeling/web_homepage">Github repo</a>,
-            page is housed on Netlify and refreshed at 6am each morning via a Netlify Hook.
-        </p>
-    </div>
-    <div class="panel" id="regen">
-        <h2>Regenerate</h2>
-        <p>
-            Use the button below to trigger a fresh "build" of the website on Netlify. This will
-            take up to 60 seconds - and you'll need to refresh the page.
-        </p>
-        <button id="trigger_build">Trigger build</button>
-    </div>
+    {% include "components/about.html" %}
+    {% include "components/regenerate.html" %}
 </div><!-- outer_container -->
 
 <script>

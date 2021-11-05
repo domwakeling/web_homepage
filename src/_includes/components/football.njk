@@ -5,7 +5,7 @@
             <th></th>
             <th>Club</th>
             <th>Pld</th>
-            <th>Form</th>
+            <th>W-D-L</th>
             <th>Pts</th>
             <th>GD</th>
         </tr>
@@ -18,7 +18,7 @@
                 style="height: 4.0rem; width: 4.0rem; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
                 /></td>
             <td>{{ item.playedGames}}</td>
-            <td>{{ item.form | formstring }}</td>
+            <td>{{ item.won }}-{{ item.draw }}-{{ item.lost }}</td>
             <td>{{ item.points}}</td>
             <td>{{ item.goalDifference}}</td>
         </tr>
