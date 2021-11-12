@@ -10,6 +10,10 @@ const data = [
     {
         "showName": "The Book Of Boba Fett",
         "release": "29.12.21"
+    },
+    {
+        "showName": "Cowboy Bebop",
+        "release": "19.11.21"
     }
 ];
 
