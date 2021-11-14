@@ -9,3 +9,5 @@ _not_for_git
 .env
 .cache
 .DS_Store
+_design
+src/img/.DS_Store

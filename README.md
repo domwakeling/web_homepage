@@ -13,7 +13,7 @@ Technologies used:
 * `js-beautify` to generate clean, properly-indented HTML
 
 Netlify deploys are triggered (via [build hooks](https://docs.netlify.com/configure-builds/build-hooks/))
-at 3am (from IFTTF) , midday and 6pm (both by a [Deta](https://www.deta.sh/) Micro cronjob).
+at 6am (from IFTTF), midday and 6pm (both by a [Deta](https://www.deta.sh/) Micro cronjob).
 
 To improve Lighthouse scores and reduce the load times, Twitter images are processed as the
 generator runs to:

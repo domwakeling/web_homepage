@@ -171,3 +171,19 @@ img.beer_img {
         }
     }
 }
+
+/* ADDITIONAL STYLE FOR LINKS */
+div.links_container {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr 100px;
+}
+
+img.link_img {
+    height: 100px;
+    border-radius: 1.0rem;
+}
+
+a.link_img_wrap {
+    text-decoration: none;
+}
