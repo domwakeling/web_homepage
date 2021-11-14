@@ -14,6 +14,10 @@ const data = [
     {
         "showName": "Cowboy Bebop",
         "release": "19.11.21"
+    },
+    {
+        "showName": "Hit Monkey",
+        "release": "19.11.21"
     }
 ];
 
