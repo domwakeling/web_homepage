@@ -75,6 +75,7 @@ const data = [
             <li>That's Kenny Loggins!</li>
             <li>From Kenny Loggins Roaster's?</li>
             `,
+        "heightClass": "height2",
         "media_url": "http://pbs.twimg.com/media/CpxYZaKVIAAFkvX.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CpxYZaKVIAAFkvX.jpg",
     },
@@ -87,6 +88,7 @@ const data = [
             <li>Could you not find a punch bowl?</li>
             <li>It was too heavy</li>
             `,
+        "heightClass" : "height2",
         "media_url": "http://pbs.twimg.com/media/Cph1_3wUsAAoz7d.jpg",
         "media_url_https": "https://pbs.twimg.com/media/Cph1_3wUsAAoz7d.jpg",
     },

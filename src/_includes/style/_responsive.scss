@@ -30,11 +30,12 @@
 #watchouter {
     grid-column-start: 1;
     grid-row-start: 1;
-    grid-row-end: span 2;
+    // grid-row-end: span 2;
 }
 #podcast {
     grid-column-start: 1;
-    grid-row-start: 3;
+    // grid-row-start: 3;
+    grid-row-start: 2;
 }
 
 // archer panel varies in height
@@ -49,15 +50,15 @@
 
 // all the smaller units
 #silly-quote {
-    grid-row-end: span 2;
+    grid-row-end: span 1;
 }
 #covid {
-    grid-row-end: span 3;
+    grid-row-end: span 2;
 }
 #superhero {
     grid-row-end: span 2;
 }
-#about, #regen, #joke, #randomcat, #currency, #bitcoin, #space {
+#about, #regen, #joke, #randomcat, #bitcoin, #space {
     grid-row-end: span 2;
 }
 
@@ -75,7 +76,7 @@
     grid-row-end: span 11;
 }
 #football {
-    grid-row-end: span 6;
+    grid-row-end: span 5;
 }
 #weather {
     grid-row-end: span 3;
@@ -118,4 +119,8 @@
         max-width: 460px;
         display: block;
     }
+}
+
+#tv.span_2 {
+    grid-row-end: span 2;
 }
