@@ -14,14 +14,16 @@ module.exports = async function () {
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return dummydata;
 
     let jokedata = await axios
-        .get('https://official-joke-api.appspot.com/jokes/programming/random')
+        .get('https:// joke.deno.dev/type/programming')
         .catch((err) => {
             console.error(err);
             return {}
         });
+    
+    console.log(jokedata)
 
     if (jokedata.data) {
-        return jokedata.data[0];
+        return jokedata.data[Math.floor(Math.random() * jokedata.data.length];
     } else {
         return dummydata;
     }
