@@ -23,7 +23,7 @@ module.exports = async function () {
     console.log(jokedata)
 
     if (jokedata.data) {
-        return jokedata.data[Math.floor(Math.random() * jokedata.data.length];
+        return jokedata.data[Math.floor(Math.random() * jokedata.data.length)];
     } else {
         return dummydata;
     }
