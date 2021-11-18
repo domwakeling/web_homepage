@@ -17,7 +17,7 @@ const data = [
     },
     {
         "showName": "Hit Monkey",
-        "release": "17.11.21"
+        "release": "26.01.22"
     }
 ];
 
