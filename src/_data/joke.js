@@ -19,8 +19,6 @@ module.exports = async function () {
             console.error(err);
             return {}
         });
-    
-    console.log(jokedata)
 
     if (jokedata.data) {
         return jokedata.data[Math.floor(Math.random() * jokedata.data.length)];
