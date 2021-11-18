@@ -14,7 +14,7 @@ module.exports = async function () {
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return dummydata;
 
     let jokedata = await axios
-        .get('https:// joke.deno.dev/type/programming')
+        .get('https://joke.deno.dev/type/programming')
         .catch((err) => {
             console.error(err);
             return {}
