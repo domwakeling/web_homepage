@@ -137,6 +137,11 @@ module.exports = function (eleventyConfig) {
         return new CleanCSS({}).minify(code).styles;
     });
 
+    // filter to upperstring text
+    eleventyConfig.addNunjucksFilter("upper", function(text) {
+        return text.toUpperCase();
+    })
+
     // copy from src/_includes/favicons to the root
     eleventyConfig.addPassthroughCopy({ "src/_includes/favicons": "." })
 
