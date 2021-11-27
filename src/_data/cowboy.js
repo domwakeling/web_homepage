@@ -67,6 +67,5 @@ module.exports = async function () {
             .then(response => response.data)
     }
 
-    console.log(cowboydata)
     return cowboydata[Math.floor(Math.random() * cowboydata.length)]
 }
