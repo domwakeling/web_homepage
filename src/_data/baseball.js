@@ -550,7 +550,9 @@ const clubs = {
     },
 }
 module.exports = async function () {
-
+    // this return added due to problem with erikberg.com; remove prior to next season?
+    return [];
+    
     let livedata = {};
 
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
