@@ -550,8 +550,9 @@ const clubs = {
     },
 }
 module.exports = async function () {
-    // this return added due to problem with erikberg.com; remove prior to next season?
-    return [];
+    
+    // TODO - look next year at the postseason information
+    // https://erikberg.com/mlb/postseason.json
     
     let livedata = {};
 

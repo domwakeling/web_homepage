@@ -1,21 +1,26 @@
 <div class="panel span_{{ 2 if tv.length > 3 else 1 }}" id="tv">
     <h2>TV Shows</h2>
-    <table style="margin: 0 auto 1.0rem; width: 90%;" id="tv_table">
-        <tr>
-            <th style="padding-left: 1.0rem; width: 70%;">Show</th>
-            <th style="text-align: right; padding-right: 1.0rem; width: 30%;">When</th>
-        </tr>
-        {%- for item in tv -%}
-        <tr>
-            <td style="padding-left: 1.0rem;">{{ item.showName }}</td>
-            <td style="text-align: right; padding-right: 1.0rem; width: 30%;">
-                {% if item.days > 0 %}
-                    {{ item.days }} day{% if item.days > 1 %}s{% endif %}
-                {% else %}
-                    today
-                {% endif %}
-            </td>
-        </tr>
-        {%- endfor -%}
-    </table>
+    {% if tv.length > 0 %}
+        <table style="margin: 0 auto 1.0rem; width: 90%;" id="tv_table">
+            <tr>
+                <th style="padding-left: 1.0rem; width: 70%;">Show</th>
+                <th style="text-align: right; padding-right: 1.0rem; width: 30%;">When</th>
+            </tr>
+            {%- for item in tv -%}
+            <tr>
+                <td style="padding-left: 1.0rem;">{{ item.showName }}</td>
+                <td style="text-align: right; padding-right: 1.0rem; width: 30%;">
+                    {% if item.days > 0 %}
+                        {{ item.days }} day{% if item.days > 1 %}s{% endif %}
+                    {% else %}
+                        today
+                    {% endif %}
+                </td>
+            </tr>
+            {%- endfor -%}
+        </table>
+    {% else %}
+        <p>No shows in the list &mdash; check <a href="https://www.geektown.co.uk/uk-air-dates/"
+            target="_offsite">GeekTown</a> for some more!</p>
+    {% endif %}
 </div>
