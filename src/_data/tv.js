@@ -1,11 +1,7 @@
 const data = [
     {
-        "showName": "Around The World in 80 Days",
-        "release": "22.12.21"
-    },
-    {
-        "showName": "The Book Of Boba Fett",
-        "release": "29.12.21"
+        "showName": "Death in Paradise (S11)",
+        "release": "07.01.22"
     },
     {
         "showName": "Hit Monkey",
