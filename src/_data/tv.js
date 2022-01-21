@@ -10,6 +10,10 @@ const data = [
     {
         "showName": "Reacher",
         "release": "04.02.22"
+    },
+    {
+        "showName": "Moon Knight",
+        "release": "30.03.22"
     }
 ];
 
