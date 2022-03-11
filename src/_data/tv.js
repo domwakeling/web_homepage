@@ -1,19 +1,11 @@
 const data = [
     {
-        "showName": "Death in Paradise (S11)",
-        "release": "07.01.22"
-    },
-    {
-        "showName": "Hit Monkey",
-        "release": "26.01.22"
-    },
-    {
-        "showName": "Reacher",
-        "release": "04.02.22"
-    },
-    {
         "showName": "Moon Knight",
         "release": "30.03.22"
+    },
+    {
+        "showName": "Obi-Wan Kenobi",
+        "release": "25.05.22"
     }
 ];
 
