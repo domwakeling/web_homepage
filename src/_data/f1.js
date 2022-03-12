@@ -161,8 +161,7 @@ module.exports = async function () {
     // allow you to get link with "upload"; generating out PNG's to retain transparency
     const imgUrls = {
         'mercedes': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mercedes-Benz_in_Formula_One_logo.svg/358px-Mercedes-Benz_in_Formula_One_logo.svg.png',
-        //'red_bull': 'https://upload.wikimedia.org/wikipedia/en/b/b2/Red_Bull_Racing_2021_logo.png',
-        'red_bull': 'https://en.wikipedia.org/wiki/File:OracleRBR.jpg',
+        'red_bull': 'https://upload.wikimedia.org/wikipedia/en/b/b2/Red_Bull_Racing_2021_logo.png',
         'mclaren': 'https://upload.wikimedia.org/wikipedia/en/thumb/6/66/McLaren_Racing_logo.svg/320px-McLaren_Racing_logo.svg.png',
         'racing_point': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/BWT_Racing_Point_Logo.svg/320px-BWT_Racing_Point_Logo.svg.png',
         // 'aston_martin': 'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Aston_Martin_F1.svg/562px-Aston_Martin_F1.svg.png',
