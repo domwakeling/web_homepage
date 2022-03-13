@@ -26,11 +26,9 @@ layout: layout.njk
     {% if panels.baseball %}
         {% include "components/baseball.njk" %}
     {% endif %}
-    {#
-        {% if panels.f1 %}
-            {% include "components/f1.njk" %}
-        {% endif %}
-    #}
+    {% if panels.f1 %}
+        {% include "components/f1.njk" %}
+    {% endif %}
     {% include "components/fccnews.njk" %}
     {% include "components/currency.njk" %}
     {% include "components/cycling.njk" %}
