@@ -12,11 +12,7 @@
         {%- for item in football -%}
         <tr>
             <td>{{ item.position }}</td>
-            <td><img
-                alt="{{ item.team.name}}"
-                src="{{ item.team.crestUrl }}"
-                style="height: 4.0rem; width: 4.0rem; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
-                /></td>
+            <td>{% footballImage item.team.crestUrl, item.team.name %}</td>
             <td>{{ item.playedGames}}</td>
             <td>{{ item.won }}-{{ item.draw }}-{{ item.lost }}</td>
             <td>{{ item.points}}</td>

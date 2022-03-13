@@ -8,7 +8,7 @@ Eleventy setup built from basics and deployed on Netlify.
 Technologies used:
 * Nunjucks templates
 * SVG/HTML/JavaScript for the
-  [6015](https://wornandwound.com/review/affordable-vintage-seiko-6105/)-inspired watchface
+  [6105](https://wornandwound.com/review/affordable-vintage-seiko-6105/)-inspired watchface
 * `sass` to convert SASS to CSS (SASS compiled using Nunjucks), and `clean-css` to minify CSS
 * `js-beautify` to generate clean, properly-indented HTML
 
@@ -23,5 +23,5 @@ generator runs to:
 Google Lighthouse is high, but still being held back a little by:
 * Twitter images not necessarily "right" size (the element width is not set, generating circa `@2x`
   but this isn't guaranteed)
-* Premier League club logos, which are high-quality SVGs (considering changing these)
+* Premier League club logos, which are high-quality SVGs (currently implementing a change to fix this)
 * Unreliable responses for images for both the Superhero and Beer panels

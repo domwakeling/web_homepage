@@ -4,6 +4,8 @@ const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 require('dotenv').config();
 
+let count = 0;
+
 async function generateTwitterImage(src, alt) {
     if (!src || src == '') return '';
     // stop errors in development (comment out to test locally)
@@ -44,6 +46,35 @@ async function generateF1Image(src, alt) {
     console.log(src);
     let data = metadata.png.pop();
     return `<img src="${data.url}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
+}
+
+async function generateFootballImage(src, alt) {
+    // stop errors in development (comment out to test locally)
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return `<img
+            src="${src}"
+            alt="${alt}"
+            style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
+            loading="lazy"
+            decoding="async">`;
+    }
+    // production
+    if (alt === undefined) {
+        alt = ''
+    }
+    let metadata = await Image(src, {
+        widths: [80],
+        formats: ["png"],
+        outputDir: "./_site/img/"
+    });
+    console.log(++count, src);
+    let data = metadata.png.pop();
+    return `<img
+        src="${data.url}"
+        alt="${alt}"
+        style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
+        loading="lazy"
+        decoding="async">`;
 }
 
 module.exports = function (eleventyConfig) {
@@ -120,6 +151,10 @@ module.exports = function (eleventyConfig) {
     // take F1 images, pass them to function which generates a 300-wide version,
     // get back html 
     eleventyConfig.addNunjucksAsyncShortcode("f1Image", generateF1Image);
+
+    // take football images, pass them to function which generates a 44-wide version,
+    // get back html 
+    eleventyConfig.addNunjucksAsyncShortcode("footballImage", generateFootballImage);
 
     // filter to return an openweathermap icon link from icon code
     eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {
