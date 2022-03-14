@@ -4,8 +4,16 @@ const data = [
         "release": "30.03.22"
     },
     {
+        "showName": "Russian Doll (S2)",
+        "release": "20.04.22"
+    },
+    {
         "showName": "Obi-Wan Kenobi",
         "release": "25.05.22"
+    },
+    {
+        "showName": "Umbrella Academy (S3)",
+        "release": "22.06.22"
     }
 ];
 
