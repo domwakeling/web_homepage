@@ -40,7 +40,7 @@ const dummydata = {
             "ordinal_rank": "3rd",
             "first_name": "Cleveland",
             "last_name": "Indians",
-            "team_id": "cleveland-indians",
+            "team_id": "cleveland-guardians",
             "games_back": 3,
             "last_five": "1-4",
             "conference": "AL",
@@ -436,7 +436,7 @@ const clubs = {
         url: '/img/baseball/cws.png',
         short: "CWS"
     },
-    "cleveland-indians": {
+    "cleveland-guardians": {
         url: '/img/baseball/cle.png',
         short: "CLE"
     },
