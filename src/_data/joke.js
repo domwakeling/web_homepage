@@ -14,7 +14,7 @@ module.exports = async function () {
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return dummydata;
 
     let jokedata = await axios
-        .get('https://v2.jokeapi.dev/joke/Programming')
+        .get('https://v2.jokeapi.dev/joke/Programming?type=twopart')
         .catch((err) => {
             console.error(err);
             return {}

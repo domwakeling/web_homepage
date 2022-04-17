@@ -25,3 +25,6 @@ Google Lighthouse is high, but still being held back a little by:
   but this isn't guaranteed)
 * Premier League club logos, which are high-quality SVGs (currently implementing a change to fix this)
 * Unreliable responses for images for both the Superhero and Beer panels
+
+Other **TO-DO**:
+* *if* JokeAPI proves reliable, allow option for single jokes to be used (not just two-parters)
