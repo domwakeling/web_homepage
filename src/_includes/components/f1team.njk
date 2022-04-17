@@ -1,7 +1,7 @@
-<div class="panel" id="f1">
-    <h2>F1 Standings</h2>
-    <table style="margin: 0 auto 1.0rem;" id="f1_table">
-        {%- for item in f1 -%}
+<div class="panel" id="f1team">
+    <h2>F1 Teams</h2>
+    <table style="margin: 0 auto 1.0rem;" id="f1_team_table">
+        {%- for item in f1team -%}
         <tr>
             <td style="height: 70px;">
                 {% f1Image item.imageUrl, item.name %}
