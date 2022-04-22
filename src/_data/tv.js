@@ -1,19 +1,31 @@
 const data = [
     {
-        "showName": "Moon Knight",
-        "release": "30.03.22"
+        "showName": "Bosch: Legacy",
+        "release": "06.05.22"
     },
     {
-        "showName": "Russian Doll (S2)",
-        "release": "20.04.22"
+        "showName": "The Blacklist (S9)",
+        "release": "11.05.22"
     },
     {
         "showName": "Obi-Wan Kenobi",
         "release": "25.05.22"
     },
     {
+        "showName": "Ms Marvel",
+        "release": "08.06.22"
+    },
+    {
+        "showName": "For All Mankind (S3)",
+        "release": "10.06.22"
+    },
+    {
         "showName": "Umbrella Academy (S3)",
         "release": "22.06.22"
+    },
+    {
+        "showName": "Resident Evil",
+        "release": "14.06.22"
     }
 ];
 
