@@ -3,7 +3,9 @@
 <div class="panel" id="superhero">
     <h2>{{ hero.name}}</h2>
     <img alt="hero image" src="{{ hero.image.url}}" class="tweet_img"/>
+    {% if hero.biography["full-name"] %}
     <p>({{ hero.biography["full-name"] }})</p>
+    {% endif %}
     <p>{{ hero.biography.publisher }}</p>
     {# <p>{{ hero |stringify }}</p> #}
     <div style="clear: both;"></div>
