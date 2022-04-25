@@ -1,34 +1,36 @@
-<div class="panel" id="baseball">
-    <h2>MLB</h2>
-    <table style="margin: 0 auto 1.0rem;" id="baseball_table">
-        <tr>
-            <th></th>
-            <th>Club</th>
-            <th>Games</th>
-            <th>PCT</th>
-            <th>GB</th>
-        </tr>
-        {%- for item in baseball -%}
-        <tr>
-            <td>{{ item.rank }}</td>
-            <td>
-                <img
-                    alt="{{ item.team_id}}"
-                    src="{{ item.imgUrl }}"
-                    style="height: 3.0rem; position: relative; top: 0.2rem"
-                />
-            </td>
-            {# <td>{{ item.short }}</td> #}
-            <td style="text-align: center">{{ item.won }}-{{ item.lost }}</td>
-            <td>{{ item.pct }}</td>
-            <td style="text-align: right">
-                {% if item.gb > 0%}
-                    +{{ item.gb }}
-                {% else %}
-                    {{ item.gb }}
-                {% endif %}
-            </td>
-        </tr>
-        {%- endfor -%}
-    </table>
+<div class="grid-item">
+    <div class="panel" id="baseball">
+        <h2>MLB</h2>
+        <table style="margin: 0 auto 1.0rem;" id="baseball_table">
+            <tr>
+                <th></th>
+                <th>Club</th>
+                <th>Games</th>
+                <th>PCT</th>
+                <th>GB</th>
+            </tr>
+            {%- for item in baseball -%}
+            <tr>
+                <td>{{ item.rank }}</td>
+                <td>
+                    <img
+                        alt="{{ item.team_id}}"
+                        src="{{ item.imgUrl }}"
+                        style="height: 3.0rem; position: relative; top: 0.2rem"
+                    />
+                </td>
+                {# <td>{{ item.short }}</td> #}
+                <td style="text-align: center">{{ item.won }}-{{ item.lost }}</td>
+                <td>{{ item.pct }}</td>
+                <td style="text-align: right">
+                    {% if item.gb > 0%}
+                        +{{ item.gb }}
+                    {% else %}
+                        {{ item.gb }}
+                    {% endif %}
+                </td>
+            </tr>
+            {%- endfor -%}
+        </table>
+    </div>
 </div>

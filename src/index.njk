@@ -3,43 +3,42 @@ layout: layout.njk
 ---
 
 <div class="outer_container"> 
-    {% include "components/watch.html" %}
-    {% include "components/podcast.html" %}
-    {% include "components/covid.njk" %}
-    {% include "components/rtww2.njk" %}
-    {% include "components/cowboy.njk" %}
-    {% include "components/archer.njk" %}
-    {% include "components/links.njk" %}
-    {% include "components/superhero.njk" %}
-    {% include "components/beer.njk" %}
-    {% include "components/tv.njk" %}
-    {% include "components/advice.njk" %}
-    {% include "components/football.njk" %}
-    {% include "components/weather.njk" %}
-    {% include "components/space.njk" %}
-    <div id="silly-quote" class="panel">
-        <h2>Quote Of the Night</h2>
-        {# <p style="font-family: 'Bebas Neue'; font-size: 4.0rem">I had a great day &mdash; because you weren't here!</p> #}
-        <p style="font-family: 'Bebas Neue'; font-size: 4.0rem">I'm not shouting &mdash; you just have sensitive hearing</p>
-    </div>
-    {% if panels.baseball %}
+    <div class="grid js-masonry" data-masonry-options='{ "itemSelector": ".grid-item"}'>
+        {% include "components/watch.html" %}
+        {% include "components/podcast.html" %}
+        {% include "components/covid.njk" %}
+        {% include "components/rtww2.njk" %}
+        {% include "components/cowboy.njk" %}
+        {% include "components/archer.njk" %}
+        {% include "components/links.njk" %}
+        {% include "components/superhero.njk" %}
+        {% include "components/beer.njk" %}
+        {% include "components/tv.njk" %}
+        {% include "components/advice.njk" %}
+        {% include "components/football.njk" %}
+        {% include "components/weather.njk" %}
+        {% include "components/space.njk" %}
+        {% include "components/silly.njk" %}
+        {% if panels.baseball %}
         {% include "components/baseball.njk" %}
-    {% endif %}
-    {% if panels.f1 %}
+        {% endif %}
+        {% if panels.f1 %}
         {% include "components/f1team.njk" %}
-    {% endif %}
-    {% include "components/fccnews.njk" %}
-    {% include "components/currency.njk" %}
-    {% include "components/cycling.njk" %}
-    {% include "components/today.njk" %}
-    {% include "components/bitcoin.njk" %}
-    {% include "components/joke.njk" %}
-    {% include "components/randomcat.njk" %}
-    {% include "components/about.html" %}
-    {% include "components/regenerate.html" %}
+        {% endif %}
+        {% include "components/fccnews.njk" %}
+        {% include "components/currency.njk" %}
+        {% include "components/cycling.njk" %}
+        {% include "components/today.njk" %}
+        {% include "components/bitcoin.njk" %}
+        {% include "components/joke.njk" %}
+        {% include "components/randomcat.njk" %}
+        {% include "components/about.html" %}
+        {% include "components/regenerate.html" %}
+    </div>
 </div><!-- outer_container -->
 
 <script>
     {% include "js/watch.js" %}
     {% include "js/button.js" %}
 </script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

@@ -13,114 +13,39 @@
 /* RESPONSIVE LAYOUT  */
 
 .outer_container {
-    padding: 0 20px;
+    padding: 0;
     max-width: 1960px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
-    column-gap: 2%;
-    row-gap: 2.0rem;
 }
 .complete-row {
-    grid-column-start: span 4;
     width: 100%
 }
-
-// watch and podcast always top left
-#watchouter {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    // grid-row-end: span 2;
-}
-#podcast {
-    grid-column-start: 1;
-    // grid-row-start: 3;
-    grid-row-start: 2;
-}
-
-// archer panel varies in height
-#archer{
-    &.height2 {
-        grid-row-end: span 2;
-    }
-    &.height3 {
-        grid-row-end: span 3;
-    }
-}
-
-// all the smaller units
-#silly-quote {
-    grid-row-end: span 1;
-}
-#covid {
-    grid-row-end: span 2;
-}
-#superhero {
-    grid-row-end: span 2;
-}
-#about, #regen, #joke, #randomcat, #bitcoin, #space {
-    grid-row-end: span 2;
-}
-
-// middling
-#beer {
-    grid-row-start: span 3;
-}
-#today {
-    grid-row-start: span 3;
-}
-
-// big'uns
-
-#rtww2 {
-    grid-row-end: span 11;
-}
-#football {
-    grid-row-end: span 5;
-}
-#weather {
-    grid-row-end: span 3;
-}
-#fccnews {
-    grid-row-end: span 6;
-}
-#cycling {
-    grid-row-end: span 7;
-}
-#f1team {
-    grid-row-end: span 7;
-}
-#baseball {
-    grid-row-end: span 8;
+.grid-item {
+    width: 23%;
+    padding: 1%;
 }
 
 @include for-three-column-only {
     .outer_container {
         max-width: 1460px;
-        grid-template-columns: 31% 31% 31%;
-        column-gap: 3%;
     }
-    .complete-row {
-        grid-column-start: span 3;
+    .grid-item {
+        width: 31%;
     }
 }
 @include for-two-column-only {
     .outer_container {
         max-width: 960px;
-        grid-template-columns: 48% 48%;
-        column-gap: 4%;
     }
-    .complete-row {
-        grid-column-start: span 2;
+    .grid-item {
+        width: 48%;
     }
 }
 @include for-one-column-only {
     .outer_container {
-        max-width: 460px;
-        display: block;
+        max-width: 460px;        
     }
-}
-
-#tv.span_2 {
-    grid-row-end: span 2;
+    .grid-item {
+        width: 98%;
+    }
 }
