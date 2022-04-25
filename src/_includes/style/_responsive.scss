@@ -18,7 +18,7 @@
     margin: 0 auto;
 }
 .complete-row {
-    width: 100%
+    padding: 20px;
 }
 .grid-item {
     width: 23%;
@@ -46,6 +46,7 @@
         max-width: 460px;        
     }
     .grid-item {
-        width: 98%;
+        width: 92%;
+        padding: 1% 4%;
     }
 }
