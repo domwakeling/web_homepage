@@ -1,23 +1,21 @@
 {% set weather = openweathermap %}
-<div class="grid-item">
-    <div class="panel" id="weather">
-        <h2>Weather</h2>  
-        <table style="margin: 0 auto 1.0rem;" id="football_table">
-            <tr>
-                <th></th>
-                <th>High</th>
-                <th>Low</th>
-                <th colspan=2 style="text-align: center">Forecast</th>
-            </tr>
-            {%- for item in weather.daily -%}
-            <tr>
-                <td>{{ item.dt | weekdayfromutc }}</td>
-                <td>{{ item.temp.max | rounddecimal }}&deg;</td>
-                <td>{{ item.temp.min | rounddecimal }}&deg;</td>
-                <td>{{ item.weather[0].main }}</td>
-                <td><img src="{{ item.weather[0].icon | owmicon }}" alt="{{item.weather[0].description}}"/></td>
-            </tr>
-            {%- endfor -%}
-        </table>
-    </div>
+<div class="panel grid-item" id="weather">
+    <h2>Weather</h2>  
+    <table style="margin: 0 auto 1.0rem;" id="football_table">
+        <tr>
+            <th></th>
+            <th>High</th>
+            <th>Low</th>
+            <th colspan=2 style="text-align: center">Forecast</th>
+        </tr>
+        {%- for item in weather.daily -%}
+        <tr>
+            <td>{{ item.dt | weekdayfromutc }}</td>
+            <td>{{ item.temp.max | rounddecimal }}&deg;</td>
+            <td>{{ item.temp.min | rounddecimal }}&deg;</td>
+            <td>{{ item.weather[0].main }}</td>
+            <td><img src="{{ item.weather[0].icon | owmicon }}" alt="{{item.weather[0].description}}"/></td>
+        </tr>
+        {%- endfor -%}
+    </table>
 </div>

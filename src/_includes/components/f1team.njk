@@ -1,18 +1,16 @@
-<div class="grid-item">
-    <div class="panel" id="f1team">
-        <h2>F1 Teams</h2>
-        <table style="margin: 0 auto 1.0rem;" id="f1_team_table">
-            {%- for item in f1team -%}
-            <tr>
-                <td style="height: 70px;">
-                    {% f1Image item.imageUrl, item.name %}
-                </td>
-                <td style="padding-right: 1.0rem; text-align: right;">{{ item.points}}</td>
-            </tr>
-            {%- endfor -%}
-        </table>
-        <p style="text-align: center">
-            <i>data from <a href="https://ergast.com/mrd/" target="_offiste">Ergast.com</a></i>
-        </p>
-    </div>
+<div class="panel grid-item" id="f1team">
+    <h2>F1 Teams</h2>
+    <table style="margin: 0 auto 1.0rem;" id="f1_team_table">
+        {%- for item in f1team -%}
+        <tr>
+            <td style="height: 70px;">
+                {% f1Image item.imageUrl, item.name %}
+            </td>
+            <td style="padding-right: 1.0rem; text-align: right;">{{ item.points}}</td>
+        </tr>
+        {%- endfor -%}
+    </table>
+    <p style="text-align: center">
+        <i>data from <a href="https://ergast.com/mrd/" target="_offiste">Ergast.com</a></i>
+    </p>
 </div>

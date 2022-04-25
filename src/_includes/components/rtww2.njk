@@ -1,19 +1,17 @@
 {% set twitter = rtww2 %}
-<div class="grid-item">
-    <div class="panel" id="rtww2">
-        <img alt="user avatar" class="tweet_user" src="{{ twitter.imgurl }}" />
-        <h2>{{ twitter.screen_name }}</h2>
-        {%- for item in twitter.tweets -%}
-            <hr class="tweet_hr" />
-            <h3 class="tweet_date">{{ item | datefromtweet }}</h3>
-            {%- if item.entities.media[0].media_url_https -%}
-                {% twitterImage item.entities.media[0].media_url_https, "tweet image" %}
-            {%- elseif item.entities.media[0].media_url -%}
-                {% twitterImage item.entities.media[0].media_url, "tweet image" %}
-            {%- endif -%}
-            <p>{{ item | tweetbodytext | safe}}</p>
-            <div style="clear: both"></div>
-            {# <p>{{ item | stringify }} #}
-        {%- endfor -%}
-    </div>
+<div class="panel grid-item" id="rtww2">
+    <img alt="user avatar" class="tweet_user" src="{{ twitter.imgurl }}" />
+    <h2>{{ twitter.screen_name }}</h2>
+    {%- for item in twitter.tweets -%}
+        <hr class="tweet_hr" />
+        <h3 class="tweet_date">{{ item | datefromtweet }}</h3>
+        {%- if item.entities.media[0].media_url_https -%}
+            {% twitterImage item.entities.media[0].media_url_https, "tweet image" %}
+        {%- elseif item.entities.media[0].media_url -%}
+            {% twitterImage item.entities.media[0].media_url, "tweet image" %}
+        {%- endif -%}
+        <p>{{ item | tweetbodytext | safe}}</p>
+        <div style="clear: both"></div>
+        {# <p>{{ item | stringify }} #}
+    {%- endfor -%}
 </div>

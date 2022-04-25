@@ -21,8 +21,9 @@
     padding: 20px;
 }
 .grid-item {
+    box-sizing: border-box;
     width: 23%;
-    padding: 1%;
+    margin: 1%;
 }
 
 @include for-three-column-only {
@@ -47,6 +48,6 @@
     }
     .grid-item {
         width: 92%;
-        padding: 1% 4%;
+        margin: 1% 4%;
     }
 }

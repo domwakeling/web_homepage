@@ -1,16 +1,14 @@
-<div class="grid-item">
-    <div class="panel" id="beer">
-        <h2>{{ beer.name}}</h2>
-        <img alt="beer image" src="{{ beer.image_url}}" class="beer_img"/> 
-        <h3 class="tweet_date">{{ beer.tagline }}</h3>
-        <br />
-        <p>{{ beer.description }}</p>
-        <p>Goes well with:</p>
-        <ul>
-            {%- for food in beer.food_pairing-%}
-            <li>{{ food }}</li>
-            {%- endfor -%}
-        </ul>
-        <div style="clear: both;"></div>
-    </div>
+<div class="panel grid-item" id="beer">
+    <h2>{{ beer.name}}</h2>
+    <img alt="beer image" src="{{ beer.image_url}}" class="beer_img"/> 
+    <h3 class="tweet_date">{{ beer.tagline }}</h3>
+    <br />
+    <p>{{ beer.description }}</p>
+    <p>Goes well with:</p>
+    <ul>
+        {%- for food in beer.food_pairing-%}
+        <li>{{ food }}</li>
+        {%- endfor -%}
+    </ul>
+    <div style="clear: both;"></div>
 </div>

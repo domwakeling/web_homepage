@@ -1,14 +1,12 @@
-<div class="grid-item">
-    <div class="panel" id="space">
-        <h2>People In Space</h2>
-        {%- for item in peopleinspace -%}
-            <p style="margin-bottom: 0px;"><b>{{ item.craft }} ({{ item.peopleCount }})</b></p>
-            <p>{{ item.people }}</p>
-        {%- endfor -%}
-        <p style="text-align: center">
-            <i>
-                data from <a href="http://open-notify.org/" target="_offiste">open-notify.org</a>
-            </i>
-        </p>
-    </div>
+<div class="panel grid-item" id="space">
+    <h2>People In Space</h2>
+    {%- for item in peopleinspace -%}
+        <p style="margin-bottom: 0px;"><b>{{ item.craft }} ({{ item.peopleCount }})</b></p>
+        <p>{{ item.people }}</p>
+    {%- endfor -%}
+    <p style="text-align: center">
+        <i>
+            data from <a href="http://open-notify.org/" target="_offiste">open-notify.org</a>
+        </i>
+    </p>
 </div>

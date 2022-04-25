@@ -1,25 +1,23 @@
-<div class="grid-item">
-    <div class="panel" id="football">
-        <h2>Premier League</h2>
-        <table style="margin: 0 auto 1.0rem;" id="football_table">
-            <tr>
-                <th></th>
-                <th>Club</th>
-                <th>Pld</th>
-                <th>W-D-L</th>
-                <th>Pts</th>
-                <th>GD</th>
-            </tr>
-            {%- for item in football -%}
-            <tr>
-                <td>{{ item.position }}</td>
-                <td>{% footballImage item.team.crestUrl, item.team.name %}</td>
-                <td>{{ item.playedGames}}</td>
-                <td>{{ item.won }}-{{ item.draw }}-{{ item.lost }}</td>
-                <td>{{ item.points}}</td>
-                <td>{{ item.goalDifference}}</td>
-            </tr>
-            {%- endfor -%}
-        </table>
-    </div>
+<div class="panel grid-item" id="football">
+    <h2>Premier League</h2>
+    <table style="margin: 0 auto 1.0rem;" id="football_table">
+        <tr>
+            <th></th>
+            <th>Club</th>
+            <th>Pld</th>
+            <th>W-D-L</th>
+            <th>Pts</th>
+            <th>GD</th>
+        </tr>
+        {%- for item in football -%}
+        <tr>
+            <td>{{ item.position }}</td>
+            <td>{% footballImage item.team.crestUrl, item.team.name %}</td>
+            <td>{{ item.playedGames}}</td>
+            <td>{{ item.won }}-{{ item.draw }}-{{ item.lost }}</td>
+            <td>{{ item.points}}</td>
+            <td>{{ item.goalDifference}}</td>
+        </tr>
+        {%- endfor -%}
+    </table>
 </div>

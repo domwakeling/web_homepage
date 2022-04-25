@@ -1,27 +1,25 @@
 {% set ratedata = currency %}
-<div class="grid-item">
-    <div class="panel" id="currency">
-        <h2>Exchange Rates</h2>
-        <table style="margin: 0 auto 1.0rem;">
-            <tr>
-                {%- for item in ratedata -%}
-                <th>
-                    <img
-                        src="{{ item.flag.src }}"
-                        srcset="{{ item.flag.srcset }}"
-                        alt="{{ item.alt }}"
-                        width="64"
-                        height="48"
-                    />
-                </th>
-                {%- endfor -%}
-            </tr>
-            <tr>
-                {%- for item in ratedata -%}
-                <td style="text-align:center">{{ item.symbol | safe}}{{ item.rate}}</td>
-                {%- endfor -%}
-            </tr>
-        </table>
-        <p style="text-align:center"><i>based on data from the European Central Bank</i></p>
-    </div>
+<div class="panel grid-item" id="currency">
+    <h2>Exchange Rates</h2>
+    <table style="margin: 0 auto 1.0rem;">
+        <tr>
+            {%- for item in ratedata -%}
+            <th>
+                <img
+                    src="{{ item.flag.src }}"
+                    srcset="{{ item.flag.srcset }}"
+                    alt="{{ item.alt }}"
+                    width="64"
+                    height="48"
+                />
+            </th>
+            {%- endfor -%}
+        </tr>
+        <tr>
+            {%- for item in ratedata -%}
+            <td style="text-align:center">{{ item.symbol | safe}}{{ item.rate}}</td>
+            {%- endfor -%}
+        </tr>
+    </table>
+    <p style="text-align:center"><i>based on data from the European Central Bank</i></p>
 </div>

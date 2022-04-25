@@ -1,13 +1,11 @@
-<div class="grid-item">
-    <div class="panel" id="fccnews">
-        <h2>freeCodeCamp</h2>
-        {%- for item in fccnews -%}
-            <hr class="tweet_hr" />
-            <a href="{{ item.link }}" target="_offiste">
-                {% twitterImage item.imageUrl, "freeCodeCamp image" %}
-            </a>
-            <p>{{ item.title }}</p>
-            <div style="clear: both"></div>
-        {%- endfor -%}
-    </div>
+<div class="panel grid-item" id="fccnews">
+    <h2>freeCodeCamp</h2>
+    {%- for item in fccnews -%}
+        <hr class="tweet_hr" />
+        <a href="{{ item.link }}" target="_offiste">
+            {% twitterImage item.imageUrl, "freeCodeCamp image" %}
+        </a>
+        <p>{{ item.title }}</p>
+        <div style="clear: both"></div>
+    {%- endfor -%}
 </div>

@@ -1,14 +1,12 @@
 {% set item = archer %}
-<div class="grid-item">
-    <div class="panel" id="archer">
-        <h2>Archer</h2>
-        {%- if item.full_text -%}
-            <ul>{{ item.full_text | safe }}</ul>
-        {%- endif -%}
-        {%- if item.media_url_https -%}
-            <img alt="tweet image" src="{{ item.media_url_https }}" style="width: 100%; border-radius: 1.0rem;" />
-        {%- elseif item.media_url -%}
-            <img alt="tweet image" src="{{ item.media_url }}" style="width: 100%; border-radius: 1.0rem;" />
-        {%- endif -%}
-    </div>
+<div class="panel grid-item" id="archer">
+    <h2>Archer</h2>
+    {%- if item.full_text -%}
+        <ul>{{ item.full_text | safe }}</ul>
+    {%- endif -%}
+    {%- if item.media_url_https -%}
+        <img alt="tweet image" src="{{ item.media_url_https }}" style="width: 100%; border-radius: 1.0rem;" />
+    {%- elseif item.media_url -%}
+        <img alt="tweet image" src="{{ item.media_url }}" style="width: 100%; border-radius: 1.0rem;" />
+    {%- endif -%}
 </div>

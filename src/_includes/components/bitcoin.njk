@@ -1,15 +1,13 @@
-<div class="grid-item">
-    <div class="panel" id="bitcoin">
-        <img
-            src="https://img.icons8.com/44/bitcoin-filled.png" alt="bitcoin"
-            style="float: left; position: relative; top: 5px; margin-right: 0.25rem"
-        />
-        <h2>exchange rate</h2>
-        {%- for item in bitcoin.bpi -%}
-            <p style="text-align: center; font-weight: 700; font-size: 3.0rem">
-                {{ item.symbol | safe }}{{item.rate}}
-            </p>
-        {%- endfor -%}
-        <p style="text-align:center"><i>powered by <a href="https://www.coindesk.com/price/bitcoin">CoinDesk</a></i></p>
-    </div>
+<div class="panel grid-item" id="bitcoin">
+    <img
+        src="https://img.icons8.com/44/bitcoin-filled.png" alt="bitcoin"
+        style="float: left; position: relative; top: 5px; margin-right: 0.25rem"
+    />
+    <h2>exchange rate</h2>
+    {%- for item in bitcoin.bpi -%}
+        <p style="text-align: center; font-weight: 700; font-size: 3.0rem">
+            {{ item.symbol | safe }}{{item.rate}}
+        </p>
+    {%- endfor -%}
+    <p style="text-align:center"><i>powered by <a href="https://www.coindesk.com/price/bitcoin">CoinDesk</a></i></p>
 </div>
