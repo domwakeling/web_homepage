@@ -9,9 +9,9 @@ let count = 0;
 async function generateTwitterImage(src, alt) {
     if (!src || src == '') return '';
     // stop errors in development (comment out to test locally)
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
-    }
+    // if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+    //     return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+    // }
     // production
     if (alt === undefined) {
         alt = ''
@@ -22,7 +22,15 @@ async function generateTwitterImage(src, alt) {
         outputDir: "./_site/img/"
     });
     let data = metadata.jpeg.pop();
-    return `<img src="${data.url}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+    return `<img
+                src="${data.url}"
+                alt="${alt}"
+                class="tweet_img"
+                loading="lazy"
+                decoding="async"
+                width="${data.width}"
+                height="${data.height}"
+            >`;
 }
 
 async function generateF1Image(src, alt) {
@@ -54,6 +62,8 @@ async function generateFootballImage(src, alt) {
         return `<img
             src="${src}"
             alt="${alt}"
+            height="80"
+            width="80"
             style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
             loading="lazy"
             decoding="async">`;
