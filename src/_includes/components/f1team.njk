@@ -3,7 +3,7 @@
     <table style="margin: 0 auto 1.0rem;" id="f1_team_table">
         {%- for item in f1team -%}
         <tr>
-            <td style="height: 70px;">
+            <td style="min-height: 70px;">
                 {% f1Image item.imageUrl, item.name %}
             </td>
             <td style="padding-right: 1.0rem; text-align: right;">{{ item.points}}</td>
