@@ -47,6 +47,68 @@ async function generateTwitterImage(src, alt) {
     }
 }
 
+async function generateBeerImage(src) {
+    if (!src || src == '') return '';
+    // stop errors in development (comment out to test locally)
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return `<img src="${src}" alt="beer image" class="tweet_img" loading="lazy" decoding="async">`;
+    }
+    // production
+    let metadata = {};
+    try {
+        metadata = await Image(src, {
+            widths: [300],
+            formats: ["png"],
+            outputDir: "./_site/img/"
+        });
+        let data = metadata.png.pop();
+        return `<img
+                    src="${data.url}"
+                    alt="beer image"
+                    class="beer_img"
+                    loading="lazy"
+                    decoding="async"
+                    width="${data.width}"
+                    height="${data.height}"
+                >`;
+    } catch (e) {
+        console.error(e.message);
+        return `<img
+                    src="/img/qm.jpg"
+                    alt="?"
+                    class="beer_img"
+                    loading="lazy"
+                    decoding="async"
+                    width="300"
+                    height="500"
+                >`;
+    }
+}
+
+async function generateArcherImage(src) {
+    if (!src || src == '') return '';
+    // stop errors in development (comment out to test locally)
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return `<img alt="archer image" src="${src}" style="width: 100%; height: auto;  border-radius: 1.0rem;" />`;
+    }
+    // production
+    metadata = await Image(src, {
+        widths: [300],
+        formats: ["jpeg"],
+        outputDir: "./_site/img/"
+    });
+    let data = metadata.jpeg.pop();
+    return `<img
+                src="${data.url}"
+                alt="archer image"
+                style="width: 100%; height: auto;  border-radius: 1.0rem;"
+                loading="lazy"
+                decoding="async"
+                width="${data.width}"
+                height="${data.height}"
+            >`;
+}
+
 async function generateF1Image(src, alt) {
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
@@ -174,6 +236,14 @@ module.exports = function (eleventyConfig) {
     // take Twitter images, pass them to function which generates a 300-wide version,
     // get back html 
     eleventyConfig.addNunjucksAsyncShortcode("twitterImage", generateTwitterImage);
+
+    // take Archer images, pass them to function which generates a 300-wide version,
+    // get back html 
+    eleventyConfig.addNunjucksAsyncShortcode("archerImage", generateArcherImage);
+
+    // take Beer images, pass them to function which generates a 300-wide version,
+    // get back html 
+    eleventyConfig.addNunjucksAsyncShortcode("beerImage", generateBeerImage);
 
     // take F1 images, pass them to function which generates a 300-wide version,
     // get back html 
