@@ -128,8 +128,6 @@ async function generateF1Image(src, alt) {
             src="${data.url}"
             alt="${alt}"
             style="width: 75%; height: auto;"
-            loading="lazy"
-            decoding="async"
             width="${data.width}"
             height="${data.height}"
         >`;

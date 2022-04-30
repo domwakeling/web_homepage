@@ -14,7 +14,7 @@
             <td>{{ item.temp.max | rounddecimal }}&deg;</td>
             <td>{{ item.temp.min | rounddecimal }}&deg;</td>
             <td>{{ item.weather[0].main }}</td>
-            <td><img src="{{ item.weather[0].icon | owmicon }}" alt="{{item.weather[0].description}}"/></td>
+            <td><img src="{{ item.weather[0].icon | owmicon }}" alt="{{item.weather[0].description}}" height="50" width="50"/></td>
         </tr>
         {%- endfor -%}
     </table>
