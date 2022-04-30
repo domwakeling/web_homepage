@@ -9,35 +9,45 @@ let count = 0;
 async function generateTwitterImage(src, alt) {
     if (!src || src == '') return '';
     // stop errors in development (comment out to test locally)
-    // if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-    //     return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
-    // }
+    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
+        return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+    }
     // production
     if (alt === undefined) {
         alt = ''
     }
-    let metadata = await Image(src, {
-        widths: [300],
-        formats: ["jpeg"],
-        outputDir: "./_site/img/"
-    });
-    let data = metadata.jpeg.pop();
-    return `<img
-                src="${data.url}"
+    let metadata = {};
+    try {
+        metadata = await Image(src, {
+            widths: [300],
+            formats: ["jpeg"],
+            outputDir: "./_site/img/"
+        });
+        let data = metadata.jpeg.pop();
+        return `<img
+                    src="${data.url}"
+                    alt="${alt}"
+                    class="tweet_img"
+                    loading="lazy"
+                    decoding="async"
+                    width="${data.width}"
+                    height="${data.height}"
+                >`;
+    } catch (e) {
+        console.error(e.message);
+        return `<img
+                src="/img/qm.jpg"
                 alt="${alt}"
-                class="tweet_img"
+                style="width: 75%; height: auto;"
                 loading="lazy"
                 decoding="async"
-                width="${data.width}"
-                height="${data.height}"
+                width="300"
+                height="500"
             >`;
+    }
 }
 
 async function generateF1Image(src, alt) {
-    // capture images that are being copied locally
-    if (/^\/img/.test(src)) {
-        return `<img src="${src}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
-    }
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
         return `<img src="${src}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
@@ -46,14 +56,21 @@ async function generateF1Image(src, alt) {
     if (alt === undefined) {
         alt = ''
     }
-    let metadata = await Image(src, {
+    metadata = await Image(src, {
         widths: [300],
         formats: ["png"],
         outputDir: "./_site/img/"
     });
-    console.log(src);
     let data = metadata.png.pop();
-    return `<img src="${data.url}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
+    return `<img
+            src="${data.url}"
+            alt="${alt}"
+            style="width: 75%; height: auto;"
+            loading="lazy"
+            decoding="async"
+            width="${data.width}"
+            height="${data.height}"
+        >`;
 }
 
 async function generateFootballImage(src, alt) {
@@ -99,7 +116,7 @@ module.exports = function (eleventyConfig) {
 
     // filter to convert SASS to CSS
     eleventyConfig.addNunjucksFilter("convertSASS", function (value) {
-        return sass.renderSync({data: value}).css.toString()
+        return sass.compileString(value).css.toString()
     });
 
     // filter to stringify JSON
