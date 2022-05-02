@@ -2,8 +2,8 @@
     <h2>F1 Teams</h2>
     <table style="margin: 0 auto 1.0rem;" id="f1_team_table">
         {%- for item in f1team -%}
-        <tr>
-            <td style="min-height: 200px">
+        <tr style="height: 90px !important;">
+            <td>
                 {% f1Image item.imageUrl, item.name %}
             </td>
             <td style="padding-right: 1.0rem; text-align: right;">{{ item.points}}</td>
