@@ -12,13 +12,7 @@
         <tr>
             <td>{{ item.rank }}</td>
             <td>
-                <img
-                    alt="{{ item.team_id}}"
-                    src="{{ item.imgUrl }}"
-                    style="width: 3.0rem; height: auto; position: relative; top: 0.2rem"
-                    height="282"
-                    width="282"
-                />
+                {% baseballImage item.imgUrl, item.team_id %}
             </td>
             {# <td>{{ item.short }}</td> #}
             <td style="text-align: center">{{ item.won }}-{{ item.lost }}</td>

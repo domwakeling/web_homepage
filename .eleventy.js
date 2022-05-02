@@ -60,7 +60,8 @@ async function generateBeerImage(src) {
         metadata = await Image(src, {
             widths: [300],
             formats: ["png"],
-            outputDir: "./_site/img/"
+            outputDir: "./_site/img/beer/",
+            urlPath: "/img/beer/"
         });
         let data = metadata.png.pop();
         return `<img
@@ -96,7 +97,8 @@ async function generateArcherImage(src) {
     metadata = await Image(src, {
         widths: [300],
         formats: ["jpeg"],
-        outputDir: "./_site/img/"
+        outputDir: "./_site/img/archer/",
+        urlPath: "/img/archer/"
     });
     let data = metadata.jpeg.pop();
     return `<img
@@ -111,27 +113,29 @@ async function generateArcherImage(src) {
 }
 
 async function generateF1Image(src, alt) {
-    // stop errors in development (comment out to test locally)
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="${alt}" style="width: 75%;" loading="lazy" decoding="async">`;
-    }
-    // production
     if (alt === undefined) {
         alt = ''
     }
     metadata = await Image(src, {
         widths: [300],
-        formats: ["png"],
-        outputDir: "./_site/img/"
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/f1/",
+        urlPath: "/img/f1/"
     });
-    let data = metadata.png.pop();
-    return `<img
-            src="${data.url}"
-            alt="${alt}"
-            style="width: 75%; height: auto;"
-            width="${data.width}"
-            height="${data.height}"
-        >`;
+    let wdata = metadata.webp.pop();
+    let pdata = metadata.png.pop();
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+                src="${pdata.url}"
+                alt="${alt}"
+                style="width: 75%; height: auto;"
+                width="${pdata.width}"
+                height="${pdata.height}"
+            >
+        </picture>`;
 }
 
 async function generateFootballImage(src, alt) {
@@ -152,17 +156,52 @@ async function generateFootballImage(src, alt) {
     }
     let metadata = await Image(src, {
         widths: [80],
-        formats: ["png"],
-        outputDir: "./_site/img/"
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/football/",
+        urlPath: "/img/football/"
     });
     console.log(++count, src);
-    let data = metadata.png.pop();
-    return `<img
-        src="${data.url}"
-        alt="${alt}"
-        style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
-        loading="lazy"
-        decoding="async">`;
+    let wdata = metadata.webp.pop();
+    let pdata = metadata.png.pop();
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+            src="${pdata.url}"
+            alt="${alt}"
+            style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
+            loading="lazy"
+            decoding="async">
+        </picture>`;
+}
+
+async function generateBaseballImage(src, alt) {
+    if (alt === undefined) {
+        alt = ''
+    }
+    let metadata = await Image(src, {
+        widths: [60],
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/baseball/",
+        urlPath: "/img/baseball/"
+    });
+    console.log(++count, src);
+    let wdata = metadata.webp.pop();
+    let pdata = metadata.png.pop();
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+                src="${pdata.url}"
+                alt="${alt}"
+                style="width: 3.0rem; height: auto; position: relative; top: 0.2rem"
+                height="60"
+                width="60"
+                loading="lazy"
+                decoding="async">
+        </picture>`;
 }
 
 module.exports = function (eleventyConfig) {
@@ -251,6 +290,10 @@ module.exports = function (eleventyConfig) {
     // take football images, pass them to function which generates a 44-wide version,
     // get back html 
     eleventyConfig.addNunjucksAsyncShortcode("footballImage", generateFootballImage);
+
+    // take baseball images, pass them to function which generates a 44-wide version,
+    // get back html 
+    eleventyConfig.addNunjucksAsyncShortcode("baseballImage", generateBaseballImage);
 
     // filter to return an openweathermap icon link from icon code
     eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {

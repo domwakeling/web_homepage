@@ -429,123 +429,123 @@ const dummydata = {
 
 const clubs = {
     "kansas-city-royals": {
-        url: '/img/baseball/kc.png',
+        url: './src/img/baseball/kc.png',
         short: "KC"
     },
     "chicago-white-sox": {
-        url: '/img/baseball/cws.png',
+        url: './src/img/baseball/cws.png',
         short: "CWS"
     },
     "cleveland-guardians": {
-        url: '/img/baseball/cle.png',
+        url: './src/img/baseball/cle.png',
         short: "CLE"
     },
     "minnesota-twins": {
-        url: '/img/baseball/min.png',
+        url: './src/img/baseball/min.png',
         short: "MIN"
     },
     "detroit-tigers": {
-        url: '/img/baseball/det.png',
+        url: './src/img/baseball/det.png',
         short: "DET"
     },
     "boston-red-sox": {
-        url: '/img/baseball/bos.png',
+        url: './src/img/baseball/bos.png',
         short: "BOS"
     },
     "tampa-bay-rays": {
-        url: '/img/baseball/tb.png',
+        url: './src/img/baseball/tb.png',
         short: "TB"
     },
     "toronto-blue-jays": {
-        url: '/img/baseball/tor.png',
+        url: './src/img/baseball/tor.png',
         short: "TOR"
     },
     "new-york-yankees": {
-        url: '/img/baseball/nyy.png',
+        url: './src/img/baseball/nyy.png',
         short: "NYY"
     },
     "baltimore-orioles": {
-        url: '/img/baseball/bal.png',
+        url: './src/img/baseball/bal.png',
         short: "BAL"
     },
     "oakland-athletics": {
-        url: '/img/baseball/oak.png',
+        url: './src/img/baseball/oak.png',
         short: "OAK"
     },
     "seattle-mariners": {
-        url: '/img/baseball/sea.png',
+        url: './src/img/baseball/sea.png',
         short: "SEA"
     },
     "los-angeles-angels": {
-        url: '/img/baseball/laa.png',
+        url: './src/img/baseball/laa.png',
         short: "LAA"
     },
     "houston-astros": {
-        url: '/img/baseball/hou.png',
+        url: './src/img/baseball/hou.png',
         short: "HOU"
     },
     "texas-rangers": {
-        url: '/img/baseball/tex.png',
+        url: './src/img/baseball/tex.png',
         short: "TEX"
     },
     "milwaukee-brewers": {
-        url: '/img/baseball/mil.png',
+        url: './src/img/baseball/mil.png',
         short: "MIL"
     },
     "chicago-cubs": {
-        url: '/img/baseball/chc.png',
+        url: './src/img/baseball/chc.png',
         short: "CHC"
     },
     "st-louis-cardinals": {
-        url: '/img/baseball/stl.png',
+        url: './src/img/baseball/stl.png',
         short: "STL"
     },
     "cincinnati-reds": {
-        url: '/img/baseball/cin.png',
+        url: './src/img/baseball/cin.png',
         short: "CIN"
     },
     "pittsburgh-pirates": {
-        url: '/img/baseball/pit.png',
+        url: './src/img/baseball/pit.png',
         short: "PIT"
     },
     "new-york-mets": {
-        url: '/img/baseball/nym.png',
+        url: './src/img/baseball/nym.png',
         short: "NYM"
     },
     "philadelphia-phillies": {
-        url: '/img/baseball/php.png',
+        url: './src/img/baseball/php.png',
         short: "PHP"
     },
     "atlanta-braves": {
-        url: '/img/baseball/atl.png',
+        url: './src/img/baseball/atl.png',
         short: "ATL"
     },
     "miami-marlins": {
-        url: '/img/baseball/mia.png',
+        url: './src/img/baseball/mia.png',
         short: "MIA"
     },
     "washington-nationals": {
-        url: '/img/baseball/wsh.png',
+        url: './src/img/baseball/wsh.png',
         short: "WSH"
     },
     "los-angeles-dodgers": {
-        url: '/img/baseball/lad.png',
+        url: './src/img/baseball/lad.png',
         short: "LAD"
     },
     "san-francisco-giants": {
-        url: '/img/baseball/sf.png',
+        url: './src/img/baseball/sf.png',
         short: "SF"
     },
     "san-diego-padres": {
-        url: '/img/baseball/sd.png',
+        url: './src/img/baseball/sd.png',
         short: "SD"
     },
     "arizona-diamondbacks": {
-        url: '/img/baseball/ari.png',
+        url: './src/img/baseball/ari.png',
         short: "ARI"
     },
     "colorado-rockies": {
-        url: '/img/baseball/col.png',
+        url: './src/img/baseball/col.png',
         short: "COL"
     },
 }
