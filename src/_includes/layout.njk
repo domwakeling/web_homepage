@@ -12,6 +12,15 @@ title: Dom's Homepage
       content="A personalised homepage built with 11ty and hosted on Netlify."
     >
     <meta name="generator" content="Eleventy">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               font-src fonts.gstatic.com;
+               style-src 'self' fonts.googleapis.com 'unsafe-inline';
+               script-src 'self' 'unsafe-inline' unpkg.com;
+               frame-src embed.radiopublic.com;
+               img-src 'self' openweathermap.org pbs.twimg.com flagcdn.com img.icons8.com cdn2.thecatapi.com;"
+    >
     <title>{{ title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
