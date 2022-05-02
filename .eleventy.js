@@ -37,6 +37,7 @@ async function generateTwitterImage(src, alt) {
         console.error(e.message);
         return `<img
                 src="/img/qm.jpg"
+                class="tweet_img"
                 alt="${alt}"
                 style="width: 75%; height: auto;"
                 loading="lazy"
