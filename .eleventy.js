@@ -49,7 +49,10 @@ async function generateTwitterImage(src, alt) {
 }
 
 async function generateBeerImage(src) {
-    if (!src || src == '') return '';
+    if (!src || src == '') {
+        console.log("Empty src passed to generateBeerImage");
+        return '';
+    }
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
         return `<img src="${src}" alt="beer image" class="tweet_img" loading="lazy" decoding="async">`;

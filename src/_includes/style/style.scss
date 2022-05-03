@@ -66,12 +66,13 @@ img.tweet_img {
 }
 
 img.tweet_user {
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 3.6rem;
+    width: 3.6rem;
     border-radius: 50%;
     float: left;
     margin-right: 1.0rem;
-    margin-top: 0.5rem;
+    margin-top: 1.0rem;
+    border: 1px solid $color_orange;
 }
 
 hr.tweet_hr {
