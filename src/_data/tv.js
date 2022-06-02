@@ -1,17 +1,5 @@
 const data = [
     {
-        "showName": "Bosch: Legacy",
-        "release": "06.05.22"
-    },
-    {
-        "showName": "The Blacklist (S9)",
-        "release": "11.05.22"
-    },
-    {
-        "showName": "Obi-Wan Kenobi",
-        "release": "25.05.22"
-    },
-    {
         "showName": "Ms Marvel",
         "release": "08.06.22"
     },
@@ -26,6 +14,18 @@ const data = [
     {
         "showName": "Resident Evil",
         "release": "14.06.22"
+    },
+    {
+        "showName": "Westworld (S4)",
+        "release": "27.06.22"
+    },
+    {
+        "showName": "Resident Evil",
+        "release": "14.07.22"
+    },
+    {
+        "showName": "She-Hulk",
+        "release": "17.08.22"
     }
 ];
 
