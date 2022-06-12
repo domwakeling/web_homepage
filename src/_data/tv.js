@@ -1,19 +1,7 @@
 const data = [
     {
-        "showName": "Ms Marvel",
-        "release": "08.06.22"
-    },
-    {
-        "showName": "For All Mankind (S3)",
-        "release": "10.06.22"
-    },
-    {
         "showName": "Umbrella Academy (S3)",
         "release": "22.06.22"
-    },
-    {
-        "showName": "Resident Evil",
-        "release": "14.06.22"
     },
     {
         "showName": "Westworld (S4)",
