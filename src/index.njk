@@ -15,7 +15,9 @@ layout: layout.njk
         {% include "components/beer.njk" %}
         {% include "components/tv.njk" %}
         {% include "components/advice.njk" %}
+        {% if panels.football %}
         {% include "components/football.njk" %}
+        {% endif %}
         {% include "components/weather.njk" %}
         {% include "components/space.njk" %}
         {% include "components/silly.njk" %}
