@@ -1,13 +1,5 @@
 const data = [
     {
-        "showName": "Umbrella Academy (S3)",
-        "release": "22.06.22"
-    },
-    {
-        "showName": "Westworld (S4)",
-        "release": "27.06.22"
-    },
-    {
         "showName": "Resident Evil",
         "release": "14.07.22"
     },
