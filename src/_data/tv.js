@@ -1,11 +1,7 @@
 const data = [
     {
-        "showName": "Resident Evil",
-        "release": "14.07.22"
-    },
-    {
         "showName": "She-Hulk",
-        "release": "17.08.22"
+        "release": "18.08.22"
     }
 ];
 

@@ -3,6 +3,10 @@ require('dotenv').config()
 
 module.exports = async function () {
 
+    // superhero API down again, so:
+
+    return {};
+
     // in development, send back a static object
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return {
         "response": "success",
