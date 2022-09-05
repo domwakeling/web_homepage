@@ -1,7 +1,15 @@
 const data = [
     {
-        "showName": "She-Hulk",
-        "release": "18.08.22"
+        "showName": "Grand Tour: A Scandi Flick",
+        "release": "16.09.22"
+    },
+    {
+        "showName": "Star Wars: Andor",
+        "release": "21.09.22"
+    },
+    {
+        "showName": "Bad Batch S2",
+        "release": "28.09.22"
     }
 ];
 
