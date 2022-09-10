@@ -10,10 +10,14 @@ const data = [
     {
         "showName": "Bad Batch S2",
         "release": "28.09.22"
+    },
+    {
+        "showName": "The Peripheral",
+        "release": "21.10.22"
     }
 ];
 
-const today = new Date();
+const today = new Date(); 
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 
