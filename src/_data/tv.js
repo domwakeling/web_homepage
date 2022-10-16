@@ -1,15 +1,27 @@
 const data = [
     {
-        "showName": "Grand Tour: A Scandi Flick",
-        "release": "16.09.22"
-    },
-    {
-        "showName": "Star Wars: Andor",
-        "release": "21.09.22"
-    },
-    {
         "showName": "Bad Batch S2",
-        "release": "28.09.22"
+        "release": "04.01.23"
+    },
+    {
+        "showName": "Warrior Nun S2",
+        "release": "10.11.22"
+    },
+    {
+        "showName": "Mythic Quest S2",
+        "release": "11.11.22"
+    },
+    {
+        "showName": "Leverage: Redemption S2",
+        "release": "16.11.22"
+    },
+    {
+        "showName": "Wednesday",
+        "release": "23.11.22"
+    },
+    {
+        "showName": "Slow Horses S2",
+        "release": "02.12.22"
     },
     {
         "showName": "The Peripheral",
