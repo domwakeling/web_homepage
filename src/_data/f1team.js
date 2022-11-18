@@ -153,7 +153,7 @@ module.exports = async function () {
         .then(res => res.data)
         .catch((err) => {
             console.error(err);
-            return {};
+            return [];
         });
     }
 
@@ -181,15 +181,19 @@ module.exports = async function () {
     }
 
     // we have the data, need to map it
-    return f1data
-        .MRData
-        .StandingsTable
-        .StandingsLists[0]
-        .ConstructorStandings
-        .map((item) => ({
-            imageUrl: imgUrls[item.Constructor.constructorId],
-            name: item.Constructor.name,
-            points: item.points
-        }));
-
+    try {
+        return f1data
+            .MRData
+            .StandingsTable
+            .StandingsLists[0]
+            .ConstructorStandings
+            .map((item) => ({
+                imageUrl: imgUrls[item.Constructor.constructorId],
+                name: item.Constructor.name,
+                points: item.points
+            }));
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
 };
