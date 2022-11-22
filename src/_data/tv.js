@@ -4,18 +4,6 @@ const data = [
         "release": "04.01.23"
     },
     {
-        "showName": "Warrior Nun S2",
-        "release": "10.11.22"
-    },
-    {
-        "showName": "Mythic Quest S2",
-        "release": "11.11.22"
-    },
-    {
-        "showName": "Leverage: Redemption S2",
-        "release": "16.11.22"
-    },
-    {
         "showName": "Wednesday",
         "release": "23.11.22"
     },
@@ -24,8 +12,8 @@ const data = [
         "release": "02.12.22"
     },
     {
-        "showName": "The Peripheral",
-        "release": "21.10.22"
+        "showName": "Archer S13",
+        "release": "01.12.22"
     }
 ];
 
