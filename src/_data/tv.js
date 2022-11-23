@@ -14,6 +14,10 @@ const data = [
     {
         "showName": "Archer S13",
         "release": "01.12.22"
+    },
+    {
+        "showName": "Guardians Xmas Special",
+        "release": '25.11.22'
     }
 ];
 
