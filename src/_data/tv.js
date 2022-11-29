@@ -4,10 +4,6 @@ const data = [
         "release": "04.01.23"
     },
     {
-        "showName": "Wednesday",
-        "release": "23.11.22"
-    },
-    {
         "showName": "Slow Horses S2",
         "release": "02.12.22"
     },
@@ -16,8 +12,8 @@ const data = [
         "release": "01.12.22"
     },
     {
-        "showName": "Guardians Xmas Special",
-        "release": '25.11.22'
+        "showName": "Lockwood & Co S1",
+        "release": '27.01.23'
     }
 ];
 
