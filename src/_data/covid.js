@@ -31,28 +31,37 @@ module.exports = async function () {
             return [];
         });
     
-    // filter to the countries we want
-    const countriesWeWant = ["US", "United Kingdom", "France"]
-    coviddata = coviddata.data.data.filter(i => countriesWeWant.indexOf(i.region.name) >= 0);
-
-    // generate return data
-    let filteredList = {}
-    for (country of countriesWeWant) {
-        filteredList[country] = {cases: 0, deaths: 0}
-    }
-    for (region of coviddata) {
-        filteredList[region.region.name].cases += region.confirmed_diff;
-        filteredList[region.region.name].deaths += region.deaths_diff;
-    }
-
-    let returnData = {
-        dateString,
-        data: Object.keys(filteredList).sort().map(country => ({
-            country,
-            cases: filteredList[country].cases,
-            deaths: filteredList[country].deaths,
-        }))
-    };
+    try {
     
-    return returnData;
+        // filter to the countries we want
+        const countriesWeWant = ["US", "United Kingdom", "France"]
+        coviddata = coviddata.data.data.filter(i => countriesWeWant.indexOf(i.region.name) >= 0);
+
+        // generate return data
+        let filteredList = {}
+        for (country of countriesWeWant) {
+            filteredList[country] = {cases: 0, deaths: 0}
+        }
+        for (region of coviddata) {
+            filteredList[region.region.name].cases += region.confirmed_diff;
+            filteredList[region.region.name].deaths += region.deaths_diff;
+        }
+
+        let returnData = {
+            dateString,
+            data: Object.keys(filteredList).sort().map(country => ({
+                country,
+                cases: filteredList[country].cases,
+                deaths: filteredList[country].deaths,
+            }))
+        };
+        
+        return returnData;
+    } catch (err) {
+        console.log(err);
+        return {
+            dateString,
+            data: []
+        }
+    }
 };

@@ -14,6 +14,10 @@ const data = [
     {
         "showName": "Lockwood & Co S1",
         "release": '27.01.23'
+    },
+    {
+        "showName": "Mandalorian S3",
+        "release": "01.03.23"
     }
 ];
 
