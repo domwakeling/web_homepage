@@ -1,19 +1,7 @@
 const data = [
     {
-        "showName": "Bad Batch S2",
-        "release": "04.01.23"
-    },
-    {
-        "showName": "Slow Horses S2",
-        "release": "02.12.22"
-    },
-    {
-        "showName": "Archer S13",
-        "release": "01.12.22"
-    },
-    {
-        "showName": "Lockwood & Co S1",
-        "release": '27.01.23'
+        "showName": "Beyond Paradise",
+        "release": "24.02.23"
     },
     {
         "showName": "Mandalorian S3",
