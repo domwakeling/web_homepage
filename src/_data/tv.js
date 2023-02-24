@@ -6,6 +6,10 @@ const data = [
     {
         "showName": "Mandalorian S3",
         "release": "01.03.23"
+    },
+    {
+        "showName": "Ted Lasso S3",
+        "release": "15.03.23"
     }
 ];
 
