@@ -8,8 +8,8 @@ const data = [
         "release": "01.03.23"
     },
     {
-        "showName": "Ted Lasso S3",
-        "release": "15.03.23"
+        "showName": "True Lies",
+        "release": "19.04.23"
     }
 ];
 
