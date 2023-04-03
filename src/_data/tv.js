@@ -1,7 +1,7 @@
 const data = [
     {
-        "showName": "Beyond Paradise",
-        "release": "24.02.23"
+        "showName": "Secret Invasion",
+        "release": "21.06.23"
     },
     {
         "showName": "Mandalorian S3",
