@@ -38,7 +38,7 @@ module.exports = async function () {
                                 team: {
                                     id: 61,
                                     name: 'Chelsea FC',
-                                    crestUrl: 'https://crests.football-data.org/61.svg'
+                                    crest: 'https://crests.football-data.org/61.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -55,7 +55,7 @@ module.exports = async function () {
                                 team: {
                                     id: 64,
                                     name: 'Liverpool FC',
-                                    crestUrl: 'https://crests.football-data.org/64.svg'
+                                    crest: 'https://crests.football-data.org/64.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -72,7 +72,7 @@ module.exports = async function () {
                                 team: {
                                     id: 65,
                                     name: 'Manchester City FC',
-                                    crestUrl: 'https://crests.football-data.org/65.svg'
+                                    crest: 'https://crests.football-data.org/65.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -89,7 +89,7 @@ module.exports = async function () {
                                 team: {
                                     id: 563,
                                     name: 'West Ham United FC',
-                                    crestUrl: 'https://crests.football-data.org/563.svg'
+                                    crest: 'https://crests.football-data.org/563.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -106,7 +106,7 @@ module.exports = async function () {
                                 team: {
                                     id: 66,
                                     name: 'Manchester United FC',
-                                    crestUrl: 'https://crests.football-data.org/66.svg'
+                                    crest: 'https://crests.football-data.org/66.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -123,7 +123,7 @@ module.exports = async function () {
                                 team: {
                                     id: 57,
                                     name: 'Arsenal FC',
-                                    crestUrl: 'https://crests.football-data.org/57.svg'
+                                    crest: 'https://crests.football-data.org/57.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -140,7 +140,7 @@ module.exports = async function () {
                                 team: {
                                     id: 76,
                                     name: 'Wolverhampton Wanderers FC',
-                                    crestUrl: 'https://crests.football-data.org/76.svg'
+                                    crest: 'https://crests.football-data.org/76.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -157,7 +157,7 @@ module.exports = async function () {
                                 team: {
                                     id: 397,
                                     name: 'Brighton & Hove Albion FC',
-                                    crestUrl: 'https://crests.football-data.org/397.svg'
+                                    crest: 'https://crests.football-data.org/397.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -174,7 +174,7 @@ module.exports = async function () {
                                 team: {
                                     id: 73,
                                     name: 'Tottenham Hotspur FC',
-                                    crestUrl: 'https://crests.football-data.org/73.svg'
+                                    crest: 'https://crests.football-data.org/73.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -191,7 +191,7 @@ module.exports = async function () {
                                 team: {
                                     id: 62,
                                     name: 'Everton FC',
-                                    crestUrl: 'https://crests.football-data.org/62.svg'
+                                    crest: 'https://crests.football-data.org/62.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -208,7 +208,7 @@ module.exports = async function () {
                                 team: {
                                     id: 338,
                                     name: 'Leicester City FC',
-                                    crestUrl: 'https://crests.football-data.org/338.svg'
+                                    crest: 'https://crests.football-data.org/338.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -225,7 +225,7 @@ module.exports = async function () {
                                 team: {
                                     id: 340,
                                     name: 'Southampton FC',
-                                    crestUrl: 'https://crests.football-data.org/340.svg'
+                                    crest: 'https://crests.football-data.org/340.svg'
                                 },
                                 playedGames: 11,
                                 form: null,
@@ -242,7 +242,7 @@ module.exports = async function () {
                                 team: {
                                     id: 402,
                                     name: 'Brentford FC',
-                                    crestUrl: 'https://crests.football-data.org/402.svg'
+                                    crest: 'https://crests.football-data.org/402.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -259,7 +259,7 @@ module.exports = async function () {
                                 team: {
                                     id: 354,
                                     name: 'Crystal Palace FC',
-                                    crestUrl: 'https://crests.football-data.org/354.svg'
+                                    crest: 'https://crests.football-data.org/354.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -276,7 +276,7 @@ module.exports = async function () {
                                 team: {
                                     id: 58,
                                     name: 'Aston Villa FC',
-                                    crestUrl: 'https://crests.football-data.org/58.svg'
+                                    crest: 'https://crests.football-data.org/58.svg'
                                 },
                                 playedGames: 11,
                                 form: null,
@@ -293,7 +293,7 @@ module.exports = async function () {
                                 team: {
                                     id: 346,
                                     name: 'Watford FC',
-                                    crestUrl: 'https://crests.football-data.org/346.svg'
+                                    crest: 'https://crests.football-data.org/346.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -310,7 +310,7 @@ module.exports = async function () {
                                 team: {
                                     id: 341,
                                     name: 'Leeds United FC',
-                                    crestUrl: 'https://crests.football-data.org/341.svg'
+                                    crest: 'https://crests.football-data.org/341.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -327,7 +327,7 @@ module.exports = async function () {
                                 team: {
                                     id: 328,
                                     name: 'Burnley FC',
-                                    crestUrl: 'https://crests.football-data.org/328.svg'
+                                    crest: 'https://crests.football-data.org/328.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -344,7 +344,7 @@ module.exports = async function () {
                                 team: {
                                     id: 67,
                                     name: 'Newcastle United FC',
-                                    crestUrl: 'https://crests.football-data.org/67.svg'
+                                    crest: 'https://crests.football-data.org/67.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -361,7 +361,7 @@ module.exports = async function () {
                                 team: {
                                     id: 68,
                                     name: 'Norwich City FC',
-                                    crestUrl: 'https://upload.wikimedia.org/wikipedia/en/8/8c/Norwich_City.svg'
+                                    crest: 'https://upload.wikimedia.org/wikipedia/en/8/8c/Norwich_City.svg'
                                 },
                                 playedGames: 10,
                                 form: null,
@@ -385,7 +385,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 64,
                                     "name": "Liverpool FC",
-                                    "crestUrl": "https://crests.football-data.org/64.svg"
+                                    "crest": "https://crests.football-data.org/64.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -402,7 +402,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 354,
                                     "name": "Crystal Palace FC",
-                                    "crestUrl": "https://crests.football-data.org/354.svg"
+                                    "crest": "https://crests.football-data.org/354.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -419,7 +419,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 76,
                                     "name": "Wolverhampton Wanderers FC",
-                                    "crestUrl": "https://crests.football-data.org/76.svg"
+                                    "crest": "https://crests.football-data.org/76.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -436,7 +436,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 58,
                                     "name": "Aston Villa FC",
-                                    "crestUrl": "https://crests.football-data.org/58.svg"
+                                    "crest": "https://crests.football-data.org/58.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -453,7 +453,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 65,
                                     "name": "Manchester City FC",
-                                    "crestUrl": "https://crests.football-data.org/65.svg"
+                                    "crest": "https://crests.football-data.org/65.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -470,7 +470,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 67,
                                     "name": "Newcastle United FC",
-                                    "crestUrl": "https://crests.football-data.org/67.svg"
+                                    "crest": "https://crests.football-data.org/67.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -487,7 +487,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 57,
                                     "name": "Arsenal FC",
-                                    "crestUrl": "https://crests.football-data.org/57.svg"
+                                    "crest": "https://crests.football-data.org/57.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -504,7 +504,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 61,
                                     "name": "Chelsea FC",
-                                    "crestUrl": "https://crests.football-data.org/61.svg"
+                                    "crest": "https://crests.football-data.org/61.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -521,7 +521,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 62,
                                     "name": "Everton FC",
-                                    "crestUrl": "https://crests.football-data.org/62.svg"
+                                    "crest": "https://crests.football-data.org/62.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -538,7 +538,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 66,
                                     "name": "Manchester United FC",
-                                    "crestUrl": "https://crests.football-data.org/66.svg"
+                                    "crest": "https://crests.football-data.org/66.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -555,7 +555,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 338,
                                     "name": "Leicester City FC",
-                                    "crestUrl": "https://crests.football-data.org/338.svg"
+                                    "crest": "https://crests.football-data.org/338.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -572,7 +572,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 328,
                                     "name": "Burnley FC",
-                                    "crestUrl": "https://crests.football-data.org/328.svg"
+                                    "crest": "https://crests.football-data.org/328.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -589,7 +589,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 341,
                                     "name": "Leeds United FC",
-                                    "crestUrl": "https://crests.football-data.org/341.svg"
+                                    "crest": "https://crests.football-data.org/341.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -606,7 +606,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 340,
                                     "name": "Southampton FC",
-                                    "crestUrl": "https://crests.football-data.org/340.svg"
+                                    "crest": "https://crests.football-data.org/340.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -623,7 +623,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 73,
                                     "name": "Tottenham Hotspur FC",
-                                    "crestUrl": "https://crests.football-data.org/73.svg"
+                                    "crest": "https://crests.football-data.org/73.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -640,7 +640,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 397,
                                     "name": "Brighton & Hove Albion FC",
-                                    "crestUrl": "https://crests.football-data.org/397.svg"
+                                    "crest": "https://crests.football-data.org/397.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -657,7 +657,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 356,
                                     "name": "Sheffield United FC",
-                                    "crestUrl": "https://crests.football-data.org/356.svg"
+                                    "crest": "https://crests.football-data.org/356.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -674,7 +674,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 563,
                                     "name": "West Ham United FC",
-                                    "crestUrl": "https://crests.football-data.org/563.svg"
+                                    "crest": "https://crests.football-data.org/563.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -691,7 +691,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 63,
                                     "name": "Fulham FC",
-                                    "crestUrl": "https://crests.football-data.org/63.svg"
+                                    "crest": "https://crests.football-data.org/63.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -708,7 +708,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 74,
                                     "name": "West Bromwich Albion FC",
-                                    "crestUrl": "https://crests.football-data.org/74.svg"
+                                    "crest": "https://crests.football-data.org/74.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -732,7 +732,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 57,
                                     "name": "Arsenal FC",
-                                    "crestUrl": "https://crests.football-data.org/57.svg"
+                                    "crest": "https://crests.football-data.org/57.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -749,7 +749,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 338,
                                     "name": "Leicester City FC",
-                                    "crestUrl": "https://crests.football-data.org/338.svg"
+                                    "crest": "https://crests.football-data.org/338.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -766,7 +766,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 61,
                                     "name": "Chelsea FC",
-                                    "crestUrl": "https://crests.football-data.org/61.svg"
+                                    "crest": "https://crests.football-data.org/61.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -783,7 +783,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 76,
                                     "name": "Wolverhampton Wanderers FC",
-                                    "crestUrl": "https://crests.football-data.org/76.svg"
+                                    "crest": "https://crests.football-data.org/76.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -800,7 +800,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 67,
                                     "name": "Newcastle United FC",
-                                    "crestUrl": "https://crests.football-data.org/67.svg"
+                                    "crest": "https://crests.football-data.org/67.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -817,7 +817,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 62,
                                     "name": "Everton FC",
-                                    "crestUrl": "https://crests.football-data.org/62.svg"
+                                    "crest": "https://crests.football-data.org/62.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -834,7 +834,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 63,
                                     "name": "Fulham FC",
-                                    "crestUrl": "https://crests.football-data.org/63.svg"
+                                    "crest": "https://crests.football-data.org/63.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -851,7 +851,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 58,
                                     "name": "Aston Villa FC",
-                                    "crestUrl": "https://crests.football-data.org/58.svg"
+                                    "crest": "https://crests.football-data.org/58.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -868,7 +868,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 64,
                                     "name": "Liverpool FC",
-                                    "crestUrl": "https://crests.football-data.org/64.svg"
+                                    "crest": "https://crests.football-data.org/64.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -885,7 +885,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 65,
                                     "name": "Manchester City FC",
-                                    "crestUrl": "https://crests.football-data.org/65.svg"
+                                    "crest": "https://crests.football-data.org/65.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -902,7 +902,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 73,
                                     "name": "Tottenham Hotspur FC",
-                                    "crestUrl": "https://crests.football-data.org/73.svg"
+                                    "crest": "https://crests.football-data.org/73.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -919,7 +919,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 74,
                                     "name": "West Bromwich Albion FC",
-                                    "crestUrl": "https://crests.football-data.org/74.svg"
+                                    "crest": "https://crests.football-data.org/74.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -936,7 +936,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 66,
                                     "name": "Manchester United FC",
-                                    "crestUrl": "https://crests.football-data.org/66.svg"
+                                    "crest": "https://crests.football-data.org/66.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -953,7 +953,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 356,
                                     "name": "Sheffield United FC",
-                                    "crestUrl": "https://crests.football-data.org/356.svg"
+                                    "crest": "https://crests.football-data.org/356.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -970,7 +970,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 328,
                                     "name": "Burnley FC",
-                                    "crestUrl": "https://crests.football-data.org/328.svg"
+                                    "crest": "https://crests.football-data.org/328.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -987,7 +987,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 563,
                                     "name": "West Ham United FC",
-                                    "crestUrl": "https://crests.football-data.org/563.svg"
+                                    "crest": "https://crests.football-data.org/563.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -1004,7 +1004,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 354,
                                     "name": "Crystal Palace FC",
-                                    "crestUrl": "https://crests.football-data.org/354.svg"
+                                    "crest": "https://crests.football-data.org/354.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -1021,7 +1021,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 397,
                                     "name": "Brighton & Hove Albion FC",
-                                    "crestUrl": "https://crests.football-data.org/397.svg"
+                                    "crest": "https://crests.football-data.org/397.svg"
                                 },
                                 "playedGames": 0,
                                 "form": null,
@@ -1038,7 +1038,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 341,
                                     "name": "Leeds United FC",
-                                    "crestUrl": "https://crests.football-data.org/341.svg"
+                                    "crest": "https://crests.football-data.org/341.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -1055,7 +1055,7 @@ module.exports = async function () {
                                 "team": {
                                     "id": 340,
                                     "name": "Southampton FC",
-                                    "crestUrl": "https://crests.football-data.org/340.svg"
+                                    "crest": "https://crests.football-data.org/340.svg"
                                 },
                                 "playedGames": 1,
                                 "form": null,
@@ -1083,12 +1083,14 @@ module.exports = async function () {
         };
 
         footballdata = await axios
-            .get('https://api.football-data.org/v2/competitions/PL/standings', body)
+            .get('https://api.football-data.org/v4/competitions/PL/standings', body)
             .catch((err) => {
                 console.error(err);
                 return {}
             });
     }
+
+    console.log(footballdata.data.standings.filter(item => item.type = 'TOTAL')[0].table[0]);
 
     return footballdata.data.standings.filter(item => item.type = 'TOTAL')[0].table.sort((a,b) => a.position - b.position);
 };
