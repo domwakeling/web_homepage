@@ -1090,7 +1090,5 @@ module.exports = async function () {
             });
     }
 
-    console.log(footballdata.data.standings.filter(item => item.type = 'TOTAL')[0].table[0]);
-
     return footballdata.data.standings.filter(item => item.type = 'TOTAL')[0].table.sort((a,b) => a.position - b.position);
 };
