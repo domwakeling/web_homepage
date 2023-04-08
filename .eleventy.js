@@ -305,8 +305,11 @@ module.exports = function (eleventyConfig) {
 
     // filter to generate a properly-formatted date string from a teet created_at string
     eleventyConfig.addNunjucksFilter("datefromtweet", function(item) {
-        let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
-        return `${t[1]} ${parseInt(t[3])} ${t[2]} - ${t[4]}`.toUpperCase()
+        let t = item.created_at.match(/^\d{4}-(\d{2})-(\d{2})T(\d{2}:\d{2})/)
+        // let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
+            'Sep', 'Oct', 'Nov', 'Dec']
+        return `${t[2]} ${months[parseInt(t[1])]} ${t[3]}`.toUpperCase(); 
     });
 
     // filter to minimise css
