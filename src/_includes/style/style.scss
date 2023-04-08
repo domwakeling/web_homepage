@@ -51,9 +51,9 @@ hr {
     // margin: 0 auto;
 }
 
-/* STYLING FOR TWEETS */
+/* STYLING FOR TOOTS */
 
-img.tweet_img {
+img.side_image {
     float: right;
     max-width: 40%;
     height: auto;
@@ -65,7 +65,7 @@ img.tweet_img {
     // filter:         drop-shadow(5px 5px 5px #777); 
 }
 
-img.tweet_user {
+img.toot_user {
     height: 3.6rem;
     width: 3.6rem;
     border-radius: 50%;
@@ -75,12 +75,12 @@ img.tweet_user {
     border: 1px solid $color_orange;
 }
 
-hr.tweet_hr {
+hr.toot_hr {
     margin-top: 0.5rem;
     margin-bottom: 2.0rem;
 }
 
-h3.tweet_date  {
+h3.toot_date  {
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.05rem;

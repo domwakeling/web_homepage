@@ -1,12 +1,12 @@
 {# {% set rtww2 %} #}
 <div class="panel grid-item" id="rtww2">
-    <img alt="user avatar" class="tweet_user" src="{{ rtww2.user_img }}" />
+    <img alt="user avatar" class="toot_user" src="{{ rtww2.user_img }}" />
     <h2>{{ rtww2.user_name }}</h2>
     {%- for item in rtww2.toots -%}
-        <hr class="tweet_hr" />
-        <h3 class="tweet_date">{{ item | datefromtweet }}</h3>
+        <hr class="toot_hr" />
+        <h3 class="toot_date">{{ item | datefromtoot }}</h3>
         {%- if item.media != '' -%}
-            {% twitterImage item.media, "tweet image" %}
+            {% processImage item.media, "toot image" %}
         {%- endif -%}
         {{ item.content | safe }}
         <div style="clear: both"></div>

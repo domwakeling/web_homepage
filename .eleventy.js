@@ -6,11 +6,11 @@ require('dotenv').config();
 
 let count = 0;
 
-async function generateTwitterImage(src, alt) {
+async function generateImageTags(src, alt) {
     if (!src || src == '') return '';
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="${alt}" class="tweet_img" loading="lazy" decoding="async">`;
+        return `<img src="${src}" alt="${alt}" class="side_image" loading="lazy" decoding="async">`;
     }
     // production
     if (alt === undefined) {
@@ -27,7 +27,7 @@ async function generateTwitterImage(src, alt) {
         return `<img
                     src="${data.url}"
                     alt="${alt}"
-                    class="tweet_img"
+                    class="side_image"
                     loading="lazy"
                     decoding="async"
                     width="${data.width}"
@@ -37,7 +37,7 @@ async function generateTwitterImage(src, alt) {
         console.error(e.message);
         return `<img
                 src="/img/qm.jpg"
-                class="tweet_img"
+                class="side_image"
                 alt="${alt}"
                 style="width: 75%; height: auto;"
                 loading="lazy"
@@ -55,7 +55,7 @@ async function generateBeerImage(src) {
     }
     // stop errors in development (comment out to test locally)
     if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="beer image" class="tweet_img" loading="lazy" decoding="async">`;
+        return `<img src="${src}" alt="beer image" class="side_image" loading="lazy" decoding="async">`;
     }
     // production
     let metadata = {};
@@ -230,30 +230,13 @@ module.exports = function (eleventyConfig) {
     // filter to turn comma-seperated form list into string
     eleventyConfig.addNunjucksFilter("formstring", function (value) {
         return value ? value.split(",").join("") : null;
-    })
-
-    // filter to take a tweet and either strip the final url (if it's not a "real" link) or
-    // turn it into an <a> tag if it *is* a real link
-    eleventyConfig.addNunjucksFilter("tweetbodytext", function (item) {
-        // receives a tweet item
-        let t = item.full_text;
-        let u = item.entities.urls;
-        const htmlRegex = /^(.*) ((([A-Za-z]{5,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/
-        if (!u || u.length == 0) {
-            m = t.match(htmlRegex)
-            return m ? m[1] : t
-        }
-        for (url of u) {
-            t = t.replace(url.url, `<a href="${url.expanded_url}">${url.display_url}</a>`)
-        }
-        return t;
     });
 
     // filter to take a Unix timestamp and return the weekday
     eleventyConfig.addNunjucksFilter("weekdayfromutc", function(utc) {
         const date = new Date(utc * 1000)
         return `${["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"][date.getDay()]}day`
-    })
+    });
 
     // filter to take a decimal and return nearest whole number
     eleventyConfig.addNunjucksFilter("rounddecimal", function(n) {
@@ -263,7 +246,7 @@ module.exports = function (eleventyConfig) {
         } else {
             return minmax[1]
         }
-    })
+    });
 
     // add a new shortcode to return today (date generator ran) in a pleasing format
     eleventyConfig.addShortcode("todayString", () => {
@@ -272,11 +255,11 @@ module.exports = function (eleventyConfig) {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
                         'September', 'October', 'November', 'December']
         return `${weekday}day ${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`
-    })
+    });
 
     // take Twitter images, pass them to function which generates a 300-wide version,
     // get back html 
-    eleventyConfig.addNunjucksAsyncShortcode("twitterImage", generateTwitterImage);
+    eleventyConfig.addNunjucksAsyncShortcode("processImage", generateImageTags);
 
     // take Archer images, pass them to function which generates a 300-wide version,
     // get back html 
@@ -301,10 +284,10 @@ module.exports = function (eleventyConfig) {
     // filter to return an openweathermap icon link from icon code
     eleventyConfig.addNunjucksFilter("owmicon", function(shortcode) {
         return `https://openweathermap.org/img/wn/${shortcode}@2x.png`
-    })
+    });
 
     // filter to generate a properly-formatted date string from a teet created_at string
-    eleventyConfig.addNunjucksFilter("datefromtweet", function(item) {
+    eleventyConfig.addNunjucksFilter("datefromtoot", function(item) {
         let t = item.created_at.match(/^\d{4}-(\d{2})-(\d{2})T(\d{2}:\d{2})/)
         // let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
@@ -320,13 +303,13 @@ module.exports = function (eleventyConfig) {
     // filter to upperstring text
     eleventyConfig.addNunjucksFilter("upper", function(text) {
         return text.toUpperCase();
-    })
+    });
 
     // copy from src/_includes/favicons to the root
-    eleventyConfig.addPassthroughCopy({ "src/_includes/favicons": "." })
+    eleventyConfig.addPassthroughCopy({ "src/_includes/favicons": "." });
 
     // copy from src/img to the root
-    eleventyConfig.addPassthroughCopy({ "src/img": "./img" })
+    eleventyConfig.addPassthroughCopy({ "src/img": "./img" });
 
     // because we're making a function we need to return the "normal" exports object
     return {
