@@ -218,10 +218,37 @@ const generateWeatherImage = async (icon, alt) => {
         </picture>`;
 }
 
+const generateCatImage = async (src) => {
+    if (!src || src == '') return '';
+    let metadata = await Image(src, {
+        widths: [600],
+        formats: ["webp", "jpeg"],
+        outputDir: "./_site/img/",
+        urlPath: "/img/"
+    });
+    let wdata = metadata.webp[0];
+    let jdata = metadata.jpeg[0];
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${jdata.url}" type="image/jpeg">
+            <img
+                src="${jdata.url}"
+                alt="random cat image"
+                style = "width: 100%; height: auto; border-radius: 1.0rem;"
+                height="${jdata.height}"
+                width="${jdata.width}"
+                loading="lazy"
+                decoding="async"
+            >
+        </picture>`
+}
+
 module.exports = {
     generateArcherImage,
     generateBaseballImage,
     generateBeerImage,
+    generateCatImage,
     generateF1Image,
     generateFootballImage,
     generateImageTags,

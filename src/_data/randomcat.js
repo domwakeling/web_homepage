@@ -15,6 +15,5 @@ module.exports = async function () {
         if (newCat && ( (newCat.height * 1.2) < newCat.width)) found = true;
     }
 
-
     return newCat;
 }
