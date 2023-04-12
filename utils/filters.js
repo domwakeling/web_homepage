@@ -37,12 +37,7 @@ const rounddecimal = (n) => {
         return minmax[1]
     }
 };
-   
-// return an openweathermap icon link from icon code
-const owmicon = (shortcode) => {
-    return `https://openweathermap.org/img/wn/${shortcode}@2x.png`
-};
-  
+
 const datefromtoot = (item) => {
     let t = item.created_at.match(/^\d{4}-(\d{2})-(\d{2})T(\d{2}:\d{2})/)
     // let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
@@ -67,7 +62,6 @@ module.exports = {
     cssmin,
     datefromtoot,
     formstring,
-    owmicon,
     rounddecimal,
     stringify,
     upper,

@@ -5,7 +5,8 @@ const {
     generateBeerImage,
     generateF1Image,
     generateFootballImage,
-    generateImageTags
+    generateImageTags,
+    generateWeatherImage
 } = require('./utils/config_img_shortcodes.js');
 
 const {
@@ -13,7 +14,6 @@ const {
     cssmin,
     datefromtoot,
     formstring,
-    owmicon,
     rounddecimal,
     stringify,
     upper,
@@ -59,9 +59,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("f1Image", generateF1Image);
     eleventyConfig.addShortcode("footballImage", generateFootballImage);
     eleventyConfig.addShortcode("baseballImage", generateBaseballImage);
-
-    // filter to return an openweathermap icon link from icon code
-    eleventyConfig.addFilter("owmicon", owmicon);
+    eleventyConfig.addShortcode("weatherImage", generateWeatherImage);
 
     // filter to generate a properly-formatted date string from a teet created_at string
     eleventyConfig.addFilter("datefromtoot", datefromtoot);

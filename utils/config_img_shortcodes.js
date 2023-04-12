@@ -149,7 +149,6 @@ const generateFootballImage = async (src, alt) => {
         outputDir: "./_site/img/football/",
         urlPath: "/img/football/"
     });
-    console.log(src);
     let wdata = metadata.webp[0];
     let pdata = metadata.png[0];
     return `
@@ -192,11 +191,39 @@ const generateBaseballImage = async (src, alt) => {
         </picture>`;
 }
 
+const generateWeatherImage = async (icon, alt) => {
+    if (alt === undefined) {
+        alt = ''
+    }
+    const src = `https://openweathermap.org/img/wn/${icon}@2x.png`
+    let metadata = await Image(src, {
+        widths: [50],
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/weather/",
+        urlPath: "/img/weather/"
+    });
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+                src="${pdata.url}"
+                alt="${alt}"
+                height="50"
+                width="50"
+                loading="lazy"
+                decoding="async">
+        </picture>`;
+}
+
 module.exports = {
     generateArcherImage,
     generateBaseballImage,
     generateBeerImage,
     generateF1Image,
     generateFootballImage,
-    generateImageTags
+    generateImageTags,
+    generateWeatherImage
 }
