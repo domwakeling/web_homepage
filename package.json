@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
-    "dev": "eleventy --serve",
+    "dev": "eleventy --serve --incremental",
     "build": "eleventy",
     "clean": "rimraf _site && rimraf .cache"
   },

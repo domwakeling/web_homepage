@@ -3,11 +3,6 @@ const Image = require("@11ty/eleventy-img");
 
 const generateImageTags = async (src, alt) => {
     if (!src || src == '') return '';
-    // stop errors in development (comment out to test locally)
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="${alt}" class="side_image" loading="lazy" decoding="async">`;
-    }
-    // production
     if (alt === undefined) {
         alt = ''
     }
@@ -15,19 +10,25 @@ const generateImageTags = async (src, alt) => {
     try {
         metadata = await Image(src, {
             widths: [300],
-            formats: ["jpeg"],
+            formats: ["webp", "jpeg"],
             outputDir: "./_site/img/"
         });
-        let data = metadata.jpeg.pop();
-        return `<img
-                    src="${data.url}"
+        let wdata = metadata.webp[0];
+        let jdata = metadata.jpeg[0];
+        return `
+            <picture>
+                <source srcset="${wdata.url}" type="image/webp">
+                <source srcset="${jdata.url}" type="image/jpeg">
+                <img
+                    src="${jdata.url}"
                     alt="${alt}"
                     class="side_image"
+                    height="${jdata.height}"
+                    width="${jdata.width}"
                     loading="lazy"
                     decoding="async"
-                    width="${data.width}"
-                    height="${data.height}"
-                >`;
+                >
+            </picture>`;
     } catch (e) {
         console.error(e.message);
         return `<img
@@ -48,29 +49,30 @@ const generateBeerImage = async (src) => {
         console.log("Empty src passed to generateBeerImage");
         return '';
     }
-    // stop errors in development (comment out to test locally)
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img src="${src}" alt="beer image" class="side_image" loading="lazy" decoding="async">`;
-    }
-    // production
     let metadata = {};
     try {
         metadata = await Image(src, {
             widths: [300],
-            formats: ["png"],
+            formats: ["webp", "png"],
             outputDir: "./_site/img/beer/",
             urlPath: "/img/beer/"
         });
-        let data = metadata.png.pop();
-        return `<img
-                    src="${data.url}"
+        let wdata = metadata.webp[0];
+        let pdata = metadata.png[0];
+        return `
+            <picture>
+                <source srcset="${wdata.url}" type="image/webp">
+                <source srcset="${pdata.url}" type="image/png">
+                <img
+                    src="${pdata.url}"
                     alt="beer image"
                     class="beer_img"
+                    height="${pdata.height}"
+                    width="${pdata.width}"
                     loading="lazy"
                     decoding="async"
-                    width="${data.width}"
-                    height="${data.height}"
-                >`;
+                >
+            </picture>`;
     } catch (e) {
         console.error(e.message);
         return `<img
@@ -87,41 +89,42 @@ const generateBeerImage = async (src) => {
 
 const generateArcherImage = async (src) => {
     if (!src || src == '') return '';
-    // stop errors in development (comment out to test locally)
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img alt="archer image" src="${src}" style="width: 100%; height: auto;  border-radius: 1.0rem;" />`;
-    }
-    // production
-    metadata = await Image(src, {
-        widths: [300],
-        formats: ["jpeg"],
+    let metadata = await Image(src, {
+        widths: [600],
+        formats: ["webp", "jpeg"],
         outputDir: "./_site/img/archer/",
         urlPath: "/img/archer/"
     });
-    let data = metadata.jpeg.pop();
-    return `<img
-                src="${data.url}"
+    let wdata = metadata.webp[0];
+    let jdata = metadata.jpeg[0];
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${jdata.url}" type="image/jpeg">
+            <img
+                src="${jdata.url}"
                 alt="archer image"
                 style="width: 100%; height: auto;  border-radius: 1.0rem;"
+                height="${jdata.height}"
+                width="${jdata.width}"
                 loading="lazy"
                 decoding="async"
-                width="${data.width}"
-                height="${data.height}"
-            >`;
+            >
+        </picture>`
 }
 
 const generateF1Image = async (src, alt) => {
     if (alt === undefined) {
         alt = ''
     }
-    metadata = await Image(src, {
+    let metadata = await Image(src, {
         widths: [300],
         formats: ["webp", "png"],
         outputDir: "./_site/img/f1/",
         urlPath: "/img/f1/"
     });
-    let wdata = metadata.webp.pop();
-    let pdata = metadata.png.pop();
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
     return `
         <picture>
             <source srcset="${wdata.url}" type="image/webp">
@@ -137,18 +140,6 @@ const generateF1Image = async (src, alt) => {
 }
 
 const generateFootballImage = async (src, alt) => {
-    // stop errors in development (comment out to test locally)
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') {
-        return `<img
-            src="${src}"
-            alt="${alt}"
-            height="80"
-            width="80"
-            style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
-            loading="lazy"
-            decoding="async">`;
-    }
-    // production
     if (alt === undefined) {
         alt = ''
     }
@@ -158,8 +149,9 @@ const generateFootballImage = async (src, alt) => {
         outputDir: "./_site/img/football/",
         urlPath: "/img/football/"
     });
-    let wdata = metadata.webp.pop();
-    let pdata = metadata.png.pop();
+    console.log(src);
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
     return `
         <picture>
             <source srcset="${wdata.url}" type="image/webp">
@@ -183,8 +175,8 @@ const generateBaseballImage = async (src, alt) => {
         outputDir: "./_site/img/baseball/",
         urlPath: "/img/baseball/"
     });
-    let wdata = metadata.webp.pop();
-    let pdata = metadata.png.pop();
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
     return `
         <picture>
             <source srcset="${wdata.url}" type="image/webp">

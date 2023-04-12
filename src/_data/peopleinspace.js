@@ -6,7 +6,7 @@ module.exports = async function () {
         .get('http://api.open-notify.org/astros.json')
         .catch((err) => {
             console.error(err);
-            return []
+            return [];
         });
     
     const mappedData = spacedata.data.people.reduce((cum, item) => {
@@ -24,7 +24,7 @@ module.exports = async function () {
             craft,
             people: mappedData[craft].join(", "),
             peopleCount: mappedData[craft].length
-        })
+        });
     }
 
     return outputData;
