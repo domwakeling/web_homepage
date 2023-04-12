@@ -2,10 +2,6 @@
 
 const data = [
     {
-        "media_url": "http://pbs.twimg.com/tweet_video_thumb/DLEjFqkWkAAFNRM.jpg",
-        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/DLEjFqkWkAAFNRM.jpg",
-    },
-    {
         "media_url": "http://pbs.twimg.com/media/CxGMKNdUUAASf8y.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CxGMKNdUUAASf8y.jpg",
         "heightClass": "height1"
@@ -23,10 +19,6 @@ const data = [
         "media_url": "http://pbs.twimg.com/media/CtPu3UFUsAA3kzj.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CtPu3UFUsAA3kzj.jpg",
         "heightClass": "height1"
-    },
-    {
-        "media_url": "http://pbs.twimg.com/media/CtKa6QDUsAAPS-K.jpg",
-        "media_url_https": "https://pbs.twimg.com/media/CtKa6QDUsAAPS-K.jpg",
     },
     {
         "media_url": "http://pbs.twimg.com/media/Cq5WtjlUMAAzYBQ.jpg",
@@ -59,11 +51,6 @@ const data = [
             `,
         "media_url": "http://pbs.twimg.com/media/CqksuCfUsAAaanO.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CqksuCfUsAAaanO.jpg",            
-    },
-    {
-        "full_text": "<li>Pam, if you want to scuff them that badly just throw them down the......ugh.</li>",
-        "media_url": "http://pbs.twimg.com/media/Cp8P_zrVUAAAfu2.jpg",
-        "media_url_https": "https://pbs.twimg.com/media/Cp8P_zrVUAAAfu2.jpg",        
     },
     {
         "media_url": "http://pbs.twimg.com/media/Cp2x2mxUkAAn90U.jpg",
