@@ -5,4 +5,4 @@
 [[headers]]
   for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "https://distracted-elion-60a106.netlify.app/*"
+    Access-Control-Allow-Origin = "https://distracted-elion-60a106.netlify.app"
