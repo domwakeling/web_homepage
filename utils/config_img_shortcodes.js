@@ -47,10 +47,11 @@ const generateImageTags = async (src, alt) => {
 }
 
 const generateBeerImage = async (src) => {
-    console.log('generating img:', src.substring(0, 60));
     if (!src || src == '') {
         console.log("Empty src passed to generateBeerImage");
         return '';
+    } else {
+        console.log('generating img:', src.substring(0, 60));
     }
     let metadata = {};
     try {
