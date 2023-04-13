@@ -5,13 +5,7 @@
         <tr>
             {%- for item in ratedata -%}
             <th>
-                <img
-                    src="{{ item.flag.src }}"
-                    srcset="{{ item.flag.srcset }}"
-                    alt="{{ item.alt }}"
-                    width="64"
-                    height="48"
-                />
+                {% flagImage item.flag.src, item.alt %}
             </th>
             {%- endfor -%}
         </tr>

@@ -2,6 +2,7 @@ require('dotenv').config();
 const Image = require("@11ty/eleventy-img");
 
 const generateImageTags = async (src, alt) => {
+    console.log('generating img:', src.substring(0,50));
     if (!src || src == '') return '';
     if (alt === undefined) {
         alt = ''
@@ -11,7 +12,8 @@ const generateImageTags = async (src, alt) => {
         metadata = await Image(src, {
             widths: [300],
             formats: ["webp", "jpeg"],
-            outputDir: "./_site/img/"
+            outputDir: "./_site/img/general/",
+            urlPath: "/img/general/"
         });
         let wdata = metadata.webp[0];
         let jdata = metadata.jpeg[0];
@@ -45,6 +47,7 @@ const generateImageTags = async (src, alt) => {
 }
 
 const generateBeerImage = async (src) => {
+    console.log('generating img:', src.substring(0, 60));
     if (!src || src == '') {
         console.log("Empty src passed to generateBeerImage");
         return '';
@@ -88,6 +91,7 @@ const generateBeerImage = async (src) => {
 }
 
 const generateArcherImage = async (src) => {
+    console.log('generating img:', src.substring(0, 60));
     if (!src || src == '') return '';
     let metadata = await Image(src, {
         widths: [600],
@@ -114,6 +118,7 @@ const generateArcherImage = async (src) => {
 }
 
 const generateF1Image = async (src, alt) => {
+    console.log('generating img:', src.substring(0, 60));
     if (alt === undefined) {
         alt = ''
     }
@@ -140,6 +145,7 @@ const generateF1Image = async (src, alt) => {
 }
 
 const generateFootballImage = async (src, alt) => {
+    console.log('generating img:', src.substring(0, 60));
     if (alt === undefined) {
         alt = ''
     }
@@ -165,6 +171,7 @@ const generateFootballImage = async (src, alt) => {
 }
 
 const generateBaseballImage = async (src, alt) => {
+    console.log('generating img:', src.substring(0, 60));
     if (alt === undefined) {
         alt = ''
     }
@@ -195,7 +202,8 @@ const generateWeatherImage = async (icon, alt) => {
     if (alt === undefined) {
         alt = ''
     }
-    const src = `https://openweathermap.org/img/wn/${icon}@2x.png`
+    const src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    console.log('generating img:', src.substring(0, 60));
     let metadata = await Image(src, {
         widths: [50],
         formats: ["webp", "png"],
@@ -219,12 +227,13 @@ const generateWeatherImage = async (icon, alt) => {
 }
 
 const generateCatImage = async (src) => {
+    console.log('generating img:', src.substring(0, 60));
     if (!src || src == '') return '';
     let metadata = await Image(src, {
         widths: [600],
         formats: ["webp", "jpeg"],
-        outputDir: "./_site/img/",
-        urlPath: "/img/"
+        outputDir: "./_site/img/general/",
+        urlPath: "/img/general/"
     });
     let wdata = metadata.webp[0];
     let jdata = metadata.jpeg[0];
@@ -244,13 +253,72 @@ const generateCatImage = async (src) => {
         </picture>`
 }
 
+const generateLinkImage = async (src, alt) => {
+    console.log('generating img:', src.substring(0, 50));
+    if (!src || src == '') return '';
+    if (alt === undefined) {
+        alt = ''
+    }
+    let metadata = await Image(src, {
+        widths: [200],
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/links/",
+        urlPath: "/img/links/"
+    });
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+                src="${pdata.url}"
+                alt="${alt}"
+                class="link_img"
+                height="${pdata.height}"
+                width="${pdata.width}"
+                loading="lazy"
+                decoding="async"
+            >
+        </picture>`;
+}
+
+const generateFlagImage = async (src, alt) => {
+    if (alt === undefined) {
+        alt = ''
+    }
+    console.log('generating img:', src.substring(0, 60));
+    let metadata = await Image(src, {
+        widths: [64],
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/flags/",
+        urlPath: "/img/flags/"
+    });
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+                src="${pdata.url}"
+                alt="${alt}"
+                height="48"
+                width="64"
+                loading="lazy"
+                decoding="async">
+        </picture>`;
+}
+
 module.exports = {
     generateArcherImage,
     generateBaseballImage,
     generateBeerImage,
     generateCatImage,
     generateF1Image,
+    generateFlagImage,
     generateFootballImage,
     generateImageTags,
+    generateLinkImage,
     generateWeatherImage
 }
