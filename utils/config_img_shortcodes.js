@@ -163,11 +163,12 @@ const generateFootballImage = async (src, alt) => {
             <source srcset="${wdata.url}" type="image/webp">
             <source srcset="${pdata.url}" type="image/png">
             <img
-            src="${pdata.url}"
-            alt="${alt}"
-            style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem"
-            loading="lazy"
-            decoding="async">
+                src="${pdata.url}"
+                alt="${alt}"
+                style="height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem; object-fit: cover;"
+                loading="lazy"
+                decoding="async"
+            >
         </picture>`;
 }
 
