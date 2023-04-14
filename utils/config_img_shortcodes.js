@@ -102,6 +102,7 @@ const generateArcherImage = async (src) => {
     });
     let wdata = metadata.webp[0];
     let jdata = metadata.jpeg[0];
+    // PROBABLY the largest image & above the fold, so eagerly load
     return `
         <picture>
             <source srcset="${wdata.url}" type="image/webp">
@@ -112,7 +113,7 @@ const generateArcherImage = async (src) => {
                 style="width: 100%; height: auto;  border-radius: 1.0rem;"
                 height="${jdata.height}"
                 width="${jdata.width}"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
             >
         </picture>`
