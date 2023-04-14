@@ -313,6 +313,64 @@ const generateFlagImage = async (src, alt) => {
         </picture>`;
 }
 
+const generateWatchImage = async (src) => {    
+    console.log('generating img:', src.substring(0, 60));
+    let metadata = await Image(src, {
+        widths: [500],
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/general/",
+        urlPath: "/img/general/"
+    });
+    let wdata = metadata.webp[0];
+    let pdata = metadata.png[0];
+    return `
+        <picture>
+            <source srcset="${wdata.url}" type="image/webp">
+            <source srcset="${pdata.url}" type="image/png">
+            <img
+                src="${pdata.url}"
+                height="500"
+                width="500"
+                style="width: 250px; height: 250px;"
+                alt="watchface
+                loading="eager"
+                decoding="async">
+        </picture>`;
+}
+
+const generateMastoImage = async (src) => {
+    console.log('generating img:', src.substring(0, 50));
+    if (!src || src == '') return '';
+    let metadata = {};
+    try {
+        metadata = await Image(src, {
+            widths: [80],
+            formats: ["webp", "jpeg"],
+            outputDir: "./_site/img/general/",
+            urlPath: "/img/general/"
+        });
+        let wdata = metadata.webp[0];
+        let jdata = metadata.jpeg[0];
+        return `
+            <picture>
+                <source srcset="${wdata.url}" type="image/webp">
+                <source srcset="${jdata.url}" type="image/jpeg">
+                <img
+                    src="${jdata.url}"
+                    alt="user avatar"
+                    class="toot_user"
+                    height="${jdata.height}"
+                    width="${jdata.width}"
+                    loading="eager"
+                    decoding="async"
+                >
+            </picture>`;
+    } catch (e) {
+        console.error(e.message);
+        return '';
+    }
+}
+
 module.exports = {
     generateArcherImage,
     generateBaseballImage,
@@ -323,5 +381,7 @@ module.exports = {
     generateFootballImage,
     generateImageTags,
     generateLinkImage,
+    generateMastoImage,
+    generateWatchImage,
     generateWeatherImage
 }

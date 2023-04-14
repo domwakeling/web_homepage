@@ -9,6 +9,8 @@ const {
     generateFootballImage,
     generateImageTags,
     generateLinkImage,
+    generateMastoImage,
+    generateWatchImage,
     generateWeatherImage
 } = require('./utils/config_img_shortcodes.js');
 
@@ -65,6 +67,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("footballImage", generateFootballImage);
     eleventyConfig.addShortcode("f1Image", generateF1Image);
     eleventyConfig.addShortcode("linkImage", generateLinkImage);
+    eleventyConfig.addShortcode("mastoImage", generateMastoImage);
+    eleventyConfig.addShortcode("watchImage", generateWatchImage);
     eleventyConfig.addShortcode("weatherImage", generateWeatherImage);
 
     // filter to generate a properly-formatted date string from a teet created_at string
