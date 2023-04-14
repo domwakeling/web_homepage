@@ -24,6 +24,7 @@
     box-sizing: border-box;
     width: 23%;
     margin: 1%;
+    float: left;
 }
 
 @include for-three-column-only {
