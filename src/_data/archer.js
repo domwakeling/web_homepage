@@ -7,15 +7,6 @@ const data = [
         "heightClass": "height1"
     },
     {
-        "full_text": `
-            <li>Don't you think it's a little premature to be celebrating?</li>
-            <li>Who's celebrating?</li>
-            `,
-        "media_url": "http://pbs.twimg.com/media/CwhV65sVIAAVRkr.jpg",
-        "media_url_https": "https://pbs.twimg.com/media/CwhV65sVIAAVRkr.jpg",
-        "heightClass": "height2"
-    },
-    {
         "media_url": "http://pbs.twimg.com/media/CtPu3UFUsAA3kzj.jpg",
         "media_url_https": "https://pbs.twimg.com/media/CtPu3UFUsAA3kzj.jpg",
         "heightClass": "height1"
@@ -27,14 +18,6 @@ const data = [
     {
         "media_url": "http://pbs.twimg.com/media/Cq0CUQ4UEAA59jv.jpg",
         "media_url_https": "https://pbs.twimg.com/media/Cq0CUQ4UEAA59jv.jpg",
-    },
-    {
-        "full_text": `
-            <li>You're my smoochie boochie</li>
-            <li>No, you're my smoochie boochie</li>
-            `,
-        "media_url": "http://pbs.twimg.com/media/CquyqMEUIAAcjbC.jpg",
-        "media_url_https": "https://pbs.twimg.com/media/CquyqMEUIAAcjbC.jpg",
     },
     {
         "full_text": `
