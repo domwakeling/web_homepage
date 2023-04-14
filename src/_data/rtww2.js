@@ -92,7 +92,7 @@ module.exports = async function () {
             .then(data => {
                 const toots = data
                     .filter(item => item.visibility == 'public' && item.account.id == '8169')
-                    .filter((_, idx) => idx < 10)
+                    .filter((_, idx) => idx < 7)
                     .map(item => {
                         const tmp = {}
                         tmp.id = item.id;

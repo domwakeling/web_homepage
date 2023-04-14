@@ -26,16 +26,16 @@ module.exports = async function () {
             link: 'http://freecodecamp.org/news/react-libraries-you-should-use/',
             title: 'The Best React Libraries You Should Be Using Today'
         },
-        {
-            imageUrl: 'http://freecodecamp.org/news/content/images/size/w600/2021/04/Brand-Poster-1.png',
-            link: 'http://freecodecamp.org/news/build-your-personal-brand-as-a-developer/',
-            title: 'How to Build Your Personal Brand as a Developer'
-        },
-        {
-            imageUrl: 'https://images.unsplash.com/photo-1572062505547-912c49028cc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIwfHxkYXJrJTIwbW9kZXxlbnwwfHx8fDE2MTc2MDM0NTI&ixlib=rb-1.2.1&q=80&w=2000',
-            link: 'http://freecodecamp.org/news/gmail-dark-mode/',
-            title: 'Gmail Dark Mode – How to Change the Gmail Background Theme on Desktop, iOS, and Android'
-        }
+        // {
+        //     imageUrl: 'http://freecodecamp.org/news/content/images/size/w600/2021/04/Brand-Poster-1.png',
+        //     link: 'http://freecodecamp.org/news/build-your-personal-brand-as-a-developer/',
+        //     title: 'How to Build Your Personal Brand as a Developer'
+        // },
+        // {
+        //     imageUrl: 'https://images.unsplash.com/photo-1572062505547-912c49028cc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIwfHxkYXJrJTIwbW9kZXxlbnwwfHx8fDE2MTc2MDM0NTI&ixlib=rb-1.2.1&q=80&w=2000',
+        //     link: 'http://freecodecamp.org/news/gmail-dark-mode/',
+        //     title: 'Gmail Dark Mode – How to Change the Gmail Background Theme on Desktop, iOS, and Android'
+        // }
     ];
 
     let htmldata = await axios
@@ -46,7 +46,7 @@ module.exports = async function () {
             const articles = dom.window.document.querySelectorAll('article');
             const ret = [];
             // get src and title for first n items
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 4; i++) {
                 const temp = {
                     imageUrl: articles[i].querySelector('.post-card-image').getAttribute('srcset'),
                     link: articles[i].querySelector('a.post-card-image-link').getAttribute('href'),

@@ -30,16 +30,16 @@ module.exports = async function () {
             link: 'https://www.cyclingnews.com/races/presidential-cycling-tour-of-turkey-2021/stage-3/results/',
             title: 'Tour of Turkey: Mark Cavendish wins stage 3'
         },
-        {
-            imageUrl: 'https://cdn.mos.cms.futurecdn.net/ZCFsd5HkvuqsZpcAeFoHbh.jpg',
-            link: 'https://www.cyclingnews.com/races/gorge-gravel-grinder-2021/elite-women/results/',
-            title: "Rebecca Fahringer overcomes intimidation to win Gorge Gravel Grinder over 'cross rival Clara Honsinger"
-        },
-        {
-            imageUrl: 'https://cdn.mos.cms.futurecdn.net/WYEWig96USzwLcPfTnLb94.jpg',
-            link: 'https://www.cyclingnews.com/races/presidential-cycling-tour-of-turkey-2021/stage-2/results/',
-            title: 'Tour of Turkey: Mark Cavendish wins stage 2'
-        }
+        // {
+        //     imageUrl: 'https://cdn.mos.cms.futurecdn.net/ZCFsd5HkvuqsZpcAeFoHbh.jpg',
+        //     link: 'https://www.cyclingnews.com/races/gorge-gravel-grinder-2021/elite-women/results/',
+        //     title: "Rebecca Fahringer overcomes intimidation to win Gorge Gravel Grinder over 'cross rival Clara Honsinger"
+        // },
+        // {
+        //     imageUrl: 'https://cdn.mos.cms.futurecdn.net/WYEWig96USzwLcPfTnLb94.jpg',
+        //     link: 'https://www.cyclingnews.com/races/presidential-cycling-tour-of-turkey-2021/stage-2/results/',
+        //     title: 'Tour of Turkey: Mark Cavendish wins stage 2'
+        // }
     ];
 
     let htmldata = await axios
@@ -64,7 +64,7 @@ module.exports = async function () {
                     ret.push(temp);
                 }
                 idx += 1;
-                if (ret.length >= 7 || idx >= articles.length) complete = true; 
+                if (ret.length >= 5 || idx >= articles.length) complete = true; 
             }
             return ret
         })
