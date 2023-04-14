@@ -4,3 +4,4 @@ $color_linkText: darken(saturate($color_orange, 50%), 32%);
 $color_mainBackground: white;
 $color_panelBackground: lighten($color_orange, 43%);
 $color_greyText: darken(desaturate($color_orange, 70%), 15%);
+$color_darkGrey: darken($color_greyText, 15%);
