@@ -1,13 +1,5 @@
-const beautify_html = require("js-beautify").html;
 const sass = require('sass');
 const CleanCSS = require("clean-css");
-
-const beautifyHTML = (content, outputPath) => {
-    if (outputPath.endsWith(".html")) {
-        return beautify_html(content);
-    }
-    return content;
-};
 
  const convertSASS =  (value) => {
     return sass.compileString(value).css.toString()
@@ -57,7 +49,6 @@ const upper=  (text) => {
 };
 
 module.exports = {
-    beautifyHTML,
     convertSASS,
     cssmin,
     datefromtoot,
