@@ -11,3 +11,5 @@ const metToImp = () => {
     const lbs = (Math.floor((pounds - 14 * stone) * 10) * 0.1).toFixed(1);
     impBox.value = `${stone}st ${lbs}lbs`;
 }
+
+metBox.addEventListener("input", metToImp);
