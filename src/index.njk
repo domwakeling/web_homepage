@@ -9,19 +9,24 @@ layout: layout.njk
         {% include "components/archer.njk" %}
         {% include "components/rtww2.njk" %}
         {# {% if panels.football %} #}
-        {% include "components/football.njk" %}
+        {% if showFootball %}
+            {% include "components/football.njk" %}
+        {% endif %}
         {# {% endif %} #}
         {# {% include "components/cowboy.njk" %} #}
         {% include "components/links.njk" %}
         {# {% include "components/superhero.njk" %} #}
         {# {% if panels.baseball %} #}
-        {# {% include "components/baseball.njk" %} #}
+        {# {% if showBaseball %} #}
+            {# {% include "components/baseball.njk" %} #}
         {# {% endif %}  #}
         {% include "components/beer.njk" %}
         {% include "components/tv.njk" %}
         {% include "components/advice.njk" %}
         {% include "components/weather.njk" %}
-        {% include "components/f1team.njk" %}
+        {% if showF1 %}
+            {% include "components/f1team.njk" %}
+        {% endif %}
         {% include "components/space.njk" %}
         {% include "components/silly.njk" %}
         {% include "components/fccnews.njk" %}
