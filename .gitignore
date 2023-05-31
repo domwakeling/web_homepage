@@ -11,3 +11,4 @@ _not_for_git
 .DS_Store
 _design
 src/img/.DS_Store
+.vscode

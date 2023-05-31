@@ -149,12 +149,12 @@ module.exports = async function () {
         }
     } else {
          f1data = await axios
-        .get('https://ergast.com/api/f1/current/constructorStandings.json')
-        .then(res => res.data)
-        .catch((err) => {
-            console.error(err);
-            return [];
-        });
+             .get('https://ergast.com/api/f1/current/constructorStandings.json')
+            .then(res => res.data)
+            .catch((err) => {
+                console.error(err.message);
+                return [];
+            });
     }
 
     // If more are needed: use Wikipedia, right-click on the image and open in new tab, this will
@@ -180,6 +180,8 @@ module.exports = async function () {
         'williams': 'https://upload.wikimedia.org/wikipedia/en/e/e8/Williams_Racing_2020_logo.png'
     }
 
+    console.log(f1data);
+
     // we have the data, need to map it
     try {
         return f1data
@@ -193,7 +195,7 @@ module.exports = async function () {
                 points: item.points
             }));
     } catch (err) {
-        console.error(err);
+        console.error(err.message);
         return [];
     }
 };

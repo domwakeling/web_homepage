@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
     // filter to stringify JSON
     eleventyConfig.addFilter("stringify", stringify);
 
-    // filter to turn comma-seperated form list into string
+    // filter to turn comma-separated form list into string
     eleventyConfig.addFilter("formstring", formstring);
 
     // filter to take a Unix timestamp and return the weekday
@@ -71,13 +71,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("watchImage", generateWatchImage);
     eleventyConfig.addShortcode("weatherImage", generateWeatherImage);
 
-    // filter to generate a properly-formatted date string from a teet created_at string
+    // filter to generate a properly-formatted date string from a toot created_at string
     eleventyConfig.addFilter("datefromtoot", datefromtoot);
 
     // filter to minimise css
     eleventyConfig.addFilter("cssmin", cssmin);
 
-    // filter to upperstring text
+    // filter to upperString text
     eleventyConfig.addFilter("upper", upper);
 
     // copy from src/_includes/favicons to the root
