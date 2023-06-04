@@ -2,12 +2,12 @@ name: Scheduled Homepage Build
 
 on:
     schedule:
-    # -   cron: 0 6,12,18 * * *
-    -   cron: 42 * * * *
+    # -   cron: 0 5,12,18 * * *
+    -   cron: 5 * * * *
 
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
         -   name: build request
-            run: curl -X POST -d {} https://api.netlify.com/build_hooks/647cafa5bddc514178d7cd15
+            run: curl -X POST -d {} ${{ secrets.BUILD_HOOK }}
