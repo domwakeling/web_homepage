@@ -180,8 +180,6 @@ module.exports = async function () {
         'williams': 'https://upload.wikimedia.org/wikipedia/en/e/e8/Williams_Racing_2020_logo.png'
     }
 
-    console.log(f1data);
-
     // we have the data, need to map it
     try {
         return f1data

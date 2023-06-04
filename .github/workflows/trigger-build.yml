@@ -1,0 +1,13 @@
+name: Scheduled Homepage Build
+
+on:
+    schedule:
+    # -   cron: 0 6,12,18 * * *
+    -   cron: 30 * * * *
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: build request
+            run: curl -X post {} https://api.netlify.com/build_hooks/622db09fe489bb446d584752

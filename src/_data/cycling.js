@@ -49,7 +49,7 @@ module.exports = async function () {
             const dom = new jsdom.JSDOM(data);
             const articles = dom.window.document.querySelectorAll('div.listingResult');
             const ret = [];
-            // get up to 7 items, return gracefully if there *aren'* seven items            
+            // get up to 7 items, return gracefully if there *aren't* seven items            
             let complete = false;
             let idx = 0;
             while (!complete) {
