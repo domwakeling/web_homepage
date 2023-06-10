@@ -4,12 +4,28 @@ const data = [
         "release": "21.06.23"
     },
     {
-        "showName": "Mandalorian S3",
-        "release": "01.03.23"
+        "showName": "The Blacklist S10",
+        "release": "25.06.23"
     },
     {
-        "showName": "True Lies",
-        "release": "19.04.23"
+        "showName": "The Witcher S3",
+        "release": "29.06.23"
+    },
+    {
+        "showName": "Good Omens S2",
+        "release": "28.07.23"
+    },
+    {
+        "showName": "Ahsoka",
+        "release": "23.08.23"
+    },
+    {
+        "shoaName": "Lupin S3",
+        "release": "05.10.23"
+    },
+    {
+        "shoaName": "Loki S2",
+        "release" : "06.10.23"
     }
 ];
 
