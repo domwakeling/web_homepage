@@ -1,28 +1,24 @@
-const axios = require('axios');
+const EleventyFetch = require("@11ty/eleventy-fetch"); 
 require('dotenv').config();
 
 module.exports = async function () {
 
-    const dummydata = {
+    const dummy_data = {
         "id": 26,
         "type": "programming",
         "setup": "If you put a million monkeys at a million keyboards, one of them will eventually write a Java program",
         "delivery": "the rest of them will write Perl"
     }
 
-    // in development, send back a static object
-    if (process.env.LOCAL_DEVELOPMENT == 'DEVELOPMENT') return dummydata;
-
-    let jokedata = await axios
-        .get('https://v2.jokeapi.dev/joke/Programming?type=twopart')
-        .catch((err) => {
-            console.error(err);
-            return {}
+    try {
+        const joke_data = await EleventyFetch('https://v2.jokeapi.dev/joke/Programming?type=twopart', {
+            duration: "3h",
+            type: "json"
         });
-
-    if (jokedata.data) {
-        return jokedata.data;
-    } else {
-        return dummydata;
+        
+        return joke_data;
+        
+    } catch {
+        return dummy_data;
     }
 };

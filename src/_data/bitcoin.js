@@ -8,11 +8,12 @@ module.exports = async function () {
             duration: "3h",
             type: "json"
         });
-
+        
         const bitData = {};
         bitData.time = data.time;
         bitData.bpi = [];
         for (let item of Object.keys(data.bpi)) {
+
             const tempRate = data.bpi[item];
             tempRate.rate = tempRate.rate.match(/^[\d,]+\.\d{2}/)
             bitData.bpi.push(tempRate)
