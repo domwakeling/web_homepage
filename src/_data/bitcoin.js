@@ -1,24 +1,26 @@
-const axios = require('axios');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-    
-    const bitData = await axios.
-        get('https://api.coindesk.com/v1/bpi/currentprice.json')
-        .then(res => res.data)
-        .then(data => {
-            const temp = {};
-            temp.time = data.time;
-            temp.bpi = [];
-            for (let item of Object.keys(data.bpi)) {
-                const tempRate = data.bpi[item];
-                tempRate.rate = tempRate.rate.match(/^[\d,]+\.\d{2}/)
-                temp.bpi.push(tempRate)
-            }
-            return temp;
-        })
-        .catch((err) => {
-            console.error(err);
-            return null;
+
+    try {
+
+        const data = await EleventyFetch('https://api.coindesk.com/v1/bpi/currentprice.json', {
+            duration: "3h",
+            type: "json"
         });
-    return bitData;
+
+        const bitData = {};
+        bitData.time = data.time;
+        bitData.bpi = [];
+        for (let item of Object.keys(data.bpi)) {
+            const tempRate = data.bpi[item];
+            tempRate.rate = tempRate.rate.match(/^[\d,]+\.\d{2}/)
+            bitData.bpi.push(tempRate)
+        }
+        return bitData;
+
+    } catch (error) {
+        console.log("Error when fetching from CoinDesk:",  error.message);
+        return null;
+    }
 }

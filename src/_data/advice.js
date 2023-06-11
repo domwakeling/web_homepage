@@ -1,20 +1,24 @@
-const axios = require('axios');
-
-const dummydata = {
-    "slip": {
-        "id": 99,
-        "advice": "Learn from your mistakes."
-    }
-}
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-
-    livedata = await axios
-        .get('https://api.adviceslip.com/advice')
-        .then(res => res.data)
-        .catch((err) => {
-            return dummydata;
-        });
     
-    return livedata.slip;
+    const dummy_data = {
+        "slip": {
+            "id": 99,
+            "advice": "Learn from your mistakes."
+        }
+    }
+
+    try {
+
+        const response = await EleventyFetch('https://api.adviceslip.com/advice', {
+            duration: "3h",
+            type: "json"
+        });
+        return response.slip;
+
+    } catch {
+
+        return dummy_data.slip;
+    }
 }

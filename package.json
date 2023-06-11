@@ -16,6 +16,7 @@
   "author": "Dom Wakeling <domwakelinge@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^2.0.0"
   },
   "devDependencies": {

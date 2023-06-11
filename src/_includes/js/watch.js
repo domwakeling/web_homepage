@@ -1,7 +1,7 @@
 let rotation = [0.0, 0.0, 0.0]
-let secHand = document.getElementById("secondhand");
-let minHand = document.getElementById("minutehand");
-let hourHand = document.getElementById("hourhand");
+let secHand = document.getElementById("second_hand");
+let minHand = document.getElementById("minute_hand");
+let hour_hand = document.getElementById("hour_hand");
 
 function secsRotation(time) {
     return Math.floor((time.getSeconds() + 0.001 * time.getMilliseconds()) * 60) * 0.1;
@@ -20,7 +20,7 @@ setInterval(() => {
     if (Math.abs(hoursRotation(time) - rotation[0]) >= 0.05) {
         rotation[0] = hoursRotation(time);
         let transformString = `rotate(${rotation[0]},125, 125)`;
-        hourHand.setAttribute('transform', transformString);
+        hour_hand.setAttribute('transform', transformString);
     }
     if (Math.abs(minutesRotation(time) - rotation[1]) >= 0.05) {
         rotation[1] = minutesRotation(time);

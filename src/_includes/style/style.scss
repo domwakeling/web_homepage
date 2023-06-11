@@ -103,7 +103,7 @@ img.beer_img {
 
 /* STYLING FOR FOOTBALL & BASEBALL */
 
-#football_table, #baseball_table {
+#football_table {
     tr {
         td {
             padding-top: 0.25rem;
@@ -124,20 +124,9 @@ img.beer_img {
     }
 }
 
-#baseball_table {
-    tr {
-        &:nth-child(5n+1) {
-            border-bottom: 2px solid orange;
-        }
-        &:last-child {
-            border-bottom: 1px solid orange;
-        }
-    }
-}
+/* STYLING FOR ARCHER AND JOKE */
 
-/* STYLING FOR ARCHER AND JOKE AND COWBOY */
-
-#archer, #joke, #cowboy {
+#archer, #joke {
     ul {
         list-style-type: none;
         li {
@@ -152,12 +141,6 @@ img.beer_img {
             }
         }
     }
-}
-
-p.cowboy_attribution {
-    font-size: 2.4rem;
-    font-family: 'Bebas Neue';
-    text-align: right;
 }
 
 #advice > p {
