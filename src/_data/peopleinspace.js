@@ -1,31 +1,34 @@
-const axios = require('axios');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
 
-    let spacedata = await axios
-        .get('http://api.open-notify.org/astros.json')
-        .catch((err) => {
-            console.error(err);
-            return [];
+    try {
+        const spaceData = await EleventyFetch('http://api.open-notify.org/astros.json', {
+            duration: "3h",
+            type: "json"
         });
-    
-    const mappedData = spacedata.data.people.reduce((cum, item) => {
-        if (item.craft in cum) {
-            cum[item.craft].push(item.name)
-        } else {
-            cum[item.craft] = [item.name]
+        
+        const mappedData = spaceData.people.reduce((cum, item) => {
+            if (item.craft in cum) {
+                cum[item.craft].push(item.name)
+            } else {
+                cum[item.craft] = [item.name]
+            }
+            return cum
+        }, {});
+        
+        const outputData = [];
+        for (craft of Object.keys(mappedData)) {
+            outputData.push({
+                craft,
+                people: mappedData[craft].join(", "),
+                peopleCount: mappedData[craft].length
+            });
         }
-        return cum
-    }, {});
+        
+        return outputData;
 
-    const outputData = [];
-    for (craft of Object.keys(mappedData)) {
-        outputData.push({
-            craft,
-            people: mappedData[craft].join(", "),
-            peopleCount: mappedData[craft].length
-        });
+    } catch {
+        return [];
     }
-
-    return outputData;
 };

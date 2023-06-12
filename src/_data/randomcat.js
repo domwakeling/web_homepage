@@ -1,19 +1,24 @@
-const axios = require('axios');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-    let found = false;
-    let newCat = null;
 
-    while (!found) {
-        newCat = await axios.
-            get('https://api.thecatapi.com/v1/images/search')
-            .then(res => res.data[0])
-            .catch((err) => {
-                console.error(err);
-                return null;
+    try {
+        let found = false;
+        let newCat = null;
+        
+        while (!found) {
+            let data = await EleventyFetch('https://api.thecatapi.com/v1/images/search', {
+                duration: "3h",
+                type: "json"
             });
-        if (newCat && ( (newCat.height * 1.2) < newCat.width)) found = true;
-    }
+            newCat = data[0];
+            
+            if (newCat && ( (newCat.height * 1.2) < newCat.width)) found = true;
+        }
+        
+        return newCat;
 
-    return newCat;
+    } catch {
+        return null;
+    }
 }

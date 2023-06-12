@@ -4,9 +4,7 @@ require('dotenv').config();
 
 module.exports = async function () {
 
-    try {
-
-        
+    try {        
         let html_data = await EleventyFetch('https://www.freecodecamp.org/news/', {
             duration: "3h",
             type: "buffer"

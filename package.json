@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "axios": "^0.27.1",
     "clean-css": "^5.2.2",
     "dotenv": "^16.0.0",
     "js-beautify": "^1.14.0",
