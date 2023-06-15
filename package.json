@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
     "dev": "eleventy --serve --incremental",
-    "build": "eleventy",
+    "build": "DEBUG=Eleventy* eleventy",
     "clean": "rimraf _site && rimraf .cache"
   },
   "keywords": [
