@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
     "dev": "eleventy --serve --incremental",
-    "build": "DEBUG=Eleventy* eleventy",
+    "build": "eleventy",
     "clean": "rimraf _site && rimraf .cache"
   },
   "keywords": [
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "axios": "^1.4.0",
     "clean-css": "^5.2.2",
     "dotenv": "^16.0.0",
     "js-beautify": "^1.14.0",
