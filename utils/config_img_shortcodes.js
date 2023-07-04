@@ -14,7 +14,13 @@ const generateImageTags = async (src, alt) => {
             alt: alt,
             class:  "side_image",
             loading: "lazy",
-            decoding: "async"
+            decoding: "async",
+            sizes: `(min-width: 2080px) 170px,
+                    (min-width: 1540px) calc(7.5vw + 16px),
+                    (min-width: 1160px) calc(10.28vw + 14px),
+                    (min-width: 1020px) 174px,
+                    (min-width: 780px) calc(15.91vw + 15px),
+                    (min-width: 500px) 158px, 32.22vw`
         }
         return Image.generateHTML(metadata, attributes);
     } catch (e) {
@@ -45,7 +51,13 @@ const generateBeerImage = async (src) => {
             alt: "beer image",
             class: "beer_img",
             loading:"lazy",
-            decoding:"async"
+            decoding:"async",
+            sizes: `(min-width: 2080px) 170px,
+                    (min-width: 1540px) calc(7.5vw + 16px),
+                    (min-width: 1160px) calc(10.28vw + 14px),
+                    (min-width: 1020px) 174px,
+                    (min-width: 780px) calc(15.91vw + 15px),
+                    (min-width: 500px) 158px, 32.22vw`
         }
         return Image.generateHTML(metadata, attributes);
     } catch (e) {
@@ -75,6 +87,12 @@ const generateArcherImage = async (src) => {
         style: "width: 100%; height: auto;  border-radius: 1.0rem;",
         loading: "eager",
         decoding: "async",
+        sizes: `(min-width: 2080px) 424px,
+                (min-width: 1540px) calc(18.65vw + 40px),
+                (min-width: 1160px) calc(25.83vw + 33px),
+                (min-width: 1020px) 434px,
+                (min-width: 780px) calc(39.55vw + 39px),
+                (min-width: 500px) 396px, 81.67vw`
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -82,16 +100,16 @@ const generateArcherImage = async (src) => {
 const generateF1Image = async (src, alt) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [300],
+        widths: [240],
         formats: ["webp", "png"],
         outputDir: "./_site/img/f1/",
         urlPath: "/img/f1/"
     });
     const attributes = {
         alt,
-        style: "width: 75%; height: auto;",
         loading: "lazy",
-        decoding: "async"
+        decoding: "async",
+        sizes: "240px"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -108,7 +126,8 @@ const generateFootballImage = async (src, alt) => {
         alt,
         style: "height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem; object-fit: cover;",
         loading: "lazy",
-        decoding: "async"
+        decoding: "async",
+        sizes:"40px"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -142,7 +161,8 @@ const generateWeatherImage = async (icon, alt) => {
     const attributes = {
         alt,
         loading: "lazy",
-        decoding: "async"
+        decoding: "async",
+        sizes: "50px"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -159,7 +179,13 @@ const generateCatImage = async (src) => {
         alt: "random cat image",
         style:  "width: 100%; height: auto; border-radius: 1.0rem;",
         loading: "lazy",
-        decoding: "async"
+        decoding: "async",
+        sizes: `(min-width: 2080px) 424px,
+                (min-width: 1540px) calc(18.65vw + 40px),
+                (min-width: 1160px) calc(25.83vw + 33px),
+                (min-width: 1020px) 434px,
+                (min-width: 780px) calc(39.55vw + 39px),
+                (min-width: 500px) 396px, 81.67vw`
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -176,7 +202,8 @@ const generateLinkImage = async (src, alt) => {
         alt,
         class: "link_img",
         loading:"lazy",
-        decoding:"async"
+        decoding:"async",
+        sizes: "100px"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -192,7 +219,8 @@ const generateFlagImage = async (src, alt) => {
     const attributes = {
         alt,
         loading: "lazy",
-        decoding: "async"
+        decoding: "async",
+        sizes: "64px"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -207,6 +235,7 @@ const generateWatchImage = async (src) => {
     });
     const attributes = {
         style: "width: 250px; height: 250px;",
+        sizes: "250px",
         alt: "watchface",
         loading: "eager",
         decoding: "async"
@@ -227,7 +256,8 @@ const generateMastoImage = async (src) => {
             alt:"user avatar",
             class: "toot_user",
             loading:"eager",
-            decoding:"async"
+            decoding:"async",
+            sizes: "36px"
         }
         return Image.generateHTML(metadata, attributes);
     } catch (e) {
