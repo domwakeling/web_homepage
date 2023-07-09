@@ -1,23 +1,19 @@
 const data = [
     {
-        "showName": "Secret Invasion",
-        "release": "21.06.23"
-    },
-    {
-        "showName": "The Blacklist S10",
-        "release": "25.06.23"
-    },
-    {
-        "showName": "The Witcher S3",
-        "release": "29.06.23"
-    },
-    {
         "showName": "Good Omens S2",
         "release": "28.07.23"
     },
     {
+        "showName": "Only Murders S3",
+        "release": "08.08.23"
+    },
+    {
         "showName": "Ahsoka",
         "release": "23.08.23"
+    },
+    {
+        "showName": "Justified City Primeval",
+        "release": "06.09.23"
     },
     {
         "showName": "Lupin S3",
