@@ -9,7 +9,7 @@ const CleanCSS = require("clean-css");
     return JSON.stringify(value);
 };
 
-// turn comma-seperated form list into string
+// turn comma-separated form list into string
 const formstring = (value) => {
     return value ? value.split(",").join("") : null;
 };
@@ -35,7 +35,7 @@ const datefromtoot = (item) => {
     // let t = item.created_at.match(/^(\w{3}) (\w{3}) (\d*) (\d*:\d*)/)
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
         'Sep', 'Oct', 'Nov', 'Dec']
-    return `${t[2]} ${months[parseInt(t[1])]} ${t[3]}`.toUpperCase();
+    return `${t[2]} ${months[parseInt(t[1]) - 1]} ${t[3]}`.toUpperCase();
 };
 
 // minimise css
@@ -43,7 +43,7 @@ const cssmin=  (code) => {
     return new CleanCSS({}).minify(code).styles;
 };
 
-// upperstring text
+// uppercase text
 const upper=  (text) => {
     return text.toUpperCase();
 };
