@@ -7,7 +7,7 @@
     />
     <h2>exchange rate</h2>
     {%- for item in bitcoin.bpi -%}
-        <p style="text-align: center; font-weight: 600; font-size: 3.0rem">
+        <p style="text-align: center; font-weight: 600; font-size: 3.0rem" role="paragraph>
             {{ item.symbol | safe }}{{item.rate}}
         </p>
     {%- endfor -%}

@@ -21,6 +21,7 @@ module.exports = async function () {
             if (article && article.querySelector('div.image-remove-reflow-container')) {
                 const temp = {
                     imageUrl: articles[idx].querySelector('div.image-remove-reflow-container').getAttribute('data-original'),
+                    altText: articles[idx].querySelector('img').getAttribute('alt'),
                     link: articles[idx].querySelector('a.article-link').getAttribute('href'),
                     title: articles[idx].querySelector('h3').textContent
                 }

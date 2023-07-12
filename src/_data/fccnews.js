@@ -17,6 +17,7 @@ module.exports = async function () {
         for (let i = 0; i < 4; i++) {
             const temp = {
                 imageUrl: articles[i].querySelector('.post-card-image').getAttribute('srcset'),
+                altText: articles[i].querySelector('img').getAttribute('alt'),
                 link: articles[i].querySelector('a.post-card-image-link').getAttribute('href'),
                 title: articles[i].querySelector('h2>a').textContent
             }

@@ -5,7 +5,7 @@ const generateImageTags = async (src, alt) => {
     try {
         console.log('generating img:', src.substring(0, 50));
         const metadata = await Image(src, {
-            widths: [300],
+            widths: [200, 300],
             formats: ["webp", "jpeg"],
             outputDir: "./_site/img/general/",
             urlPath: "/img/general/"
@@ -42,13 +42,13 @@ const generateBeerImage = async (src) => {
     try {
         console.log('generating img:', src.substring(0, 60));
         const metadata = await Image(src, {
-            widths: [300],
+            widths: [200, 300],
             formats: ["webp", "png"],
             outputDir: "./_site/img/beer/",
             urlPath: "/img/beer/"
         });
         const attributes = {
-            alt: "beer image",
+            alt: "Beer bottle or beer keg",
             class: "beer_img",
             loading:"lazy",
             decoding:"async",
@@ -77,13 +77,13 @@ const generateBeerImage = async (src) => {
 const generateArcherImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [600],
+        widths: [400, 600],
         formats: ["webp", "jpeg"],
         outputDir: "./_site/img/archer/",
         urlPath: "/img/archer/"
     });
     const attributes = {
-        alt: "archer image",
+        alt: "Archer TV show screenshot",
         style: "width: 100%; height: auto;  border-radius: 1.0rem;",
         loading: "eager",
         decoding: "async",
@@ -170,7 +170,7 @@ const generateWeatherImage = async (icon, alt) => {
 const generateCatImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [600],
+        widths: [400, 600],
         formats: ["webp", "jpeg"],
         outputDir: "./_site/img/general/",
         urlPath: "/img/general/"
@@ -193,7 +193,7 @@ const generateCatImage = async (src) => {
 const generateLinkImage = async (src, alt) => {
     console.log('generating img:', src.substring(0, 50));
     const metadata = await Image(src, {
-        widths: [200],
+        widths: [100, 200],
         formats: ["webp", "png"],
         outputDir: "./_site/img/links/",
         urlPath: "/img/links/"
@@ -228,7 +228,7 @@ const generateFlagImage = async (src, alt) => {
 const generateWatchImage = async (src) => {    
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [500],
+        widths: [250, 500],
         formats: ["webp", "png"],
         outputDir: "./_site/img/general/",
         urlPath: "/img/general/"

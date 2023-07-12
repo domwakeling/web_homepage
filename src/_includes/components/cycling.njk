@@ -3,7 +3,7 @@
     {%- for item in cycling -%}
         <hr class="toot_hr" />
         <a href="{{ item.link }}" target="_offiste">
-            {% processImage item.imageUrl, "freeCodeCamp image" %}
+            {% processImage item.imageUrl, item.altText %}
         </a>
         <p>{{ item.title }}</p>
         <div style="clear: both"></div>
