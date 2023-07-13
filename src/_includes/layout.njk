@@ -17,7 +17,7 @@ title: Dom's Homepage
       content="default-src 'self' gateway.zscalertwo.net;
                font-src fonts.gstatic.com;
                style-src 'self' fonts.googleapis.com gateway.zscalertwo.net 'unsafe-inline';
-               script-src 'self' 'sha256-tQayGmJcGcN/bvQZ8To+Jy/P6Sc8qPzzgyBJzFuWfkQ=' unpkg.com gateway.zscalertwo.net;
+               script-src 'self' 'sha256-6JVGBVlWx+o/ijyOpgCAus2NCo/ynXXcLnsQOtSSY98=' unpkg.com gateway.zscalertwo.net;
                img-src *;
                connect-src https://api.netlify.com/build_hooks/622db0523bf38e3cbcdabd0e localhost:* ws://localhost:*;"
     >
@@ -34,11 +34,13 @@ title: Dom's Homepage
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
-    <div class="outer_container">
-      <div class="complete-row">
-          <h1 class="page_title">{% todayString %}</h1>
+    <main>
+      <div class="outer_container">
+        <div class="complete-row">
+            <h1 class="page_title">{% todayString %}</h1>
+        </div>
       </div>
-    </div>
-    {{ content | safe }}
+      {{ content | safe }}
+    <main>
   </body>
 </html>
