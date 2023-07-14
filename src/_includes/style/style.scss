@@ -144,7 +144,7 @@ img.beer_img {
 }
 
 #advice > p {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     font-family: 'Bebas Neue';
 }
 
@@ -189,4 +189,27 @@ a.link_img_wrap {
 p.weight {
     font-weight: 600;
     margin-bottom: 0.5rem;
+}
+
+a.skip-link {
+    background: $color_orange;
+    color: $color_mainBackground !important;
+    left: 50%;
+    padding: 0.5rem 1.0rem;
+    position: absolute;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    z-index: 10;
+    transform: translateY(-120%);
+    transition: transform 0.3s;
+
+    &:focus {
+        transform: translateY(0%);
+    }
+
+    &:hover {
+        &::before {
+            height: 0;
+        }
+    }
 }

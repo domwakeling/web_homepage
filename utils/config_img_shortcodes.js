@@ -176,7 +176,7 @@ const generateCatImage = async (src) => {
         urlPath: "/img/general/"
     });
     const attributes = {
-        alt: "random cat image",
+        alt: "a cute cat photo that is cute",
         style:  "width: 100%; height: auto; border-radius: 1.0rem;",
         loading: "lazy",
         decoding: "async",
