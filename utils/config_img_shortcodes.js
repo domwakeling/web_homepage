@@ -5,7 +5,7 @@ const generateImageTags = async (src, alt) => {
     try {
         console.log('generating img:', src.substring(0, 50));
         const metadata = await Image(src, {
-            widths: [200, 300],
+            widths: [150, 200, 300],
             formats: ["webp", "jpeg"],
             outputDir: "./_site/img/general/",
             urlPath: "/img/general/"
@@ -42,7 +42,7 @@ const generateBeerImage = async (src) => {
     try {
         console.log('generating img:', src.substring(0, 60));
         const metadata = await Image(src, {
-            widths: [200, 300],
+            widths: [150, 200, 300],
             formats: ["webp", "png"],
             outputDir: "./_site/img/beer/",
             urlPath: "/img/beer/"
@@ -62,15 +62,27 @@ const generateBeerImage = async (src) => {
         return Image.generateHTML(metadata, attributes);
     } catch (e) {
         console.error(e.message);
-        return `<img
-                    src="/img/qm.jpg"
-                    alt="?"
-                    class="beer_img"
-                    loading="lazy"
-                    decoding="async"
-                    width="300"
-                    height="500"
-                >`;
+
+        const metadata = await Image('./src/img/qm.jpg', {
+            widths: [150, 200, 300],
+            formats: ["webp", "png"],
+            outputDir: "./_site/img/beer/",
+            urlPath: "/img/beer/"
+        });
+        const attributes = {
+            alt: "White question mark on black background",
+            class: "beer_img",
+            loading: "lazy",
+            decoding: "async",
+            sizes: `(min-width: 2080px) 170px,
+                    (min-width: 1540px) calc(7.5vw + 16px),
+                    (min-width: 1160px) calc(10.28vw + 14px),
+                    (min-width: 1020px) 174px,
+                    (min-width: 780px) calc(15.91vw + 15px),
+                    (min-width: 500px) 158px, 32.22vw`
+        }
+        return Image.generateHTML(metadata, attributes);
+
     }
 }
 
