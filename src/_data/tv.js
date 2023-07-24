@@ -16,6 +16,10 @@ const data = [
         "release": "06.09.23"
     },
     {
+        "showName": "Lower Decks S4",
+        "release": "08.09.23"
+    },
+    {
         "showName": "Lupin S3",
         "release": "05.10.23"
     },
