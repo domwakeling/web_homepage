@@ -5,7 +5,7 @@ const generateImageTags = async (src, alt) => {
     try {
         console.log('generating img:', src.substring(0, 50));
         const metadata = await Image(src, {
-            widths: [150, 200, 300],
+            widths: [125, 150, 200, 250, 300],
             formats: ["webp", "jpeg"],
             outputDir: "./_site/img/general/",
             urlPath: "/img/general/"
@@ -42,7 +42,7 @@ const generateBeerImage = async (src) => {
     try {
         console.log('generating img:', src.substring(0, 60));
         const metadata = await Image(src, {
-            widths: [150, 200, 300],
+            widths: [125, 150, 200, 250, 300],
             formats: ["webp", "png"],
             outputDir: "./_site/img/beer/",
             urlPath: "/img/beer/"
@@ -89,7 +89,7 @@ const generateBeerImage = async (src) => {
 const generateArcherImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [400, 600],
+        widths: [300, 400, 600],
         formats: ["webp", "jpeg"],
         outputDir: "./_site/img/archer/",
         urlPath: "/img/archer/"
@@ -182,7 +182,7 @@ const generateWeatherImage = async (icon, alt) => {
 const generateCatImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [400, 600],
+        widths: [300, 400, 600],
         formats: ["webp", "jpeg"],
         outputDir: "./_site/img/general/",
         urlPath: "/img/general/"
