@@ -1,9 +1,5 @@
 const data = [
     {
-        "showName": "Good Omens S2",
-        "release": "28.07.23"
-    },
-    {
         "showName": "Only Murders S3",
         "release": "08.08.23"
     },
@@ -18,6 +14,14 @@ const data = [
     {
         "showName": "Lower Decks S4",
         "release": "08.09.23"
+    },
+    {
+        "showName": "Welcome to Wrexham S2",
+        "release": "13.09.23"
+    },
+    {
+        "showName": "The Continental",
+        "release": "22.09.23"
     },
     {
         "showName": "Lupin S3",
