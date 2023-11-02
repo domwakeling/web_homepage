@@ -1,35 +1,11 @@
 const data = [
     {
-        "showName": "Only Murders S3",
-        "release": "08.08.23"
+        "showName": "Doctor Who specials",
+        "release": "25.11.23"
     },
     {
-        "showName": "Ahsoka",
-        "release": "23.08.23"
-    },
-    {
-        "showName": "Justified City Primeval",
-        "release": "06.09.23"
-    },
-    {
-        "showName": "Lower Decks S4",
-        "release": "08.09.23"
-    },
-    {
-        "showName": "Welcome to Wrexham S2",
-        "release": "13.09.23"
-    },
-    {
-        "showName": "The Continental",
-        "release": "22.09.23"
-    },
-    {
-        "showName": "Lupin S3",
-        "release": "05.10.23"
-    },
-    {
-        "showName": "Loki S2",
-        "release" : "06.10.23"
+        "showName": "Slow Horses S3",
+        "release": "01.12.23"
     }
 ];
 
