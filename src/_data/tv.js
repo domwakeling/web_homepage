@@ -6,6 +6,10 @@ const data = [
     {
         "showName": "Slow Horses S3",
         "release": "01.12.23"
+    },
+    {
+        "showName": "What If ... ? S2",
+        "release": "22.12.23"
     }
 ];
 
