@@ -1,15 +1,22 @@
 const data = [
     {
-        "showName": "Doctor Who specials",
-        "release": "25.11.23"
+        "showName": "Vigil S2",
+        "release": "10.12.23"
     },
     {
         "showName": "Slow Horses S3",
-        "release": "01.12.23"
+        "release": "29.11.23"
     },
     {
         "showName": "What If ... ? S2",
         "release": "22.12.23"
+    },{
+        "showName": "Reacher S2",
+        "release": "15.12.23"
+    },
+    {
+        "showName": "Echo",
+        "release": "10.01.24"
     }
 ];
 
