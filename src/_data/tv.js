@@ -1,7 +1,7 @@
 const data = [
     {
-        "showName": "Vigil S2",
-        "release": "10.12.23"
+        "showName": "Bad Batch S3",
+        "release": "21.02.24"
     },
     {
         "showName": "Slow Horses S3",
