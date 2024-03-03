@@ -17,7 +17,9 @@ module.exports = async function () {
         'alphatauri': './src/img/f1/scuderia_alphatauri.png',
         'alfa': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_Alfa_Romeo_Racing_Orlen.svg/320px-Logo_Alfa_Romeo_Racing_Orlen.svg.png',
         'haas': 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Haas_F1_Team_logo.png',
-        'williams': './src/img/f1/williams.png'
+        'williams': './src/img/f1/williams.png',
+        'rb': 'https://upload.wikimedia.org/wikipedia/en/2/2b/VCARB_F1_logo.svg',
+        'sauber': './src/img/f1/stake_sauber.png'
     }
 
     try {
