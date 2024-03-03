@@ -52,12 +52,13 @@ const generateBeerImage = async (src) => {
             class: "beer_img",
             loading:"lazy",
             decoding:"async",
-            sizes: `(min-width: 2080px) 170px,
-                    (min-width: 1540px) calc(7.5vw + 16px),
-                    (min-width: 1160px) calc(10.28vw + 14px),
-                    (min-width: 1020px) 174px,
-                    (min-width: 780px) calc(15.91vw + 15px),
-                    (min-width: 500px) 158px, 32.22vw`
+            sizes: `(min-width: 2080px) 125px,
+                    (min-width: 1540px) calc(5.58vw + 10px),
+                    (min-width: 1160px) calc(7.5vw + 11px),
+                    (min-width: 1020px) 128px,
+                    (min-width: 780px) calc(11.82vw + 10px),
+                    (min-width: 500px) 116px,
+                    23.89vw`
         }
         return Image.generateHTML(metadata, attributes);
     } catch (e) {
@@ -89,7 +90,7 @@ const generateBeerImage = async (src) => {
 const generateArcherImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [300, 400, 600],
+        widths: [300, 400, 424, 600, 800, 848],
         formats: ["webp", "jpeg"],
         outputDir: "./_site/img/archer/",
         urlPath: "/img/archer/"
@@ -166,7 +167,7 @@ const generateWeatherImage = async (icon, alt) => {
     const src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [50],
+        widths: [50, 100],
         formats: ["webp", "png"],
         outputDir: "./_site/img/weather/",
         urlPath: "/img/weather/"
@@ -175,7 +176,8 @@ const generateWeatherImage = async (icon, alt) => {
         alt,
         loading: "lazy",
         decoding: "async",
-        sizes: "50px"
+        sizes: "50px",
+        style: "width: 50px; height: auto;"
     }
     return Image.generateHTML(metadata, attributes);
 }

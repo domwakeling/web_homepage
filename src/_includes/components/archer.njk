@@ -4,11 +4,5 @@
     {%- if item.full_text -%}
         <ul>{{ item.full_text | safe }}</ul>
     {%- endif -%}
-    {%- if item.media_url_https -%}
-        {# <img alt="archer image" src="{{ item.media_url_https }}" style="width: 100%; height: auto;  border-radius: 1.0rem;" /> #}
-        {% archerImage item.media_url_https %}
-    {%- elseif item.media_url -%}
-        {# <img alt="archer image" src="{{ item.media_url }}" style="width: 100%; height: auto;  border-radius: 1.0rem;" /> #}
-        {% archerImage item.media_url %}
-    {%- endif -%}
+    {% archerImage item.media_url %}
 </div>
