@@ -1,5 +1,6 @@
 const sass = require('sass');
 const CleanCSS = require("clean-css");
+const { minify } = require('terser');
 
  const convertSASS =  (value) => {
     return sass.compileString(value).css.toString()
@@ -39,7 +40,7 @@ const datefromtoot = (item) => {
 };
 
 // minimise css
-const cssmin=  (code) => {
+const cssmin = (code) => {
     return new CleanCSS({}).minify(code).styles;
 };
 
@@ -48,11 +49,27 @@ const upper=  (text) => {
     return text.toUpperCase();
 };
 
+// minify js
+const jsmin = async (code) => {
+    const options = {
+        format: {
+            comments: false
+        }
+    }
+    try {
+        const minified = await minify(code, options);
+        return minified.code;
+    } catch {
+        return code;
+    }
+}
+
 module.exports = {
     convertSASS,
     cssmin,
     datefromtoot,
     formstring,
+    jsmin,
     rounddecimal,
     stringify,
     upper,

@@ -19,6 +19,7 @@ const {
     cssmin,
     datefromtoot,
     formstring,
+    jsmin,
     rounddecimal,
     stringify,
     upper,
@@ -76,6 +77,9 @@ module.exports = function (eleventyConfig) {
 
     // filter to minimise css
     eleventyConfig.addFilter("cssmin", cssmin);
+
+    // filter to minimise js
+    eleventyConfig.addFilter("jsmin", jsmin);
 
     // filter to upperString text
     eleventyConfig.addFilter("upper", upper);

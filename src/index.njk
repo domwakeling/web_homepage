@@ -31,10 +31,16 @@ layout: layout.njk
     </div>
 </div><!-- outer_container -->
 
-<script>
+{% set js %}
     {% include "js/masonry.min.js" %}
     {% include "js/watch.js" %}
     {% include "js/font-switch.js" %}
     {% include "js/button.js" %}
     {% include "js/weight.js" %}
+{% endset %}
+
+<!-- beautify ignore:start -->
+<script>
+    {{ js | jsmin | safe }}
 </script>
+<!-- beautify ignore:stop -->
