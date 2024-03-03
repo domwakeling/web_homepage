@@ -112,7 +112,7 @@ const generateArcherImage = async (src) => {
 const generateF1Image = async (src, alt) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [240],
+        widths: [240, 480],
         formats: ["webp", "png"],
         outputDir: "./_site/img/f1/",
         urlPath: "/img/f1/"
@@ -121,7 +121,8 @@ const generateF1Image = async (src, alt) => {
         alt,
         loading: "lazy",
         decoding: "async",
-        sizes: "240px"
+        sizes: "240px",
+        style: "width: 240px; height: auto;"
     }
     return Image.generateHTML(metadata, attributes);
 }
