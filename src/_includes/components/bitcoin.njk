@@ -1,10 +1,11 @@
 <div class="panel grid-item" id="bitcoin">
-    <img
+    {# <img
         src="https://img.icons8.com/44/bitcoin-filled.png" alt="bitcoin"
         style="float: left; position: relative; top: 5px; margin-right: 0.25rem"
         height="44"
         width="44"
-    />
+    /> #}
+    {% bitcoinImage %}
     <h2>exchange rate</h2>
     {%- for item in bitcoin.bpi -%}
         <p style="text-align: center; font-weight: 600; font-size: 2.0rem">

@@ -3,6 +3,7 @@ const {
     generateArcherImage,
     generateBaseballImage,
     generateBeerImage,
+    generateBitcoinImage,
     generateCatImage,
     generateF1Image,
     generateFlagImage,
@@ -63,6 +64,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("archerImage", generateArcherImage);
     eleventyConfig.addShortcode("baseballImage", generateBaseballImage);
     eleventyConfig.addShortcode("beerImage", generateBeerImage);
+    eleventyConfig.addShortcode("bitcoinImage", generateBitcoinImage);
     eleventyConfig.addShortcode("catImage", generateCatImage);
     eleventyConfig.addShortcode("flagImage", generateFlagImage);
     eleventyConfig.addShortcode("footballImage", generateFootballImage);

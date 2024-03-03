@@ -182,6 +182,25 @@ const generateWeatherImage = async (icon, alt) => {
     return Image.generateHTML(metadata, attributes);
 }
 
+const generateBitcoinImage = async () => {
+    const src = `./src/img/bitcoin.png`;
+    console.log('generating img: bitcoin');
+    const metadata = await Image(src, {
+        widths: [44, 88],
+        formats: ["webp", "png"],
+        outputDir: "./_site/img/bitcoin/",
+        urlPath: "/img/bitcoin/"
+    });
+    const attributes = {
+        alt: "Bitcoin logo",
+        loading: "lazy",
+        decoding: "async",
+        sizes: "44px",
+        style: "width: 44px; height: auto; float: left; position: relative; top: 7px; margin-right: 0.25rem"
+    }
+    return Image.generateHTML(metadata, attributes);
+}
+
 const generateCatImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
@@ -285,6 +304,7 @@ module.exports = {
     generateArcherImage,
     generateBaseballImage,
     generateBeerImage,
+    generateBitcoinImage,
     generateCatImage,
     generateF1Image,
     generateFlagImage,
