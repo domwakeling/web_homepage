@@ -1,8 +1,8 @@
 <div class="panel grid-item" id="joke">
     <h2>Programming Joke</h2>
     <ul>
-        <li>{{ joke.setup }}</li>
-        <li>{{ joke.delivery }}</li>
+        <li>{{ joke.setup | upper }}</li>
+        <li>{{ joke.delivery | upper }}</li>
     </ul>
     <p style="text-align: center">
         <i>courtesy of <a href="https://sv443.net/jokeapi/v2/" target="_offsite">JokeAPI</a></i>

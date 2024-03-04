@@ -132,8 +132,10 @@ img.beer_img {
         li {
             padding-left: 1.1rem;
             margin-left: 0;
-            font-family: 'Bebas Neue';
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 600;
             font-size: 2.0rem;
+            line-height: 1.2;
             margin-bottom: 1.0rem;
             &:before {
                 content: "-- ";
@@ -145,7 +147,9 @@ img.beer_img {
 
 #advice > p {
     font-size: 2.0rem;
-    font-family: 'Bebas Neue';
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 /* STYLING FOR WEATHER */
@@ -163,8 +167,11 @@ img.beer_img {
 #f1team {
     tr {
         td {
-            font-family: 'Bebas Neue';
+            // font-family: 'Bebas Neue';
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 600;
             font-size: 2.4rem;
+            line-height: 1.2;
         }
     }
 }
