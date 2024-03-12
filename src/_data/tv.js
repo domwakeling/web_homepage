@@ -1,22 +1,14 @@
 const data = [
     {
-        "showName": "Bad Batch S3",
-        "release": "21.02.24"
-    },
-    {
-        "showName": "Grand Tour - Sand Job",
-        "release": "16.02.24"
-    },
-    {
         "showName": "Welcome to Wrexham S3",
         "release": "18.04.24"
     },{
-        "showName": "Reacher S2",
-        "release": "15.12.23"
+        "showName": "Beyond Paradise S2",
+        "release": "22.03.24"
     },
     {
-        "showName": "Echo",
-        "release": "10.01.24"
+        "showName": "Star Trek: Discovery S5",
+        "release": "04.04.24"
     }
 ];
 
