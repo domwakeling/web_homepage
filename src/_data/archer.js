@@ -75,8 +75,7 @@ const data = [
 ];
 
 module.exports = () => {
-    // const ret = data[Math.floor(Math.random() * data.length)];
-    const ret = data[5];
+    const ret = data[Math.floor(Math.random() * data.length)];
     const keys = Object.keys(ret);
     if (keys.indexOf("heightClass") < 0) {
         ret.heightClass = keys.indexOf('full_text') >= 0 ? "height3" : "height2";
