@@ -6,7 +6,7 @@ module.exports = async function () {
 
     try {        
         let html_data = await EleventyFetch('https://www.freecodecamp.org/news/', {
-            duration: "3h",
+            duration: "3s",
             type: "buffer"
         });
 
@@ -15,8 +15,9 @@ module.exports = async function () {
         const result = [];
         // get src and title for first n items
         for (let i = 0; i < 4; i++) {
+            // console.log(i, articles[i].querySelector('img').getAttribute('srcset'))
             const temp = {
-                imageUrl: articles[i].querySelector('.post-card-image').getAttribute('srcset'),
+                imageUrl: articles[i].querySelector('img').getAttribute('srcset'),
                 altText: articles[i].querySelector('img').getAttribute('alt'),
                 link: articles[i].querySelector('a.post-card-image-link').getAttribute('href'),
                 title: articles[i].querySelector('h2>a').textContent
@@ -28,8 +29,8 @@ module.exports = async function () {
             item.title = item.title.replace(/\n/g, '').replace(/\s{3,}/g, '');
             // get thw "width 200" image for the image srcset
             item.imageUrl = item.imageUrl
-                .split(",")
-                .filter(x => /w200/.test(x))[0]
+                .split(", ")
+                .filter(x => /600w/.test(x))[0]
                 .split(" ")[0];
             // if urls are relative, fix that
             if (/^\/news/.test(item.imageUrl)) {
@@ -41,9 +42,12 @@ module.exports = async function () {
                 item.link = "http://freecodecamp.org" + item.link
             }
         }
+        console.log(result)
         return result;
 
-    } catch {
+    } catch (error) {
+        console.log("Error in FCC News");
+        console.error(error);
         return [];
     }
         

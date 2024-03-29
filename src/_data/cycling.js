@@ -4,6 +4,8 @@ require('dotenv').config();
 
 module.exports = async function () {
 
+    return [];
+    
     try {
         let html_data = await EleventyFetch('https://www.cyclingnews.com/race-results/', {
             duration: "3h",
