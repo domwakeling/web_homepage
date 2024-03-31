@@ -6,3 +6,17 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "https://distracted-elion-60a106.netlify.app"
+
+[[plugins]]
+package = "netlify-plugin-cache"
+
+  [plugins.inputs]
+  paths = [
+    "_site/img/archer",
+    "_site/img/beer",
+    "_site/img/bitcoin",
+    "_site/img/f1",
+    "_site/img/flags",
+    "_site/img/links",
+    "_site/img/weather"
+  ]
