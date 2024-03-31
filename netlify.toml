@@ -18,5 +18,6 @@ package = "netlify-plugin-cache"
     "_site/img/f1",
     "_site/img/flags",
     "_site/img/links",
-    "_site/img/weather"
+    "_site/img/weather",
+    ".cache"
   ]
