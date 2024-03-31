@@ -15,7 +15,6 @@ module.exports = async function () {
         const result = [];
         // get src and title for first n items
         for (let i = 0; i < 4; i++) {
-            // console.log(i, articles[i].querySelector('img').getAttribute('srcset'))
             const temp = {
                 imageUrl: articles[i].querySelector('img').getAttribute('srcset'),
                 altText: articles[i].querySelector('img').getAttribute('alt'),
@@ -27,7 +26,7 @@ module.exports = async function () {
         for (item of result) {
             // strip out leading spaces and newlines from the title
             item.title = item.title.replace(/\n/g, '').replace(/\s{3,}/g, '');
-            // get thw "width 200" image for the image srcset
+            // get thw "600w" image for the image srcset
             item.imageUrl = item.imageUrl
                 .split(", ")
                 .filter(x => /600w/.test(x))[0]
@@ -42,7 +41,6 @@ module.exports = async function () {
                 item.link = "http://freecodecamp.org" + item.link
             }
         }
-        console.log(result)
         return result;
 
     } catch (error) {
