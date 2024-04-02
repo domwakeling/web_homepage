@@ -3,8 +3,8 @@ const data = [
         "showName": "Welcome to Wrexham S3",
         "release": "18.04.24"
     },{
-        "showName": "Beyond Paradise S2",
-        "release": "22.03.24"
+        "showName": "Star Wars: The Acolyte",
+        "release": "05.06.24"
     },
     {
         "showName": "Star Trek: Discovery S5",
