@@ -93,7 +93,7 @@ const generateWeatherImage = async (icon, alt) => {
         loading: "lazy",
         decoding: "async",
         sizes: "50px",
-        style: "width: 50px; height: auto;"
+        style: "width: 50px; height: 50px;"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -161,7 +161,7 @@ const generateLinkImage = async (src, alt) => {
 const generateFlagImage = async (src, alt) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
-        widths: [64],
+        widths: [64,128],
         formats: ["webp", "png"],
         outputDir: "./_site/img/flags/",
         urlPath: "/img/flags/"
@@ -170,7 +170,8 @@ const generateFlagImage = async (src, alt) => {
         alt,
         loading: "lazy",
         decoding: "async",
-        sizes: "64px"
+        sizes: "64px",
+        style: "width: 64px; height: auto"
     }
     return Image.generateHTML(metadata, attributes);
 }

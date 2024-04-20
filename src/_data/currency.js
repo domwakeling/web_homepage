@@ -7,7 +7,8 @@ module.exports = async function () {
         let returnData = [
             {
                 flag: {
-                    src: "https://flagcdn.com/64x48/gb.png",
+                    // src: "https://flagcdn.com/64x48/gb.png",
+                    src: "https://flagcdn.com/128x96/gb.png",
                     srcset: "https://flagcdn.com/128x96/gb.png 2x, https://flagcdn.com/192x144/gb.png 3x"
                 },
                 alt: 'UK flag',
@@ -15,7 +16,8 @@ module.exports = async function () {
                 rate: '1.00'
             }, {
                 flag: {
-                    src: "https://flagcdn.com/64x48/eu.png",
+                    // src: "https://flagcdn.com/64x48/eu.png",
+                    src: "https://flagcdn.com/128x96/eu.png",
                     srcset: "https://flagcdn.com/128x96/eu.png 2x, https://flagcdn.com/192x144/eu.png 3x"
                 },
                 alt: 'European flag',
@@ -23,7 +25,8 @@ module.exports = async function () {
                 rate: data.EUR && data.GBP ? (data.EUR / data.GBP).toFixed(2) : "N/A"
             }, {
                 flag: {
-                    src: "https://flagcdn.com/64x48/us.png",
+                    // src: "https://flagcdn.com/64x48/us.png",
+                    src: "https://flagcdn.com/128x96/us.png",
                     srcset: "https://flagcdn.com/128x96/us.png 2x, https://flagcdn.com/192x144/us.png 3x"
                 },
                 alt: 'US flag',
