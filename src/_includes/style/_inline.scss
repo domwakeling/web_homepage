@@ -1,0 +1,15 @@
+// items that are purportedly causing a layout shift due to late-loading CSS
+h1.page_title {
+    text-align: center;
+}
+
+#f1team {
+    tr {
+        td {
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 1.2;
+        }
+    }
+}

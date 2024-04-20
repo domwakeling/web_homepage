@@ -26,6 +26,12 @@ title: Dom's Homepage
     {% else %}
     <title>DEV - {{ title }}</title>
     {% endif %}
+    <style>
+    {% set scss %}
+      {% include "style/_inline.scss" %}
+    {% endset %}
+    {{ scss | convertSASS | cssmin | safe }}
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;600&display=swap">
