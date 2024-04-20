@@ -3,6 +3,20 @@ h1.page_title {
     text-align: center;
 }
 
+div.panel {
+    padding: 1.0rem 1.25rem;
+    background-color: #fefaf5;
+    border-radius: 1.0rem;
+    border: 1px solid #f29626;
+}
+
+.grid-item {
+    box-sizing: border-box;
+    width: 23%;
+    margin: 1%;
+    float: left;
+}
+
 #f1team {
     tr {
         td {

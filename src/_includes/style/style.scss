@@ -15,9 +15,10 @@ button {
 }
 
 /* SPECIFIC ELEMENTS / STYLES */
-h1.page_title {
-    text-align: center;
-}
+/* moved to _inline.scss */
+// h1.page_title {
+//     text-align: center;
+// }
 
 p.footnote {
     color: $color_greyText;
@@ -25,13 +26,13 @@ p.footnote {
 }
 
 /* STYLING FOR PANELS */
-
-div.panel {
-    padding: 1.0rem 1.25rem;
-    background-color: $color_panelBackground;
-    border-radius: 1.0rem;
-    border: 1px solid $color_orange;
-}
+/* moved to _inline.scss */
+// div.panel {
+//     padding: 1.0rem 1.25rem;
+//     background-color: $color_panelBackground;
+//     border-radius: 1.0rem;
+//     border: 1px solid $color_orange;
+// }
 
 /* OVERRIDE STYLING FOR (SKELETON) TABLES */
 th, td {

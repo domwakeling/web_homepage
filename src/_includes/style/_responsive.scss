@@ -20,12 +20,13 @@
 .complete-row {
     padding: 20px;
 }
-.grid-item {
-    box-sizing: border-box;
-    width: 23%;
-    margin: 1%;
-    float: left;
-}
+/* moved to _inline.scss */
+// .grid-item {
+//     box-sizing: border-box;
+//     width: 23%;
+//     margin: 1%;
+//     float: left;
+// }
 
 @include for-three-column-only {
     .outer_container {
