@@ -28,7 +28,8 @@ module.exports = async function () {
         
         return outputData;
 
-    } catch {
+    } catch (error) {
+        console.log("Error when fetching People-In-Space:", error.message);
         return [];
     }
 };

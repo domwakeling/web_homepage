@@ -1,16 +1,12 @@
 // require('dotenv').config();
 const {
-    generateArcherImage,
-    generateBaseballImage,
-    generateBeerImage,
+    generateArcherImage,    
     generateBitcoinImage,
     generateCatImage,
     generateF1Image,
     generateFlagImage,
-    generateFootballImage,
     generateImageTags,
     generateLinkImage,
-    generateMastoImage,
     generateWatchImage,
     generateWeatherImage
 } = require('./utils/config_img_shortcodes.js');
@@ -62,15 +58,11 @@ module.exports = function (eleventyConfig) {
     // image handlers
     eleventyConfig.addShortcode("processImage", generateImageTags);
     eleventyConfig.addShortcode("archerImage", generateArcherImage);
-    eleventyConfig.addShortcode("baseballImage", generateBaseballImage);
-    eleventyConfig.addShortcode("beerImage", generateBeerImage);
     eleventyConfig.addShortcode("bitcoinImage", generateBitcoinImage);
     eleventyConfig.addShortcode("catImage", generateCatImage);
     eleventyConfig.addShortcode("flagImage", generateFlagImage);
-    eleventyConfig.addShortcode("footballImage", generateFootballImage);
     eleventyConfig.addShortcode("f1Image", generateF1Image);
     eleventyConfig.addShortcode("linkImage", generateLinkImage);
-    eleventyConfig.addShortcode("mastoImage", generateMastoImage);
     eleventyConfig.addShortcode("watchImage", generateWatchImage);
     eleventyConfig.addShortcode("weatherImage", generateWeatherImage);
 

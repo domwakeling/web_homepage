@@ -18,7 +18,8 @@ module.exports = async function () {
         
         return joke_data;
         
-    } catch {
+    } catch (error) {
+        console.log("Error when fetching Joke:", error.message);
         return dummy_data;
     }
 };

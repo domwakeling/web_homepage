@@ -39,7 +39,8 @@ module.exports = async function () {
                 points: item.points
             }));
 
-    } catch {
+    } catch (error) {
+        console.log("Error when fetching from F1:", error.message);
         return [];
     }
 };

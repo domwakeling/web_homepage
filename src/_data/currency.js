@@ -48,7 +48,8 @@ module.exports = async function () {
 
         return generate_data(rate_data.rates);
 
-    } catch {
+    } catch (error) {
+        console.log("Error when fetching from Exchange Rates:", error.message);
         return generate_data(dummy_data.rates);
     }
 };

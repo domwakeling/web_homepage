@@ -44,8 +44,7 @@ module.exports = async function () {
         return result;
 
     } catch (error) {
-        console.log("Error in FCC News");
-        console.error(error);
+        console.log("Error when fetching FCC News:", error.message);
         return [];
     }
         

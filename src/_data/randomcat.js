@@ -11,7 +11,7 @@ module.exports = async function () {
             get('https://api.thecatapi.com/v1/images/search')
             .then(res => res.data[0])
             .catch((err) => {
-                console.error(err);
+                console.log("Error when fetching Random Cat:", err.message)
                 return null;
             });
         

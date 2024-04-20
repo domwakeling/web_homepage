@@ -4,7 +4,7 @@ require('dotenv').config()
 module.exports = async function () {
 
     try {
-        let url = "https://api.openweathermap.org/data/2.5/onecall";
+        let url = "https://api.openweathermap.org/data/3.0/onecall";
         url = url + `?lat=${process.env.GEO_LAT}&lon=${process.env.GEO_LON}`;
         url = url + `&exclude=current,minutely,hourly&units=metric&appid=${process.env.OPEN_WEATHER_KEY}`;
 
@@ -15,7 +15,8 @@ module.exports = async function () {
 
         return weather_data;
 
-    } catch {
+    } catch (error) {
+        console.log("Error when fetching weather:", error.message)
         return {}
     }
 }

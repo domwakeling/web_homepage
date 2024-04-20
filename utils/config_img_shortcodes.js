@@ -38,55 +38,6 @@ const generateImageTags = async (src, alt) => {
     }
 }
 
-const generateBeerImage = async (src) => {
-    try {
-        console.log('generating img:', src.substring(0, 60));
-        const metadata = await Image(src, {
-            widths: [125, 150, 200, 250, 300],
-            formats: ["webp", "png"],
-            outputDir: "./_site/img/beer/",
-            urlPath: "/img/beer/"
-        });
-        const attributes = {
-            alt: "Beer bottle or beer keg",
-            class: "beer_img",
-            loading:"lazy",
-            decoding:"async",
-            sizes: `(min-width: 2080px) 125px,
-                    (min-width: 1540px) calc(5.58vw + 10px),
-                    (min-width: 1160px) calc(7.5vw + 11px),
-                    (min-width: 1020px) 128px,
-                    (min-width: 780px) calc(11.82vw + 10px),
-                    (min-width: 500px) 116px,
-                    23.89vw`
-        }
-        return Image.generateHTML(metadata, attributes);
-    } catch (e) {
-        console.error(e.message);
-
-        const metadata = await Image('./src/img/qm.jpg', {
-            widths: [150, 200, 300],
-            formats: ["webp", "png"],
-            outputDir: "./_site/img/beer/",
-            urlPath: "/img/beer/"
-        });
-        const attributes = {
-            alt: "White question mark on black background",
-            class: "beer_img",
-            loading: "lazy",
-            decoding: "async",
-            sizes: `(min-width: 2080px) 170px,
-                    (min-width: 1540px) calc(7.5vw + 16px),
-                    (min-width: 1160px) calc(10.28vw + 14px),
-                    (min-width: 1020px) 174px,
-                    (min-width: 780px) calc(15.91vw + 15px),
-                    (min-width: 500px) 158px, 32.22vw`
-        }
-        return Image.generateHTML(metadata, attributes);
-
-    }
-}
-
 const generateArcherImage = async (src) => {
     console.log('generating img:', src.substring(0, 60));
     const metadata = await Image(src, {
@@ -124,41 +75,6 @@ const generateF1Image = async (src, alt) => {
         decoding: "async",
         sizes: "240px",
         style: "width: 240px; height: auto;"
-    }
-    return Image.generateHTML(metadata, attributes);
-}
-
-const generateFootballImage = async (src, alt) => {
-    console.log('generating img:', src.substring(0, 60)); 
-    const metadata = await Image(src, {
-        widths: [80],
-        formats: ["webp", "png"],
-        outputDir: "./_site/img/football/",
-        urlPath: "/img/football/"
-    });
-    const attributes = {
-        alt,
-        style: "height: 40px; width: 40px; border: 2px solid orange; border-radius: 50%; position: relative; top: 0.5rem; object-fit: cover;",
-        loading: "lazy",
-        decoding: "async",
-        sizes:"40px"
-    }
-    return Image.generateHTML(metadata, attributes);
-}
-
-const generateBaseballImage = async (src, alt) => {
-    console.log('generating img:', src.substring(0, 60));
-    const metadata = await Image(src, {
-        widths: [60],
-        formats: ["webp", "png"],
-        outputDir: "./_site/img/baseball/",
-        urlPath: "/img/baseball/"
-    });
-    const attributes = {
-        alt,
-        style: "width: 3.0rem; height: auto; position: relative; top: 0.2rem",
-        loading: "lazy",
-        decoding: "async"
     }
     return Image.generateHTML(metadata, attributes);
 }
@@ -277,41 +193,14 @@ const generateWatchImage = async (src) => {
     return Image.generateHTML(metadata, attributes);
 }
 
-const generateMastoImage = async (src) => {
-    try {
-        console.log('generating img:', src.substring(0, 50));
-        const metadata = await Image(src, {
-            widths: [80],
-            formats: ["webp", "jpeg"],
-            outputDir: "./_site/img/general/",
-            urlPath: "/img/general/"
-        });
-        const attributes = {
-            alt:"user avatar",
-            class: "toot_user",
-            loading:"eager",
-            decoding:"async",
-            sizes: "36px"
-        }
-        return Image.generateHTML(metadata, attributes);
-    } catch (e) {
-        console.error(e.message);
-        return '';
-    }
-}
-
 module.exports = {
     generateArcherImage,
-    generateBaseballImage,
-    generateBeerImage,
     generateBitcoinImage,
     generateCatImage,
     generateF1Image,
     generateFlagImage,
-    generateFootballImage,
     generateImageTags,
     generateLinkImage,
-    generateMastoImage,
     generateWatchImage,
     generateWeatherImage
 }

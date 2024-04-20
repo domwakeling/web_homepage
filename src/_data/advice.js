@@ -15,10 +15,11 @@ module.exports = async function () {
             duration: "3h",
             type: "json"
         });
+        
         return response.slip;
 
-    } catch {
-
+    } catch (error) {
+        console.log("Error when fetching from Advice Slip:", error.message);
         return dummy_data.slip;
     }
 }

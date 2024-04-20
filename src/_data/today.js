@@ -34,7 +34,8 @@ module.exports = async function () {
         }
         return result;
         
-    } catch {
+    } catch (error) {
+        console.log("Error when fetching Today:", error.message);
         return {}
     }
 };
