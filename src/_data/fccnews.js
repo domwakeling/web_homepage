@@ -27,14 +27,20 @@ module.exports = async function () {
             // strip out leading spaces and newlines from the title
             item.title = item.title.replace(/\n/g, '').replace(/\s{3,}/g, '');
             // get thw "600w" image for the image srcset
-            item.imageUrl = item.imageUrl
-                .split(", ")
-                .filter(x => /600w/.test(x))[0]
-                .split(" ")[0];
+            // check that there IS one, otherwise use the first option
+            const imageCheck = /600w/.test(item.imageUrl);
+            if (imageCheck) {
+                item.imageUrl = item.imageUrl
+                    .split(", ")
+                    .filter(x => /600w/.test(x))[0]
+                    .split(" ")[0];
+            } else {
+                item.imageUrl = item.imageUrl.split(", ")[0];
+            }
             // if urls are relative, fix that
             if (/^\/news/.test(item.imageUrl)) {
                 item.imageUrl = "http://freecodecamp.org" + item.imageUrl;
-                item.imageUrl = item.imageUrl.replace('600w', '300w');
+                
             }
             // turn links into full url
             if (/^\/news/.test(item.link)) {

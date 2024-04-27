@@ -1,7 +1,7 @@
 const data = [
     {
         "showName": "Welcome to Wrexham S3",
-        "release": "18.04.24"
+        "release": "03.05.24"
     },{
         "showName": "Star Wars: The Acolyte",
         "release": "05.06.24"
