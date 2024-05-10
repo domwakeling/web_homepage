@@ -7,8 +7,8 @@ const data = [
         "release": "05.06.24"
     },
     {
-        "showName": "Star Trek: Discovery S5",
-        "release": "04.04.24"
+        "showName": "Orphan Black: Echoes",
+        "release": "16.05.24"
     }
 ];
 
