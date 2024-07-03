@@ -1,14 +1,22 @@
 const data = [
     {
-        "showName": "Welcome to Wrexham S3",
-        "release": "03.05.24"
+        "showName": "Time Bandits",
+        "release": "24.07.24"
     },{
-        "showName": "Star Wars: The Acolyte",
-        "release": "05.06.24"
+        "showName": "Batman",
+        "release": "01.08.24"
     },
     {
-        "showName": "Orphan Black: Echoes",
-        "release": "16.05.24"
+        "showName": "Only Murders S4",
+        "release": "27.08.24"
+    },
+    {
+        "showName": "Slow Horses S4",
+        "release": "04.09.24"
+    },
+    {
+        "showName": "Agatha All Along",
+        "release": "18.09.24"
     }
 ];
 
