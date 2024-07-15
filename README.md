@@ -13,7 +13,7 @@ Technologies used:
 * `js-beautify` to generate clean, properly-indented HTML
 
 Netlify deploys are triggered (via [build hooks](https://docs.netlify.com/configure-builds/build-hooks/))
-5am, midday and 6pm using GitHub Actions.
+once a day using GitHub Actions.
 
 To improve Lighthouse scores and reduce the load times, most images (Mastodon, Cycling News etc) are
 processed as the generator runs to:
