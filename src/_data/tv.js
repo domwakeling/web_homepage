@@ -17,6 +17,10 @@ const data = [
     {
         "showName": "Agatha All Along",
         "release": "18.09.24"
+    },
+    {
+        "showName": "Umbrella Academy S4",
+        "release": "08.08.24"
     }
 ];
 
