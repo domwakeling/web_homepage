@@ -1,8 +1,5 @@
 const data = [
     {
-        "showName": "Time Bandits",
-        "release": "24.07.24"
-    },{
         "showName": "Batman",
         "release": "01.08.24"
     },
