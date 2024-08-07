@@ -18,6 +18,10 @@ const data = [
     {
         "showName": "Umbrella Academy S4",
         "release": "08.08.24"
+    },
+    {
+        "showName": "Star Trek Lower Decks S5",
+        "release" : "24.10.24"
     }
 ];
 
