@@ -21,7 +21,7 @@
     "netlify-plugin-cache": "^1.0.3"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "axios": "^1.6.7",
     "clean-css": "^5.3.3",
     "dotenv": "^16.4.1",
