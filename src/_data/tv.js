@@ -1,27 +1,19 @@
 const data = [
     {
-        "showName": "Batman",
-        "release": "01.08.24"
-    },
-    {
-        "showName": "Only Murders S4",
-        "release": "27.08.24"
-    },
-    {
-        "showName": "Slow Horses S4",
-        "release": "04.09.24"
-    },
-    {
-        "showName": "Agatha All Along",
-        "release": "18.09.24"
-    },
-    {
-        "showName": "Umbrella Academy S4",
-        "release": "08.08.24"
-    },
-    {
         "showName": "Star Trek Lower Decks S5",
         "release" : "24.10.24"
+    },
+    {
+        "showName": "The Franchise",
+        "release" : "21.10.24"
+    },
+    {
+        "showName": "Day of the Jackal",
+        "release": "07.11.2024"
+    },
+    {
+        "showName": "Star Wars: Skelton Crew",
+        "release": "03.12.2024"
     }
 ];
 
