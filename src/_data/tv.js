@@ -9,11 +9,11 @@ const data = [
     },
     {
         "showName": "Day of the Jackal",
-        "release": "07.11.2024"
+        "release": "07.11.24"
     },
     {
         "showName": "Star Wars: Skelton Crew",
-        "release": "03.12.2024"
+        "release": "03.12.24"
     }
 ];
 
