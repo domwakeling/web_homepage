@@ -1,19 +1,31 @@
 const data = [
     {
-        "showName": "Star Trek Lower Decks S5",
-        "release" : "24.10.24"
-    },
-    {
-        "showName": "The Franchise",
-        "release" : "21.10.24"
-    },
-    {
         "showName": "Day of the Jackal",
         "release": "07.11.24"
     },
     {
+        "showName": "Silo S2",
+        "release" : "15.11.24"
+    },
+    {
         "showName": "Star Wars: Skeleton Crew",
         "release": "03.12.24"
+    },
+    {
+        "showName": "What If...? S3",
+        "release" : "22.12.24"
+    },
+    {
+        "showName": "Severance S2",
+        "release": "17.01.25"
+    },
+    {
+        "showName": "Star Wars: Section 31",
+        "release": "24.01.25"
+    },
+    {
+        "showName": "Daredevil: Born Again",
+        "release": "05.03.25"
     }
 ];
 
