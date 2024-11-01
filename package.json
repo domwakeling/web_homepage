@@ -25,6 +25,7 @@
     "axios": "^1.6.7",
     "clean-css": "^5.3.3",
     "dotenv": "^16.4.1",
+    "ical-generator": "^8.0.1",
     "js-beautify": "^1.14.11",
     "jsdom": "^19.0.0",
     "rimraf": "^3.0.2",

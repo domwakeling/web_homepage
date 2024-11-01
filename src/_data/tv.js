@@ -12,7 +12,7 @@ const data = [
         "release": "07.11.24"
     },
     {
-        "showName": "Star Wars: Skelton Crew",
+        "showName": "Star Wars: Skeleton Crew",
         "release": "03.12.24"
     }
 ];
@@ -29,12 +29,19 @@ const daysUntil = (dStr) => {
     return diffDays(tDate, today)
 }
 
+const trueDate = (dStr) => {
+    const numbers = dStr.split(".").map(n => parseInt(n))
+    const tDate = new Date(2000 + numbers[2], numbers[1] - 1, numbers[0])
+    return tDate.toISOString().slice(0, 10);
+}
+
 module.exports = () => {
     
     const ret = data
         .map(item => ({
             "showName": item.showName,
-            "days": daysUntil(item.release)
+            "days": daysUntil(item.release),
+            "release": trueDate(item.release)
         }))
         .filter(item => item.days >= 0)
         .sort((i1, i2) => i1.days - i2.days);
