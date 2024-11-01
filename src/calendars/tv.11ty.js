@@ -33,7 +33,7 @@ class Test {
             const event = cal.createEvent({
                 // id: `${calendar.url}/${page.fileSlug}`,
                 start: new Date(show.release),
-                summary: show.showName,
+                summary: `Release: ${show.showName}`,
                 allDay: true
             })
 
