@@ -1,9 +1,5 @@
 const data = [
     {
-        "showName": "Day of the Jackal",
-        "release": "07.11.24"
-    },
-    {
         "showName": "Silo S2",
         "release" : "15.11.24"
     },
@@ -26,6 +22,10 @@ const data = [
     {
         "showName": "Daredevil: Born Again",
         "release": "05.03.25"
+    },
+    {
+        "showName": "Andor S2",
+        "release" : "22.04.25"
     }
 ];
 
