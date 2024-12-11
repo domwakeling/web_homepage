@@ -6,18 +6,20 @@
                 <th style="padding-left: 1.0rem; width: 70%;">Show</th>
                 <th style="text-align: right; padding-right: 1.0rem; width: 30%;">When</th>
             </tr>
-            {%- for item in tv -%}
-            <tr>
-                <td style="padding-left: 1.0rem;">{{ item.showName }}</td>
-                <td style="text-align: right; padding-right: 1.0rem; width: 30%;">
-                    {% if item.days > 0 %}
-                        {{ item.days }} day{% if item.days > 1 %}s{% endif %}
-                    {% else %}
-                        today
-                    {% endif %}
-                </td>
-            </tr>
-            {%- endfor -%}
+            {% for item in tv %}
+                {% if loop.index <= 5 %}
+                <tr>
+                    <td style="padding-left: 1.0rem;">{{ item.showName }}</td>
+                    <td style="text-align: right; padding-right: 1.0rem; width: 30%;">
+                        {% if item.days > 0 %}
+                            {{ item.days }} day{% if item.days > 1 %}s{% endif %}
+                        {% else %}
+                            today
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endif %}
+            {% endfor %}
         </table>
     {% else %}
         <p>No shows in the list &mdash; check <a href="https://www.geektown.co.uk/uk-air-dates/"

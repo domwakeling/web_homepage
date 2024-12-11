@@ -1,8 +1,8 @@
 {% set item = archer %}
 <div class="panel grid-item" id="archer">
     <h2>Archer</h2>
-    {%- if item.full_text -%}
+    {% if item.full_text %}
         <ul>{{ item.full_text | upper | safe }}</ul>
-    {%- endif -%}
+    {% endif %}
     {% archerImage item.media_url %}
 </div>

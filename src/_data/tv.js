@@ -1,11 +1,7 @@
 const data = [
     {
-        "showName": "Silo S2",
-        "release" : "15.11.24"
-    },
-    {
-        "showName": "Star Wars: Skeleton Crew",
-        "release": "03.12.24"
+        "showName": "Strike S6",
+        "release": "16.12.24"
     },
     {
         "showName": "What If...? S3",
@@ -16,8 +12,20 @@ const data = [
         "release": "17.01.25"
     },
     {
-        "showName": "Star Wars: Section 31",
+        "showName": "Night Agent S2",
+        "release": "23.01.25"
+    },
+    {
+        "showName": "Star Trek: Section 31",
         "release": "24.01.25"
+    },
+    {
+        "showName": "The Recruit S2",
+        "release": "30.01.25"
+    },
+    {
+        "showName": "Reacher S3",
+        "release": "20.02.25"
     },
     {
         "showName": "Daredevil: Born Again",
