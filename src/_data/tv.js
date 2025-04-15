@@ -1,9 +1,5 @@
 const data = [
     {
-        "showName": "Daredevil: Born Again",
-        "release": "05.03.25"
-    },
-    {
         "showName": "Andor S2",
         "release" : "22.04.25"
     },
