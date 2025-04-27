@@ -22,8 +22,8 @@ module.exports = async function () {
     }
 
     try {
-
-         const f1data = await EleventyFetch('https://ergast.com/api/f1/current/constructorStandings.json', {
+        // const f1data = await EleventyFetch('https://ergast.com/api/f1/current/constructorStandings.json', {
+        const f1data = await EleventyFetch('http://api.jolpi.ca/ergast/f1/current/constructorStandings.json', {
              duration: "3h",
              type: "json"
          });
