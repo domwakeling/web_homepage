@@ -1,11 +1,27 @@
 const data = [
     {
-        "showName": "Andor S2",
-        "release" : "22.04.25"
+        "showName": "Clarkson's Farm S4",
+        "release" : "23.05.25"
     },
     {
-        "showName": "Murderbot",
-        "release": "16.05.25"
+        "showName": "FUBAR S2",
+        "release": "12.06.25"
+    },
+    {
+        "showName": "Ironheart",
+        "release": "25.06.25"
+    },
+    {
+        "showName": "Sandman S2",
+        "release": "03.07.25"
+    },
+    {
+        "showName": "Strange New Worlds S3",
+        "release": "17.07.25"
+    },
+    {
+        "showName": "Wednesday S2",
+        "release": "06.08.25"
     }
 ];
 
