@@ -22,6 +22,14 @@ const data = [
     {
         "showName": "Wednesday S2",
         "release": "06.08.25"
+    },
+    {
+        "showName": "Marvel Zombies",
+        "release": "03.10.25"
+    },
+    {
+        "showName": "Star Wars Visions S3",
+        "release": "29.10.25"
     }
 ];
 
