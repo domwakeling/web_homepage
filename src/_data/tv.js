@@ -1,27 +1,15 @@
 const data = [
     {
-        "showName": "Clarkson's Farm S4",
-        "release" : "23.05.25"
+        "showName": "High Potential S4",
+        "release" : "17.09.25"
     },
     {
-        "showName": "FUBAR S2",
-        "release": "12.06.25"
+        "showName": "OMITB S5",
+        "release": "09.09.25"
     },
     {
-        "showName": "Ironheart",
-        "release": "25.06.25"
-    },
-    {
-        "showName": "Sandman S2",
-        "release": "03.07.25"
-    },
-    {
-        "showName": "Strange New Worlds S3",
-        "release": "17.07.25"
-    },
-    {
-        "showName": "Wednesday S2",
-        "release": "06.08.25"
+        "showName": "Taskmaster S20",
+        "release": "11.09.25"
     },
     {
         "showName": "Marvel Zombies",
@@ -30,7 +18,11 @@ const data = [
     {
         "showName": "Star Wars Visions S3",
         "release": "29.10.25"
-    }
+    },
+    {
+        "showName": "Slow Horses S5",
+        "release": "24.09.25"
+    },
 ];
 
 const today = new Date(); 
