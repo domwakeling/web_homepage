@@ -1,15 +1,15 @@
 const data = [
     {
-        "showName": "High Potential S4",
+        "showName": "High Potential S2",
         "release" : "17.09.25"
     },
     {
-        "showName": "OMITB S5",
-        "release": "09.09.25"
+        "showName": "Stranger Things S5",
+        "release": "27.11.25"
     },
     {
-        "showName": "Taskmaster S20",
-        "release": "11.09.25"
+        "showName": "The Witcher S4",
+        "release": "30.10.25"
     },
     {
         "showName": "Marvel Zombies",
