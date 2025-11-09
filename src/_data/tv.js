@@ -1,27 +1,15 @@
 const data = [
     {
-        "showName": "High Potential S2",
-        "release" : "17.09.25"
-    },
-    {
         "showName": "Stranger Things S5",
         "release": "27.11.25"
     },
     {
-        "showName": "The Witcher S4",
-        "release": "30.10.25"
+        "showName": "Fallout S2",
+        "release": "17.12.25"
     },
     {
-        "showName": "Marvel Zombies",
-        "release": "03.10.25"
-    },
-    {
-        "showName": "Star Wars Visions S3",
-        "release": "29.10.25"
-    },
-    {
-        "showName": "Slow Horses S5",
-        "release": "24.09.25"
+        "showName": "Wonder Man",
+        "release": "27.01.26"
     },
 ];
 
