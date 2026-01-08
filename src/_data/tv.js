@@ -1,13 +1,5 @@
 const data = [
     {
-        "showName": "Stranger Things S5",
-        "release": "27.11.25"
-    },
-    {
-        "showName": "Fallout S2",
-        "release": "17.12.25"
-    },
-    {
         "showName": "Wonder Man",
         "release": "27.01.26"
     },
