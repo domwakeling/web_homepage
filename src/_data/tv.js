@@ -3,6 +3,10 @@ const data = [
         "showName": "Wonder Man",
         "release": "27.01.26"
     },
+    {
+        "showName": "Star Wars - Maul",
+        "release": "06.04.26"
+    }
 ];
 
 const today = new Date(); 
