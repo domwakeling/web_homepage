@@ -18,7 +18,9 @@ module.exports = async function () {
         'haas': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/MoneyGram_Haas_F1_Team_Logo.svg/640px-MoneyGram_Haas_F1_Team_Logo.svg.png',
         'williams': './src/img/f1/williams.png',
         'rb': 'https://upload.wikimedia.org/wikipedia/en/2/2b/VCARB_F1_logo.svg',
-        'sauber': './src/img/f1/stake_sauber.png'
+        'sauber': './src/img/f1/stake_sauber.png',
+        'audi': './src/img/f1/audi.png',
+        'cadillac': './src/img/f1/cadillac.png',
     }
 
     try {
