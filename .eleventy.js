@@ -84,6 +84,9 @@ module.exports = function (eleventyConfig) {
     // copy from src/img to the root
     eleventyConfig.addPassthroughCopy({ "src/img": "./img" });
 
+    // Put robots.txt in root
+    eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+
     // because we're making a function we need to return the "normal" exports object
     return {
         dir: {
