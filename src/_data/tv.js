@@ -1,11 +1,15 @@
 const data = [
     {
-        "showName": "Spider-Noir S1",
-        "release": "27.05.26"
+        "showName": "Strange New Worlds S4",
+        "release": "23.07.26"
     },
     {
-        "showName": "The Punisher: One Last Kill",
-        "release": "13.05.26"
+        "showName": "Ted Lasso - S4",
+        "release": "05.08.26"
+    },
+    {
+        "showName": "VisionQuest",
+        "release": "14.10.26"
     }
 ];
 
