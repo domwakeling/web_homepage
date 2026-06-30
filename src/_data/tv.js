@@ -10,6 +10,14 @@ const data = [
     {
         "showName": "VisionQuest",
         "release": "14.10.26"
+    },
+    {
+        "showName": "Reacher S4",
+        "release": "12.08.26"
+    },
+    {
+        "showName": "Neagley",
+        "release": "16.09.26"
     }
 ];
 
