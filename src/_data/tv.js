@@ -1,23 +1,27 @@
 const data = [
     {
-        "showName": "Strange New Worlds S4",
-        "release": "23.07.26"
-    },
-    {
-        "showName": "Ted Lasso - S4",
-        "release": "05.08.26"
-    },
-    {
         "showName": "VisionQuest",
         "release": "14.10.26"
     },
     {
-        "showName": "Reacher S4",
-        "release": "12.08.26"
-    },
-    {
         "showName": "Neagley",
         "release": "16.09.26"
+    },
+    {
+        "showName": "Lupin S4",
+        "release": "23.10.26"
+    },
+    {
+        "showName": "Bad Monkey S2",
+        "release": "02.12.26"
+    },
+    {
+        "showName": "Neuromancer",
+        "release": "22.01.27"
+    },
+    {
+        "showName": "Ahsoka S2",
+        "release": "20.01.27"
     }
 ];
 
