@@ -1,23 +1,15 @@
 const data = [
     {
-        "showName": "VisionQuest",
-        "release": "14.10.26"
+        "showName": "BladeRunner 2099",
+        "release": "25.11.26"
     },
     {
         "showName": "OMITB S6",
-        "release": "03.09.26"
-    },
-    {
-        "showName": "Neagley",
-        "release": "16.09.26"
+        "release": "08.12.26"
     },
     {
         "showName": "Lupin S4",
         "release": "23.10.26"
-    },
-    {
-        "showName": "Slow Horses S5",
-        "release": "16.09.26"
     },
     {
         "showName": "Bad Monkey S2",
